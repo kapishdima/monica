@@ -1,6 +1,7 @@
 mod commands;
 mod db;
 mod error;
+mod github;
 mod models;
 mod repositories;
 
@@ -22,8 +23,11 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             commands::project::create_project,
             commands::project::list_projects,
+            commands::project::get_project,
             commands::project::update_project,
             commands::project::remove_project,
+            commands::project::connect_github_project,
+            commands::project::fetch_github_activity,
             commands::task::create_task,
             commands::task::list_tasks,
             commands::task::update_task,

@@ -1,5 +1,6 @@
 import {
   CalendarIcon,
+  FolderLibraryIcon,
   HomeIcon,
   InboxIcon,
   MessageQuestionIcon,
@@ -8,10 +9,12 @@ import {
 } from "@hugeicons/core-free-icons";
 import type { IconSvgElement } from "@hugeicons/react";
 import type { ComponentType } from "react";
+import type { LoaderFunction } from "react-router";
 import { Calendar } from "@/pages/calendar";
 import { Help } from "@/pages/help";
 import { Home } from "@/pages/home";
 import { Inbox } from "@/pages/inbox";
+import { Projects } from "@/pages/projects";
 import { Search } from "@/pages/search";
 import { Settings } from "@/pages/settings";
 
@@ -23,11 +26,20 @@ export interface MenuItem {
   url: string;
   component: ComponentType;
   position: MenuPosition;
+  /** Optional react-router data loader; the router wires it onto the route. */
+  loader?: LoaderFunction;
 }
 
 export const menu: MenuItem[] = [
   { label: "Search", icon: SearchIcon, url: "/search", component: Search, position: "header" },
   { label: "Home", icon: HomeIcon, url: "/", component: Home, position: "header" },
+  {
+    label: "Projects",
+    icon: FolderLibraryIcon,
+    url: "/projects",
+    component: Projects,
+    position: "header",
+  },
   { label: "Inbox", icon: InboxIcon, url: "/inbox", component: Inbox, position: "header" },
   {
     label: "Calendar",

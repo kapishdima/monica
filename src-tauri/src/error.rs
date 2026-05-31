@@ -5,11 +5,12 @@ pub enum AppError {
     Database(String),
     #[error("not found")]
     NotFound,
-    #[allow(dead_code)] // reserved for input validation in upcoming commands
     #[error("invalid input: {0}")]
     Validation(String),
     #[error("io error: {0}")]
     Io(String),
+    #[error("network error: {0}")]
+    Network(String),
 }
 
 impl From<sqlx::Error> for AppError {
@@ -18,6 +19,12 @@ impl From<sqlx::Error> for AppError {
             sqlx::Error::RowNotFound => AppError::NotFound,
             other => AppError::Database(other.to_string()),
         }
+    }
+}
+
+impl From<reqwest::Error> for AppError {
+    fn from(e: reqwest::Error) -> Self {
+        AppError::Network(e.to_string())
     }
 }
 

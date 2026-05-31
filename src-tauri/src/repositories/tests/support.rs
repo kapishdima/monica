@@ -40,6 +40,8 @@ pub fn new_project(name: &str) -> NewProject {
         url: None,
         github_url: None,
         github_stars: None,
+        github_prs: None,
+        github_issues: None,
     }
 }
 
