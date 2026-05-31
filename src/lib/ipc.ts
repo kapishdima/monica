@@ -32,7 +32,7 @@ export interface NewProject {
   githubStars?: number | null;
   githubPrs?: number | null;
   githubIssues?: number | null;
-  status?: ProjectStatus
+  status?: ProjectStatus;
 }
 
 // Universal patch: omit a field to leave it unchanged; pass `null` to clear a
