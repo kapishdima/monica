@@ -16,7 +16,7 @@ export const AppHeader: React.FC = () => {
   const { state } = useSidebar();
 
   return (
-    <header className="flex items-center gap-2 py-4 px-6">
+    <header className="flex items-center gap-2 py-4 pl-2">
       <div className="flex flex-1 items-center gap-2 ">
         {state === "collapsed" && (
           <>

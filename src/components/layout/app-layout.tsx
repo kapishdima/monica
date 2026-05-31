@@ -11,13 +11,11 @@ export const AppLayout: React.FC = () => {
     <ProjectDialogsProvider>
       <SidebarProvider>
         <AppSidebar variant="floating" />
-        <SidebarInset>
+        <SidebarInset className="container">
           <AppHeader />
-          <div className="container">
-            <WhichlyProvider>
-              <Outlet />
-            </WhichlyProvider>
-          </div>
+          <WhichlyProvider>
+            <Outlet />
+          </WhichlyProvider>
         </SidebarInset>
       </SidebarProvider>
       <Toaster />
