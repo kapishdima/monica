@@ -1,49 +1,90 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { SentIcon, SparklesIcon } from "@hugeicons/core-free-icons";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Spinner } from "@/components/ui/spinner";
+import "./globals.css";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
+    setLoading(true);
+    try {
+      setGreetMsg(await invoke("greet", { name }));
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
-    <main className="container">
-      <h1>Welcome to Tauri + React</h1>
+    <main className="flex min-h-svh items-center justify-center bg-background p-6">
+      <Card className="w-full max-w-md">
+        <CardHeader>
+          <CardTitle>Welcome to Tauri + React</CardTitle>
+          <CardDescription>
+            Enter your name and let the Rust backend greet you.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <form
+            id="greet-form"
+            onSubmit={(e) => {
+              e.preventDefault();
+              greet();
+            }}
+          >
+            <FieldGroup>
+              <Field>
+                <FieldLabel htmlFor="greet-input">Name</FieldLabel>
+                <Input
+                  id="greet-input"
+                  value={name}
+                  onChange={(e) => setName(e.currentTarget.value)}
+                  placeholder="Enter a name..."
+                />
+              </Field>
+            </FieldGroup>
+          </form>
 
-      <div className="row">
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
+          {greetMsg && (
+            <Alert className="mt-6">
+              <HugeiconsIcon icon={SparklesIcon} strokeWidth={2} />
+              <AlertTitle>Greeting</AlertTitle>
+              <AlertDescription>{greetMsg}</AlertDescription>
+            </Alert>
+          )}
+        </CardContent>
+        <CardFooter>
+          <Button type="submit" form="greet-form" disabled={loading}>
+            {loading ? (
+              <Spinner data-icon="inline-start" />
+            ) : (
+              <HugeiconsIcon
+                icon={SentIcon}
+                strokeWidth={2}
+                data-icon="inline-start"
+              />
+            )}
+            Greet
+          </Button>
+        </CardFooter>
+      </Card>
     </main>
   );
 }
