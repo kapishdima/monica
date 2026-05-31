@@ -1,39 +1,27 @@
-import * as React from "react"
-
-import { NavFavorites } from "@/components/nav-favorites"
-import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
-import { TeamSwitcher } from "@/components/team-switcher"
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarHeader,
-  SidebarRail,
-} from "@/components/ui/sidebar"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { CommandIcon, AudioWave01Icon } from "@hugeicons/core-free-icons"
+import { AudioWave01Icon, CommandIcon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
+import type * as React from "react";
+import { NavFavorites } from "@/components/nav-favorites";
+import { NavMain } from "@/components/nav-main";
+import { NavSecondary } from "@/components/nav-secondary";
+import { TeamSwitcher } from "@/components/team-switcher";
+import { Sidebar, SidebarContent, SidebarHeader, SidebarRail } from "@/components/ui/sidebar";
 
 const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: (
-        <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />
-      ),
+      logo: <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />,
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
-      logo: (
-        <HugeiconsIcon icon={AudioWave01Icon} strokeWidth={2} />
-      ),
+      logo: <HugeiconsIcon icon={AudioWave01Icon} strokeWidth={2} />,
       plan: "Startup",
     },
     {
       name: "Evil Corp.",
-      logo: (
-        <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />
-      ),
+      logo: <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />,
       plan: "Free",
     },
   ],
@@ -89,7 +77,7 @@ const data = {
       emoji: "✅",
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -104,5 +92,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
-  )
+  );
 }

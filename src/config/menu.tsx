@@ -1,20 +1,19 @@
-import type { ComponentType } from "react";
-import type { IconSvgElement } from "@hugeicons/react";
 import {
-  SearchIcon,
+  CalendarIcon,
   HomeIcon,
   InboxIcon,
-  CalendarIcon,
-  Settings05Icon,
   MessageQuestionIcon,
+  SearchIcon,
+  Settings05Icon,
 } from "@hugeicons/core-free-icons";
-
-import { Home } from "@/pages/home";
-import { Search } from "@/pages/search";
-import { Inbox } from "@/pages/inbox";
+import type { IconSvgElement } from "@hugeicons/react";
+import type { ComponentType } from "react";
 import { Calendar } from "@/pages/calendar";
-import { Settings } from "@/pages/settings";
 import { Help } from "@/pages/help";
+import { Home } from "@/pages/home";
+import { Inbox } from "@/pages/inbox";
+import { Search } from "@/pages/search";
+import { Settings } from "@/pages/settings";
 
 export type MenuPosition = "header" | "footer";
 
@@ -30,7 +29,19 @@ export const menu: MenuItem[] = [
   { label: "Search", icon: SearchIcon, url: "/search", component: Search, position: "header" },
   { label: "Home", icon: HomeIcon, url: "/", component: Home, position: "header" },
   { label: "Inbox", icon: InboxIcon, url: "/inbox", component: Inbox, position: "header" },
-  { label: "Calendar", icon: CalendarIcon, url: "/calendar", component: Calendar, position: "footer" },
-  { label: "Settings", icon: Settings05Icon, url: "/settings", component: Settings, position: "footer" },
+  {
+    label: "Calendar",
+    icon: CalendarIcon,
+    url: "/calendar",
+    component: Calendar,
+    position: "footer",
+  },
+  {
+    label: "Settings",
+    icon: Settings05Icon,
+    url: "/settings",
+    component: Settings,
+    position: "footer",
+  },
   { label: "Help", icon: MessageQuestionIcon, url: "/help", component: Help, position: "footer" },
 ];

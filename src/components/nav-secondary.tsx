@@ -1,19 +1,16 @@
-import React from "react"
-
+import { HugeiconsIcon } from "@hugeicons/react";
+import React from "react";
+import { Link } from "react-router";
 import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
-import { menu } from "@/config/menu"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { Link } from "react-router"
+} from "@/components/ui/sidebar";
+import { menu } from "@/config/menu";
 
-
-const items = menu
-  .filter((item) => item.position === "footer")
+const items = menu.filter((item) => item.position === "footer");
 
 export function NavSecondary() {
   return (
@@ -31,5 +28,5 @@ export function NavSecondary() {
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
-  )
+  );
 }

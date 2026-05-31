@@ -86,8 +86,7 @@ export interface UpdateTask {
 export const projects = {
   create: (input: NewProject) => invoke<Project>("create_project", { input }),
   list: () => invoke<Project[]>("list_projects"),
-  update: (id: string, patch: UpdateProject) =>
-    invoke<Project>("update_project", { id, patch }),
+  update: (id: string, patch: UpdateProject) => invoke<Project>("update_project", { id, patch }),
   remove: (id: string) => invoke<void>("remove_project", { id }),
 };
 
