@@ -1,16 +1,11 @@
 import { AppLayout } from "@/components/layout/app-layout";
-import { Home } from "@/pages/home";
+import { menu } from "@/config/menu";
 import { createBrowserRouter } from "react-router";
 
 export const router = createBrowserRouter([
   {
     Component: AppLayout,
-    children: [
-        {
-            path: '/',
-            index: true,
-            Component: Home,
-        }
-    ]
+    children: menu.map((item) => ({ path: item.url, Component: item.component })
+    ),
   },
 ]);
