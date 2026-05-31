@@ -1,3 +1,4 @@
+import { WhichlyProvider } from "@whichly/react";
 import { Outlet } from "react-router";
 import { AppSidebar } from "@/components/app-sidebar";
 import { AppHeader } from "@/components/layout/app-header";
@@ -13,7 +14,9 @@ export const AppLayout: React.FC = () => {
         <SidebarInset>
           <AppHeader />
           <div className="container">
-            <Outlet />
+            <WhichlyProvider>
+              <Outlet />
+            </WhichlyProvider>
           </div>
         </SidebarInset>
       </SidebarProvider>

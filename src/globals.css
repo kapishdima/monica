@@ -120,7 +120,7 @@
 }
 
 .container {
-  @apply mx-10 w-full ;
+  @apply mx-6 w-full;
 }
 
 @layer base {

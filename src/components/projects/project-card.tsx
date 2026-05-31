@@ -12,20 +12,21 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemDescription,
+  ItemMedia,
+  ItemTitle,
+} from "@/components/ui/item";
 import type { Project } from "@/lib/ipc";
+import { cn } from "@/lib/utils";
 import { ConnectGithubDialog } from "./connect-github-dialog";
 import { DeleteProjectDialog } from "./delete-project-dialog";
 import { ProjectFormDialog } from "./project-form-dialog";
@@ -40,64 +41,98 @@ function Metric({ icon, value }: { icon: typeof StarIcon; value: number }) {
   );
 }
 
+function ProjectMetrics({ project }: { project: Project }) {
+  return (
+    <div className="flex items-center gap-3 text-sm mt-2">
+      <Metric icon={StarIcon} value={project.githubStars ?? 0} />
+      <Metric icon={GitPullRequestIcon} value={project.githubPrs ?? 0} />
+      <Metric icon={RecordIcon} value={project.githubIssues ?? 0} />
+    </div>
+  );
+}
+
+type ProjectActions = {
+  onEdit: () => void;
+  onConnect: () => void;
+  onDelete: () => void;
+};
+
+function ProjectActionsMenu({ onEdit, onConnect, onDelete }: ProjectActions) {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger
+        render={<Button variant="ghost" size="icon-sm" aria-label="Project actions" />}
+      >
+        <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-44">
+        <DropdownMenuItem onClick={onEdit}>
+          <HugeiconsIcon icon={Edit02Icon} strokeWidth={2} />
+          <span>Edit project</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={onConnect}>
+          <HugeiconsIcon icon={GithubIcon} strokeWidth={2} />
+          <span>Connect GitHub</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem variant="destructive" onClick={onDelete}>
+          <HugeiconsIcon icon={Delete02Icon} strokeWidth={2} />
+          <span>Delete project</span>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+function ProjectInitial({ name, className }: { name: string; className?: string }) {
+  return (
+    <span
+      className={cn(
+        "flex size-10 items-center justify-center rounded-xl bg-muted text-sm font-medium text-muted-foreground",
+        className,
+      )}
+    >
+      {name.charAt(0).toUpperCase()}
+    </span>
+  );
+}
+
 export function ProjectCard({ project }: { project: Project }) {
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
   const [connectOpen, setConnectOpen] = useState(false);
 
   const showMetrics = hasGithubMetrics(project);
+  const actions: ProjectActions = {
+    onEdit: () => setEditOpen(true),
+    onConnect: () => setConnectOpen(true),
+    onDelete: () => setDeleteOpen(true),
+  };
+  const projectHref = `/projects/${project.id}`;
 
   return (
     <>
-      <Card>
-        <CardHeader>
-          <CardTitle>
-            <Link to={`/projects/${project.id}`} className="hover:underline">
+      <Item variant="line" className="items-start py-5">
+        <ItemMedia>
+          <ProjectInitial name={project.name} />
+        </ItemMedia>
+        <ItemContent>
+          <ItemTitle>
+            <Link to={projectHref} className="hover:underline">
               {project.name}
             </Link>
-          </CardTitle>
-          <CardAction>
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={<Button variant="ghost" size="icon-sm" aria-label="Project actions" />}
-              >
-                <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-40">
-                <DropdownMenuItem onClick={() => setEditOpen(true)}>
-                  <HugeiconsIcon icon={Edit02Icon} strokeWidth={2} />
-                  <span>Edit project</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem variant="destructive" onClick={() => setDeleteOpen(true)}>
-                  <HugeiconsIcon icon={Delete02Icon} strokeWidth={2} />
-                  <span>Delete project</span>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </CardAction>
+            <ProjectStatusBadge status={project.status} />
+          </ItemTitle>
           {project.description && (
-            <CardDescription className="line-clamp-2 text-pretty">
+            <ItemDescription className="max-w-3xl line-clamp-2">
               {project.description}
-            </CardDescription>
+            </ItemDescription>
           )}
-        </CardHeader>
-
-        <CardContent className="flex items-center justify-between gap-2">
-          <ProjectStatusBadge status={project.status} />
-          {showMetrics ? (
-            <div className="flex items-center gap-3 text-sm">
-              <Metric icon={StarIcon} value={project.githubStars ?? 0} />
-              <Metric icon={GitPullRequestIcon} value={project.githubPrs ?? 0} />
-              <Metric icon={RecordIcon} value={project.githubIssues ?? 0} />
-            </div>
-          ) : project.status !== "planned" ? (
-            <Button variant="outline" size="sm" onClick={() => setConnectOpen(true)}>
-              <HugeiconsIcon icon={GithubIcon} strokeWidth={2} />
-              Connect GitHub
-            </Button>
-          ) : null}
-        </CardContent>
-      </Card>
+          {showMetrics && <ProjectMetrics project={project} />}
+        </ItemContent>
+        <ItemActions>
+          <ProjectActionsMenu {...actions} />
+        </ItemActions>
+      </Item>
 
       <ProjectFormDialog mode="edit" project={project} open={editOpen} onOpenChange={setEditOpen} />
       <DeleteProjectDialog project={project} open={deleteOpen} onOpenChange={setDeleteOpen} />

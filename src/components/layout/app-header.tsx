@@ -1,3 +1,5 @@
+import { Search01Icon } from "@hugeicons/core-free-icons";
+import { HugeiconsIcon } from "@hugeicons/react";
 import { NavActions } from "@/components/nav-actions";
 import {
   Breadcrumb,
@@ -5,22 +7,39 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
+import { Input } from "@/components/ui/input";
+import { InputGroup, InputGroupAddon } from "@/components/ui/input-group";
 import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
 
 export const AppHeader: React.FC = () => {
+  const { state } = useSidebar();
+
   return (
-    <header className="flex h-14 shrink-0 items-center gap-2">
-      <div className="flex flex-1 items-center gap-2 px-3">
-        <SidebarTrigger />
-        <Separator orientation="vertical" />
-        <Breadcrumb>
+    <header className="flex items-center gap-2 py-4 px-6">
+      <div className="flex flex-1 items-center gap-2 ">
+        {state === "collapsed" && (
+          <>
+            <SidebarTrigger />
+            <Separator orientation="vertical" />
+          </>
+        )}
+
+        <div className="max-w-2xl">
+          <InputGroup>
+            <Input />
+            <InputGroupAddon>
+              <HugeiconsIcon icon={Search01Icon} />
+            </InputGroupAddon>
+          </InputGroup>
+        </div>
+        {/* <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbPage>Projects</BreadcrumbPage>
+              <BreadcrumbPage className="text-xl">Another good day for a ship</BreadcrumbPage>
             </BreadcrumbItem>
           </BreadcrumbList>
-        </Breadcrumb>
+        </Breadcrumb> */}
       </div>
       <div className="ml-auto px-3">
         <NavActions />
