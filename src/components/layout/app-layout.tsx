@@ -9,7 +9,7 @@ export const AppLayout: React.FC = () => {
   return (
     <ProjectDialogsProvider>
       <SidebarProvider>
-        <AppSidebar variant="inset" />
+        <AppSidebar variant="floating" />
         <SidebarInset>
           <AppHeader />
           <div className="container">
