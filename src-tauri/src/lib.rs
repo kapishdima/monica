@@ -1,6 +1,7 @@
 mod commands;
 mod db;
 mod error;
+mod favicon;
 mod github;
 mod models;
 mod repositories;

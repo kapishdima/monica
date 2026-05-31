@@ -8,6 +8,7 @@ import {
   StarIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
+import { convertFileSrc } from "@tauri-apps/api/core";
 import { useState } from "react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
@@ -96,6 +97,21 @@ function ProjectInitial({ name, className }: { name: string; className?: string 
   );
 }
 
+function ProjectLogo({ project }: { project: Project }) {
+  const [broken, setBroken] = useState(false);
+  if (project.logoPath && !broken) {
+    return (
+      <img
+        src={convertFileSrc(project.logoPath)}
+        alt=""
+        className="size-10 rounded-xl object-cover"
+        onError={() => setBroken(true)}
+      />
+    );
+  }
+  return <ProjectInitial name={project.name} />;
+}
+
 export function ProjectCard({ project }: { project: Project }) {
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
@@ -113,7 +129,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <>
       <Item variant="line" className="items-start py-5">
         <ItemMedia>
-          <ProjectInitial name={project.name} />
+          <ProjectLogo project={project} />
         </ItemMedia>
         <ItemContent>
           <ItemTitle>
