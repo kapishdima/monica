@@ -1,4 +1,5 @@
 import {
+  Add01Icon,
   ArrowDownIcon,
   ArrowUpIcon,
   ChartIcon,
@@ -17,6 +18,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import * as React from "react";
+import { useProjectDialogs } from "@/components/projects/project-dialogs-provider";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import {
@@ -92,44 +94,14 @@ const data = [
   ],
 ];
 export function NavActions() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  React.useEffect(() => {
-    setIsOpen(true);
-  }, []);
+  const { openCreate } = useProjectDialogs();
+
   return (
     <div className="flex items-center gap-2 text-sm">
-      <div className="hidden font-medium text-muted-foreground md:inline-block">Edit Oct 08</div>
-      <Button variant="ghost" size="icon" className="h-7 w-7">
-        <HugeiconsIcon icon={StarIcon} strokeWidth={2} />
+      <Button variant="outline" size="sm" onClick={openCreate}>
+        <HugeiconsIcon icon={Add01Icon} strokeWidth={2} />
+        Add project
       </Button>
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
-        <PopoverTrigger
-          render={<Button variant="ghost" size="icon" className="h-7 w-7 data-open:bg-accent" />}
-        >
-          <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
-        </PopoverTrigger>
-        <PopoverContent className="w-56 overflow-hidden rounded-lg p-0" align="end">
-          <Sidebar collapsible="none" className="bg-transparent">
-            <SidebarContent>
-              {data.map((group, index) => (
-                <SidebarGroup key={`action-${index}`} className="border-b last:border-none">
-                  <SidebarGroupContent className="gap-0">
-                    <SidebarMenu>
-                      {group.map((item, index) => (
-                        <SidebarMenuItem key={index}>
-                          <SidebarMenuButton>
-                            {item.icon} <span>{item.label}</span>
-                          </SidebarMenuButton>
-                        </SidebarMenuItem>
-                      ))}
-                    </SidebarMenu>
-                  </SidebarGroupContent>
-                </SidebarGroup>
-              ))}
-            </SidebarContent>
-          </Sidebar>
-        </PopoverContent>
-      </Popover>
     </div>
   );
 }

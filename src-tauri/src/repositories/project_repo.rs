@@ -10,8 +10,8 @@ pub async fn create(pool: &SqlitePool, input: NewProject) -> Result<Project> {
     let now = now_timestamp();
 
     let project = sqlx::query_as::<_, Project>(
-        "INSERT INTO projects (id, name, description, url, github_url, github_stars, created_at, updated_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        "INSERT INTO projects (id, name, description, url, github_url, github_stars, github_prs, github_issues, created_at, updated_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
          RETURNING *",
     )
     .bind(&id)
@@ -20,6 +20,8 @@ pub async fn create(pool: &SqlitePool, input: NewProject) -> Result<Project> {
     .bind(&input.url)
     .bind(&input.github_url)
     .bind(input.github_stars)
+    .bind(input.github_prs)
+    .bind(input.github_issues)
     .bind(&now)
     .bind(&now)
     .fetch_one(pool)
@@ -69,11 +71,17 @@ pub async fn update(pool: &SqlitePool, id: &str, patch: UpdateProject) -> Result
     if let Some(v) = patch.github_stars {
         p.github_stars = v;
     }
+    if let Some(v) = patch.github_prs {
+        p.github_prs = v;
+    }
+    if let Some(v) = patch.github_issues {
+        p.github_issues = v;
+    }
     p.updated_at = now_timestamp();
 
     let project = sqlx::query_as::<_, Project>(
         "UPDATE projects SET name = ?, description = ?, status = ?, logo_path = ?,
-            url = ?, github_url = ?, github_stars = ?, updated_at = ?
+            url = ?, github_url = ?, github_stars = ?, github_prs = ?, github_issues = ?, updated_at = ?
          WHERE id = ? RETURNING *",
     )
     .bind(&p.name)
@@ -83,6 +91,8 @@ pub async fn update(pool: &SqlitePool, id: &str, patch: UpdateProject) -> Result
     .bind(&p.url)
     .bind(&p.github_url)
     .bind(p.github_stars)
+    .bind(p.github_prs)
+    .bind(p.github_issues)
     .bind(&p.updated_at)
     .bind(id)
     .fetch_one(pool)

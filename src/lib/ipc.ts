@@ -18,6 +18,8 @@ export interface Project {
   url: string | null;
   githubUrl: string | null;
   githubStars: number | null;
+  githubPrs: number | null;
+  githubIssues: number | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -28,6 +30,9 @@ export interface NewProject {
   url?: string | null;
   githubUrl?: string | null;
   githubStars?: number | null;
+  githubPrs?: number | null;
+  githubIssues?: number | null;
+  status?: ProjectStatus;
 }
 
 // Universal patch: omit a field to leave it unchanged; pass `null` to clear a
@@ -40,6 +45,8 @@ export interface UpdateProject {
   url?: string | null;
   githubUrl?: string | null;
   githubStars?: number | null;
+  githubPrs?: number | null;
+  githubIssues?: number | null;
 }
 
 export interface Task {
@@ -81,13 +88,35 @@ export interface UpdateTask {
   plannedFor?: string | null;
 }
 
+// A pull request or issue fetched live from GitHub for the project detail tabs.
+export interface GithubItem {
+  number: number;
+  title: string;
+  htmlUrl: string;
+  state: string;
+  author: string | null;
+}
+
+export interface GithubActivity {
+  prs: GithubItem[];
+  issues: GithubItem[];
+}
+
 // --- API: errors reject as { kind, message } from the Rust AppError ---
 
 export const projects = {
   create: (input: NewProject) => invoke<Project>("create_project", { input }),
   list: () => invoke<Project[]>("list_projects"),
+  get: (id: string) => invoke<Project>("get_project", { id }),
   update: (id: string, patch: UpdateProject) => invoke<Project>("update_project", { id, patch }),
   remove: (id: string) => invoke<void>("remove_project", { id }),
+};
+
+export const github = {
+  // Fetch GitHub stats for `url`, persist them on the project, return it updated.
+  connect: (id: string, url: string) => invoke<Project>("connect_github_project", { id, url }),
+  // Live open PRs and issues for a repository (not persisted).
+  activity: (url: string) => invoke<GithubActivity>("fetch_github_activity", { url }),
 };
 
 export const tasks = {

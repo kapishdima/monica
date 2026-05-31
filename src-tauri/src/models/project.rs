@@ -20,6 +20,8 @@ pub struct Project {
     pub url: Option<String>,
     pub github_url: Option<String>,
     pub github_stars: Option<i64>,
+    pub github_prs: Option<i64>,
+    pub github_issues: Option<i64>,
     pub created_at: String,
     pub updated_at: String,
 }
@@ -36,6 +38,10 @@ pub struct NewProject {
     pub github_url: Option<String>,
     #[serde(default)]
     pub github_stars: Option<i64>,
+    #[serde(default)]
+    pub github_prs: Option<i64>,
+    #[serde(default)]
+    pub github_issues: Option<i64>,
 }
 
 /// Universal patch for a project. An omitted field is left unchanged; a field
@@ -57,4 +63,8 @@ pub struct UpdateProject {
     pub github_url: Option<Option<String>>,
     #[serde(default)]
     pub github_stars: Option<Option<i64>>,
+    #[serde(default)]
+    pub github_prs: Option<Option<i64>>,
+    #[serde(default)]
+    pub github_issues: Option<Option<i64>>,
 }

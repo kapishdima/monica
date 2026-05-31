@@ -35,6 +35,8 @@ fn create_persists_all_optional_fields() {
         input.url = Some("https://monica.app".into());
         input.github_url = Some("https://github.com/x/y".into());
         input.github_stars = Some(42);
+        input.github_prs = Some(3);
+        input.github_issues = Some(7);
 
         let project = project_repo::create(&pool, input).await.unwrap();
 
@@ -42,6 +44,8 @@ fn create_persists_all_optional_fields() {
         assert_eq!(project.url.as_deref(), Some("https://monica.app"));
         assert_eq!(project.github_url.as_deref(), Some("https://github.com/x/y"));
         assert_eq!(project.github_stars, Some(42));
+        assert_eq!(project.github_prs, Some(3));
+        assert_eq!(project.github_issues, Some(7));
     });
 }
 
@@ -106,6 +110,8 @@ fn update_applies_only_present_fields() {
                 description: Some(Some("desc".into())),
                 status: Some(ProjectStatus::Active),
                 logo_path: Some(Some("logos/x.png".into())),
+                github_prs: Some(Some(5)),
+                github_issues: Some(Some(9)),
                 ..Default::default()
             },
         )
@@ -116,6 +122,8 @@ fn update_applies_only_present_fields() {
         assert!(matches!(updated.status, ProjectStatus::Active));
         assert_eq!(updated.description.as_deref(), Some("desc"));
         assert_eq!(updated.logo_path.as_deref(), Some("logos/x.png"));
+        assert_eq!(updated.github_prs, Some(5));
+        assert_eq!(updated.github_issues, Some(9));
         // Untouched fields preserved.
         assert_eq!(updated.name, "Monica");
         assert_eq!(updated.github_url.as_deref(), Some("https://github.com/x/y"));
