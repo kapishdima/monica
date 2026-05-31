@@ -3,27 +3,24 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { menu } from "@/config/menu"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Link } from "react-router"
 
-export function NavMain({
-  items,
-}: {
-  items: {
-    title: string
-    url: string
-    icon: React.ReactNode
-    isActive?: boolean
-  }[]
-}) {
+const items = menu
+  .filter((item) => item.position === "header")
+  
+
+export function NavMain() {
   return (
     <SidebarMenu>
       {items.map((item) => (
-        <SidebarMenuItem key={item.title}>
+        <SidebarMenuItem key={item.label}>
           <SidebarMenuButton
-            isActive={item.isActive}
-            render={<a href={item.url} />}
+            render={<Link to={item.url} />}
           >
-            {item.icon}
-            <span>{item.title}</span>
+            <HugeiconsIcon icon={item.icon} strokeWidth={2} />
+            <span>{item.label}</span>
           </SidebarMenuButton>
         </SidebarMenuItem>
       ))}

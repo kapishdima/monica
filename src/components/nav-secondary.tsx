@@ -4,33 +4,28 @@ import {
   SidebarGroup,
   SidebarGroupContent,
   SidebarMenu,
-  SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { menu } from "@/config/menu"
+import { HugeiconsIcon } from "@hugeicons/react"
+import { Link } from "react-router"
 
-export function NavSecondary({
-  items,
-  ...props
-}: {
-  items: {
-    title: string
-    url: string
-    icon: React.ReactNode
-    badge?: React.ReactNode
-  }[]
-} & React.ComponentPropsWithoutRef<typeof SidebarGroup>) {
+
+const items = menu
+  .filter((item) => item.position === "footer")
+
+export function NavSecondary() {
   return (
-    <SidebarGroup {...props}>
+    <SidebarGroup className="mt-auto">
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item) => (
-            <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton render={<a href={item.url} />}>
-                {item.icon}
-                <span>{item.title}</span>
+            <SidebarMenuItem key={item.label}>
+              <SidebarMenuButton render={<Link to={item.url} />}>
+                <HugeiconsIcon icon={item.icon} strokeWidth={2} />,
+                <span>{item.label}</span>
               </SidebarMenuButton>
-              {item.badge && <SidebarMenuBadge>{item.badge}</SidebarMenuBadge>}
             </SidebarMenuItem>
           ))}
         </SidebarMenu>

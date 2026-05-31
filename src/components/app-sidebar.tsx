@@ -11,9 +11,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { CommandIcon, AudioWave01Icon, SearchIcon, HomeIcon, InboxIcon, CalendarIcon, Settings05Icon, MessageQuestionIcon } from "@hugeicons/core-free-icons"
+import { CommandIcon, AudioWave01Icon } from "@hugeicons/core-free-icons"
 
-// This is sample data.
 const data = {
   teams: [
     {
@@ -36,54 +35,6 @@ const data = {
         <HugeiconsIcon icon={CommandIcon} strokeWidth={2} />
       ),
       plan: "Free",
-    },
-  ],
-  navMain: [
-    {
-      title: "Search",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={SearchIcon} strokeWidth={2} />
-      ),
-    },
-    {
-      title: "Home",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={HomeIcon} strokeWidth={2} />
-      ),
-      isActive: true,
-    },
-    {
-      title: "Inbox",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={InboxIcon} strokeWidth={2} />
-      ),
-      badge: "10",
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Calendar",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={CalendarIcon} strokeWidth={2} />
-      ),
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={Settings05Icon} strokeWidth={2} />
-      ),
-    },
-    {
-      title: "Help",
-      url: "#",
-      icon: (
-        <HugeiconsIcon icon={MessageQuestionIcon} strokeWidth={2} />
-      ),
     },
   ],
   favorites: [
@@ -145,11 +96,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar className="border-r-0" {...props}>
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
-        <NavMain items={data.navMain} />
+        <NavMain />
       </SidebarHeader>
       <SidebarContent>
         <NavFavorites favorites={data.favorites} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary />
       </SidebarContent>
       <SidebarRail />
     </Sidebar>
