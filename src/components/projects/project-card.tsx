@@ -1,8 +1,8 @@
 import {
   Delete02Icon,
   Edit02Icon,
-  GitPullRequestIcon,
   GithubIcon,
+  GitPullRequestIcon,
   MoreHorizontalCircle01Icon,
   RecordIcon,
   StarIcon,
@@ -11,7 +11,14 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { useState } from "react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
-import { Card, CardAction, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -26,7 +33,7 @@ import { hasGithubMetrics, ProjectStatusBadge } from "./project-status";
 
 function Metric({ icon, value }: { icon: typeof StarIcon; value: number }) {
   return (
-    <span className="flex items-center gap-1 text-muted-foreground">
+    <span className="flex items-center gap-1 tabular-nums text-muted-foreground">
       <HugeiconsIcon icon={icon} strokeWidth={2} className="size-4" />
       {value}
     </span>
@@ -52,9 +59,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <CardAction>
             <DropdownMenu>
               <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon-sm" aria-label="Project actions" />
-                }
+                render={<Button variant="ghost" size="icon-sm" aria-label="Project actions" />}
               >
                 <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
               </DropdownMenuTrigger>
@@ -71,7 +76,9 @@ export function ProjectCard({ project }: { project: Project }) {
             </DropdownMenu>
           </CardAction>
           {project.description && (
-            <CardDescription className="line-clamp-2">{project.description}</CardDescription>
+            <CardDescription className="line-clamp-2 text-pretty">
+              {project.description}
+            </CardDescription>
           )}
         </CardHeader>
 
@@ -92,12 +99,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </CardContent>
       </Card>
 
-      <ProjectFormDialog
-        mode="edit"
-        project={project}
-        open={editOpen}
-        onOpenChange={setEditOpen}
-      />
+      <ProjectFormDialog mode="edit" project={project} open={editOpen} onOpenChange={setEditOpen} />
       <DeleteProjectDialog project={project} open={deleteOpen} onOpenChange={setDeleteOpen} />
       <ConnectGithubDialog project={project} open={connectOpen} onOpenChange={setConnectOpen} />
     </>

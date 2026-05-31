@@ -11,7 +11,7 @@ export const Projects: React.FC = () => {
   const { openCreate } = useProjectDialogs();
 
   return (
-    <div className="mx-auto w-full max-w-5xl">
+    <>
       <div className="mb-6 flex items-center justify-between">
         <h1 className="font-heading text-2xl font-semibold">Projects</h1>
         <Button onClick={openCreate}>
@@ -31,6 +31,6 @@ export const Projects: React.FC = () => {
           ))}
         </div>
       )}
-    </div>
+    </>
   );
 };

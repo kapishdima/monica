@@ -94,48 +94,14 @@ const data = [
   ],
 ];
 export function NavActions() {
-  const [isOpen, setIsOpen] = React.useState(false);
   const { openCreate } = useProjectDialogs();
-  React.useEffect(() => {
-    setIsOpen(true);
-  }, []);
+
   return (
     <div className="flex items-center gap-2 text-sm">
       <Button variant="outline" size="sm" onClick={openCreate}>
         <HugeiconsIcon icon={Add01Icon} strokeWidth={2} />
         Add project
       </Button>
-      <Button variant="ghost" size="icon" className="h-7 w-7">
-        <HugeiconsIcon icon={StarIcon} strokeWidth={2} />
-      </Button>
-      <Popover open={isOpen} onOpenChange={setIsOpen}>
-        <PopoverTrigger
-          render={<Button variant="ghost" size="icon" className="h-7 w-7 data-open:bg-accent" />}
-        >
-          <HugeiconsIcon icon={MoreHorizontalCircle01Icon} strokeWidth={2} />
-        </PopoverTrigger>
-        <PopoverContent className="w-56 overflow-hidden rounded-lg p-0" align="end">
-          <Sidebar collapsible="none" className="bg-transparent">
-            <SidebarContent>
-              {data.map((group, index) => (
-                <SidebarGroup key={`action-${index}`} className="border-b last:border-none">
-                  <SidebarGroupContent className="gap-0">
-                    <SidebarMenu>
-                      {group.map((item, index) => (
-                        <SidebarMenuItem key={index}>
-                          <SidebarMenuButton>
-                            {item.icon} <span>{item.label}</span>
-                          </SidebarMenuButton>
-                        </SidebarMenuItem>
-                      ))}
-                    </SidebarMenu>
-                  </SidebarGroupContent>
-                </SidebarGroup>
-              ))}
-            </SidebarContent>
-          </Sidebar>
-        </PopoverContent>
-      </Popover>
     </div>
   );
 }
