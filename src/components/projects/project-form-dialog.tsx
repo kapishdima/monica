@@ -64,7 +64,12 @@ export function ProjectFormDialog({ mode, project, open, onOpenChange }: Project
     const url = values.url.trim() || null;
     try {
       if (mode === "create") {
-        await projects.create({ name: values.name.trim(), description, url, status: values.status });
+        await projects.create({
+          name: values.name.trim(),
+          description,
+          url,
+          status: values.status,
+        });
         toast.success("Project created");
       } else if (project) {
         await projects.update(project.id, {

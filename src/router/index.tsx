@@ -23,10 +23,7 @@ export const router = createBrowserRouter([
         Component: ProjectDetail,
         loader: async ({ params }) => {
           const id = params.projectId as string;
-          const [project, projectTasks] = await Promise.all([
-            projects.get(id),
-            tasks.list(id),
-          ]);
+          const [project, projectTasks] = await Promise.all([projects.get(id), tasks.list(id)]);
           return { project, tasks: projectTasks };
         },
       },

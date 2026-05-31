@@ -51,7 +51,9 @@ export function NavFavorites() {
         )}
         {projects.map((project) => (
           <SidebarMenuItem key={project.id}>
-            <SidebarMenuButton render={<Link to={`/projects/${project.id}`} title={project.name} />}>
+            <SidebarMenuButton
+              render={<Link to={`/projects/${project.id}`} title={project.name} />}
+            >
               <HugeiconsIcon icon={FolderLibraryIcon} strokeWidth={2} />
               <span>{project.name}</span>
             </SidebarMenuButton>
@@ -68,7 +70,11 @@ export function NavFavorites() {
                 align={isMobile ? "end" : "start"}
               >
                 <DropdownMenuItem onClick={() => setEditProject(project)}>
-                  <HugeiconsIcon icon={Edit02Icon} strokeWidth={2} className="text-muted-foreground" />
+                  <HugeiconsIcon
+                    icon={Edit02Icon}
+                    strokeWidth={2}
+                    className="text-muted-foreground"
+                  />
                   <span>Edit project</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem variant="destructive" onClick={() => setDeleteProject(project)}>

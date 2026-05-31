@@ -19,9 +19,7 @@ export function GithubItemList({ items, emptyText }: { items: GithubItem[]; empt
           >
             <span className="text-sm text-muted-foreground tabular-nums">#{item.number}</span>
             <span className="flex-1 text-sm">{item.title}</span>
-            {item.author && (
-              <span className="text-xs text-muted-foreground">{item.author}</span>
-            )}
+            {item.author && <span className="text-xs text-muted-foreground">{item.author}</span>}
             <HugeiconsIcon
               icon={ArrowUpRight01Icon}
               strokeWidth={2}
