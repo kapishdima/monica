@@ -29,6 +29,7 @@ pub fn run() {
             commands::project::remove_project,
             commands::project::connect_github_project,
             commands::project::fetch_github_activity,
+            commands::project::fetch_github_repo,
             commands::task::create_task,
             commands::task::list_tasks,
             commands::task::update_task,

@@ -3,7 +3,7 @@ use tauri::{AppHandle, State};
 use crate::db::Db;
 use crate::error::Result;
 use crate::favicon;
-use crate::github::{self, GithubActivity};
+use crate::github::{self, GithubActivity, GithubRepo};
 use crate::models::project::{NewProject, Project, ProjectStatus, UpdateProject};
 use crate::repositories::project_repo;
 
@@ -68,6 +68,13 @@ pub async fn connect_github_project(db: State<'_, Db>, id: String, url: String) 
 #[tauri::command]
 pub async fn fetch_github_activity(url: String) -> Result<GithubActivity> {
     github::fetch_activity(&url).await
+}
+
+/// Repository metadata for pre-filling the create form when importing from a
+/// GitHub URL (not persisted).
+#[tauri::command]
+pub async fn fetch_github_repo(url: String) -> Result<GithubRepo> {
+    github::fetch_repo(&url).await
 }
 
 #[tauri::command]

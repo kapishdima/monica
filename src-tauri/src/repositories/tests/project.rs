@@ -42,7 +42,10 @@ fn create_persists_all_optional_fields() {
 
         assert_eq!(project.description.as_deref(), Some("desc"));
         assert_eq!(project.url.as_deref(), Some("https://monica.app"));
-        assert_eq!(project.github_url.as_deref(), Some("https://github.com/x/y"));
+        assert_eq!(
+            project.github_url.as_deref(),
+            Some("https://github.com/x/y")
+        );
         assert_eq!(project.github_stars, Some(42));
         assert_eq!(project.github_prs, Some(3));
         assert_eq!(project.github_issues, Some(7));
@@ -126,7 +129,10 @@ fn update_applies_only_present_fields() {
         assert_eq!(updated.github_issues, Some(9));
         // Untouched fields preserved.
         assert_eq!(updated.name, "Monica");
-        assert_eq!(updated.github_url.as_deref(), Some("https://github.com/x/y"));
+        assert_eq!(
+            updated.github_url.as_deref(),
+            Some("https://github.com/x/y")
+        );
         assert_eq!(updated.github_stars, Some(10));
     });
 }

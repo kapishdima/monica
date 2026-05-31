@@ -22,6 +22,20 @@ pub struct GithubStats {
     pub issues: i64,
 }
 
+/// Repository metadata used to pre-fill the project form when importing from a
+/// GitHub URL (not persisted directly; the frontend maps it into `NewProject`).
+#[derive(Debug, Clone, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct GithubRepo {
+    pub name: String,
+    pub description: Option<String>,
+    /// The repository's homepage, if it declares one.
+    pub url: Option<String>,
+    pub stars: i64,
+    pub prs: i64,
+    pub issues: i64,
+}
+
 /// A single pull request or issue, for the project detail tabs.
 #[derive(Debug, Clone, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -45,6 +59,11 @@ pub struct GithubActivity {
 
 #[derive(Deserialize)]
 struct RepoResponse {
+    name: String,
+    #[serde(default)]
+    description: Option<String>,
+    #[serde(default)]
+    homepage: Option<String>,
     stargazers_count: i64,
 }
 
@@ -136,6 +155,40 @@ pub async fn fetch_stats(url: &str) -> Result<GithubStats> {
     })
 }
 
+/// Fetch repository metadata (name, description, homepage) along with the same
+/// open-PR/issue counts as `fetch_stats`, for pre-filling the project form on
+/// import.
+pub async fn fetch_repo(url: &str) -> Result<GithubRepo> {
+    let (owner, repo) = parse_repo(url)?;
+    let client = client()?;
+
+    let repo_resp: RepoResponse = client
+        .get(format!("{API_BASE}/repos/{owner}/{repo}"))
+        .send()
+        .await?
+        .error_for_status()?
+        .json()
+        .await?;
+
+    let prs = search_count(&client, &owner, &repo, "pr").await?;
+    let issues = search_count(&client, &owner, &repo, "issue").await?;
+
+    Ok(GithubRepo {
+        name: repo_resp.name,
+        description: blank_to_none(repo_resp.description),
+        url: blank_to_none(repo_resp.homepage),
+        stars: repo_resp.stargazers_count,
+        prs,
+        issues,
+    })
+}
+
+/// GitHub returns an empty string (not null) for an absent homepage or
+/// description; collapse blank/whitespace values to `None`.
+fn blank_to_none(s: Option<String>) -> Option<String> {
+    s.map(|s| s.trim().to_string()).filter(|s| !s.is_empty())
+}
+
 /// Count open items of a given `kind` (`"pr"` or `"issue"`) via the search API.
 async fn search_count(
     client: &reqwest::Client,
@@ -212,6 +265,14 @@ mod tests {
     fn parse_strips_git_suffix_and_bare_host() {
         let (o, r) = parse_repo("github.com/owner/repo.git").unwrap();
         assert_eq!((o.as_str(), r.as_str()), ("owner", "repo"));
+    }
+
+    #[test]
+    fn blank_to_none_collapses_empty_and_whitespace() {
+        assert_eq!(blank_to_none(Some("".into())), None);
+        assert_eq!(blank_to_none(Some("   ".into())), None);
+        assert_eq!(blank_to_none(None), None);
+        assert_eq!(blank_to_none(Some("  hi ".into())), Some("hi".into()));
     }
 
     #[test]
