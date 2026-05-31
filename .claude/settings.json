@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "f=$(jq -r '.tool_input.file_path // .tool_response.filePath // empty'); case \"$f\" in */src-tauri/*.rs) out=$(cd src-tauri && cargo test --lib 2>&1) || { echo 'cargo test --lib failed:' >&2; echo \"$out\" >&2; exit 2; };; esac",
+            "statusMessage": "Running cargo test --lib",
+            "timeout": 180
+          }
+        ]
+      }
+    ]
+  }
+}
