@@ -1,5 +1,4 @@
 import { HugeiconsIcon } from "@hugeicons/react";
-import React from "react";
 import { Link } from "react-router";
 import {
   SidebarGroup,

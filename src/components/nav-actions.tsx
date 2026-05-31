@@ -112,7 +112,7 @@ export function NavActions() {
           <Sidebar collapsible="none" className="bg-transparent">
             <SidebarContent>
               {data.map((group, index) => (
-                <SidebarGroup key={index} className="border-b last:border-none">
+                <SidebarGroup key={`action-${index}`} className="border-b last:border-none">
                   <SidebarGroupContent className="gap-0">
                     <SidebarMenu>
                       {group.map((item, index) => (
