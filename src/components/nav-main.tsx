@@ -3,6 +3,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { Link } from "react-router"
 
 export function NavMain({
   items,
@@ -20,7 +21,7 @@ export function NavMain({
         <SidebarMenuItem key={item.title}>
           <SidebarMenuButton
             isActive={item.isActive}
-            render={<a href={item.url} />}
+            render={<Link to={item.url} />}
           >
             {item.icon}
             <span>{item.title}</span>

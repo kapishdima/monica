@@ -48,7 +48,7 @@ const data = {
     },
     {
       title: "Home",
-      url: "#",
+      url: "/",
       icon: (
         <HugeiconsIcon icon={HomeIcon} strokeWidth={2} />
       ),
