@@ -1,13 +1,18 @@
-import { AppSidebar } from "@/components/app-sidebar"
-import { Separator } from "@/components/ui/separator"
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage } from "@/components/ui/breadcrumb"
-import { NavActions } from "@/components/nav-actions"
-import { Outlet } from "react-router"
+import { Outlet } from "react-router";
+import { AppSidebar } from "@/components/app-sidebar";
+import { NavActions } from "@/components/nav-actions";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbList,
+  BreadcrumbPage,
+} from "@/components/ui/breadcrumb";
+import { Separator } from "@/components/ui/separator";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 
 export const AppLayout: React.FC = () => {
-    return (
-        <SidebarProvider>
+  return (
+    <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
         <header className="flex h-14 shrink-0 items-center gap-2">
@@ -36,5 +41,5 @@ export const AppLayout: React.FC = () => {
         </div>
       </SidebarInset>
     </SidebarProvider>
-    )
-}
+  );
+};
