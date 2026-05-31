@@ -59,7 +59,9 @@ pub fn new_task(project_id: &str, title: &str) -> NewTask {
 
 /// Insert a throwaway project and return it (for task tests that need a parent).
 pub async fn seed_project(pool: &SqlitePool) -> Project {
-    project_repo::create(pool, new_project("Seed")).await.unwrap()
+    project_repo::create(pool, new_project("Seed"))
+        .await
+        .unwrap()
 }
 
 /// Insert a throwaway task under `project_id` and return it.

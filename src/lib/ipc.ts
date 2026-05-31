@@ -102,6 +102,15 @@ export interface GithubActivity {
   issues: GithubItem[];
 }
 
+export interface GithubRepo {
+  name: string;
+  description: string | null;
+  url: string | null;
+  stars: number;
+  prs: number;
+  issues: number;
+}
+
 // --- API: errors reject as { kind, message } from the Rust AppError ---
 
 export const projects = {
@@ -117,6 +126,9 @@ export const github = {
   connect: (id: string, url: string) => invoke<Project>("connect_github_project", { id, url }),
   // Live open PRs and issues for a repository (not persisted).
   activity: (url: string) => invoke<GithubActivity>("fetch_github_activity", { url }),
+  // Repository metadata (name, description, homepage, counts) for pre-filling
+  // the create form when importing from a GitHub URL (not persisted).
+  fetchRepo: (url: string) => invoke<GithubRepo>("fetch_github_repo", { url }),
 };
 
 export const tasks = {

@@ -95,9 +95,14 @@ fn list_by_project_orders_by_position() {
             .unwrap();
         }
 
-        let listed = task_repo::list_by_project(&pool, &project.id).await.unwrap();
+        let listed = task_repo::list_by_project(&pool, &project.id)
+            .await
+            .unwrap();
         let ordered: Vec<&str> = listed.iter().map(|t| t.id.as_str()).collect();
-        assert_eq!(ordered, vec![t1.id.as_str(), t2.id.as_str(), t0.id.as_str()]);
+        assert_eq!(
+            ordered,
+            vec![t1.id.as_str(), t2.id.as_str(), t0.id.as_str()]
+        );
     });
 }
 

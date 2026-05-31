@@ -104,13 +104,19 @@ mod tests {
             parse_domain("https://user:pass@example.com:8443/x").unwrap(),
             "example.com"
         );
-        assert_eq!(parse_domain("  https://sub.example.com  ").unwrap(), "sub.example.com");
+        assert_eq!(
+            parse_domain("  https://sub.example.com  ").unwrap(),
+            "sub.example.com"
+        );
     }
 
     #[test]
     fn parse_rejects_invalid() {
         assert!(matches!(parse_domain(""), Err(AppError::Validation(_))));
-        assert!(matches!(parse_domain("localhost"), Err(AppError::Validation(_))));
+        assert!(matches!(
+            parse_domain("localhost"),
+            Err(AppError::Validation(_))
+        ));
         assert!(matches!(
             parse_domain("https://localhost/x"),
             Err(AppError::Validation(_))
