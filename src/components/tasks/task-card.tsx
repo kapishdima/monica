@@ -121,8 +121,10 @@ export function TaskCard({ task, projectName, selected = false, onSelectedChange
           aria-label={selected ? "Deselect task" : "Select task"}
         />
 
-        <TaskStatus taskId={task.id} status={task.status} />
-        <TaskPriority priority={task.priority} className="shrink-0" />
+        <div className="flex items-center">
+          <TaskStatus taskId={task.id} status={task.status} />
+          <TaskPriority taskId={task.id} priority={task.priority} />
+        </div>
 
         <Link to={taskHref} className="min-w-0 flex-1 truncate text-sm hover:underline">
           {task.title}

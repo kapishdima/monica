@@ -9,6 +9,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useTaskUpdate } from "@/hooks/use-task-update";
 import type { TaskPriority as ITaskPriority } from "@/lib/ipc";
 import { cn } from "@/lib/utils";
 import { TASK_PRIORITY_LABELS, TASK_PRIORITY_OPTIONS } from "./task-meta";
@@ -19,12 +20,20 @@ const PRIORITY_LEVEL: Record<ITaskPriority, number> = {
   urgent: 3,
 };
 
-const PRIORITY_BAR_HEIGHTS = ["h-1.5", "h-2.5", "h-3.5"] as const;
+const PRIORITY_BAR_HEIGHTS = ["h-1", "h-1.5", "h-2.5"] as const;
 
-export const TaskPriority: React.FC<{ priority: ITaskPriority; className?: string }> = ({
-  priority,
-}) => {
+export const TaskPriority: React.FC<{
+  taskId: string;
+  priority: ITaskPriority;
+  className?: string;
+}> = ({ taskId, priority }) => {
+  const { updatePriority } = useTaskUpdate();
   const [p, setP] = useState(priority);
+
+  const onChange = async (next: ITaskPriority) => {
+    setP(next);
+    await updatePriority(taskId, next);
+  };
 
   return (
     <DropdownMenu>
@@ -37,7 +46,7 @@ export const TaskPriority: React.FC<{ priority: ITaskPriority; className?: strin
       />
       <DropdownMenuContent className="min-w-56">
         <DropdownMenuGroup>
-          <DropdownMenuRadioGroup value={p} onValueChange={setP}>
+          <DropdownMenuRadioGroup value={p} onValueChange={onChange}>
             {TASK_PRIORITY_OPTIONS.map((option) => (
               <DropdownMenuRadioItem value={option} key={option}>
                 <TaskPriorityBars priority={option} />

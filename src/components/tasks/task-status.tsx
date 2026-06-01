@@ -7,8 +7,6 @@ import {
 import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
 import type React from "react";
 import { useState } from "react";
-import { useRevalidator } from "react-router";
-import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -18,7 +16,9 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { type TaskStatus as ITaskStatus, tasks } from "@/lib/ipc";
+import { useTaskUpdate } from "@/hooks/use-task-update";
+import type { TaskStatus as ITaskStatus } from "@/lib/ipc";
+import { cn } from "@/lib/utils";
 
 const icons: Record<ITaskStatus, IconSvgElement> = {
   backlog: Progress01Icon,
@@ -45,25 +45,29 @@ const labels: Record<ITaskStatus, string> = {
 };
 const statuses: ITaskStatus[] = ["backlog", "done", "in_progress", "in_review", "todo"];
 
+/** Read-only, colored status glyph — reused in group headers and lists. */
+export const TaskStatusIcon: React.FC<{ status: ITaskStatus; className?: string }> = ({
+  status,
+  className,
+}) => (
+  <HugeiconsIcon
+    icon={icons[status]}
+    strokeWidth={1.5}
+    className={cn("size-4 shrink-0", colors[status], className)}
+  />
+);
+
 export const TaskStatus: React.FC<{
   taskId: string;
   status: ITaskStatus;
   className?: string;
 }> = ({ taskId, status }) => {
-  const revalidator = useRevalidator();
+  const { updateStatus } = useTaskUpdate();
   const [s, setS] = useState(status);
 
-  // Persist the new status, optimistically updating the icon and reverting on failure.
   const onChange = async (next: ITaskStatus) => {
-    const prev = s;
     setS(next);
-    try {
-      await tasks.update(taskId, { status: next });
-      revalidator.revalidate();
-    } catch (err) {
-      setS(prev);
-      toast.error("Failed to update status", { description: String(err) });
-    }
+    await updateStatus(taskId, next);
   };
 
   return (
