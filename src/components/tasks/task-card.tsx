@@ -1,16 +1,13 @@
 import {
-  Copy01Icon,
   Delete02Icon,
   Edit02Icon,
   Folder01Icon,
-  GitBranchIcon,
   MoreHorizontalCircle01Icon,
-  Tick02Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useState } from "react";
 import { Link } from "react-router";
-import { toast } from "sonner";
+import { CopyBranchButton } from "@/components/tasks/copy-branch-button";
 import { TaskPriority } from "@/components/tasks/task-priority";
 import { TaskStatus } from "@/components/tasks/task-status";
 import { Badge } from "@/components/ui/badge";
@@ -23,44 +20,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import type { Task } from "@/lib/ipc";
-import { cn } from "@/lib/utils";
 import { DeleteTaskDialog } from "./delete-task-dialog";
 import { TaskFormDialog } from "./task-form-dialog";
-
-/** Icon-only button that copies the auto-generated git branch name. */
-function CopyBranchButton({ branch }: { branch: string }) {
-  const [copied, setCopied] = useState(false);
-
-  const onCopy = async (event: React.MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    try {
-      await navigator.clipboard.writeText(branch);
-      setCopied(true);
-      toast.success("Branch name copied");
-      setTimeout(() => setCopied(false), 1500);
-    } catch {
-      toast.error("Couldn't copy branch name");
-    }
-  };
-
-  return (
-    <Button
-      type="button"
-      variant="ghost"
-      size="icon-sm"
-      onClick={onCopy}
-      title={`Copy branch name: ${branch}`}
-      aria-label={`Copy branch name ${branch}`}
-    >
-      <HugeiconsIcon
-        icon={copied ? Tick02Icon : GitBranchIcon}
-        strokeWidth={2}
-        className={cn("size-4 shrink-0", copied && "text-emerald-500")}
-      />
-    </Button>
-  );
-}
 
 /** The project a task belongs to, shown muted on the right. */
 function ProjectLead({ name }: { name: string }) {
