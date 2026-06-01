@@ -1,5 +1,6 @@
 import {
   CalendarIcon,
+  CheckmarkSquare03Icon,
   FolderLibraryIcon,
   HomeIcon,
   InboxIcon,
@@ -10,6 +11,7 @@ import {
 import type { IconSvgElement } from "@hugeicons/react";
 import type { ComponentType } from "react";
 import type { LoaderFunction } from "react-router";
+import { tasks } from "@/lib/ipc";
 import { Calendar } from "@/pages/calendar";
 import { Help } from "@/pages/help";
 import { Home } from "@/pages/home";
@@ -17,6 +19,7 @@ import { Inbox } from "@/pages/inbox";
 import { Projects } from "@/pages/projects";
 import { Search } from "@/pages/search";
 import { Settings } from "@/pages/settings";
+import { Tasks } from "@/pages/tasks";
 
 export type MenuPosition = "header" | "footer";
 
@@ -39,6 +42,14 @@ export const menu: MenuItem[] = [
     url: "/projects",
     component: Projects,
     position: "header",
+  },
+  {
+    label: "Tasks",
+    icon: CheckmarkSquare03Icon,
+    url: "/tasks",
+    component: Tasks,
+    position: "header",
+    loader: () => tasks.listAll(),
   },
   { label: "Inbox", icon: InboxIcon, url: "/inbox", component: Inbox, position: "header" },
   {

@@ -16,6 +16,16 @@ pub async fn list_tasks(db: State<'_, Db>, project_id: String) -> Result<Vec<Tas
 }
 
 #[tauri::command]
+pub async fn list_all_tasks(db: State<'_, Db>) -> Result<Vec<Task>> {
+    task_repo::list_all(db.pool()).await
+}
+
+#[tauri::command]
+pub async fn get_task(db: State<'_, Db>, id: String) -> Result<Task> {
+    task_repo::get(db.pool(), &id).await
+}
+
+#[tauri::command]
 pub async fn update_task(db: State<'_, Db>, id: String, patch: UpdateTask) -> Result<Task> {
     task_repo::update(db.pool(), &id, patch).await
 }

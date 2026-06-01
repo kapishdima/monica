@@ -16,7 +16,7 @@ export const AppHeader: React.FC = () => {
   const { state } = useSidebar();
 
   return (
-    <header className="flex items-center gap-2 py-4 pl-2">
+    <header className="flex items-center  py-4">
       <div className="flex flex-1 items-center gap-2 ">
         {state === "collapsed" && (
           <>
@@ -41,7 +41,7 @@ export const AppHeader: React.FC = () => {
           </BreadcrumbList>
         </Breadcrumb> */}
       </div>
-      <div className="ml-auto px-3">
+      <div className="ml-auto pl-3">
         <NavActions />
       </div>
     </header>
