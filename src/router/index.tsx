@@ -3,6 +3,7 @@ import { AppLayout } from "@/components/layout/app-layout";
 import { menu } from "@/config/menu";
 import { projects, tasks } from "@/lib/ipc";
 import { ProjectDetail } from "@/pages/project-detail";
+import { TaskDetail } from "@/pages/task-detail";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
           const [project, projectTasks] = await Promise.all([projects.get(id), tasks.list(id)]);
           return { project, tasks: projectTasks };
         },
+      },
+      {
+        path: "/tasks/:taskId",
+        Component: TaskDetail,
+        loader: ({ params }) => tasks.get(params.taskId as string),
       },
     ],
   },

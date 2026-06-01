@@ -63,6 +63,20 @@ fn create_generates_unique_short_ids() {
 }
 
 #[test]
+fn get_returns_task() {
+    run(async {
+        let pool = memory_pool().await;
+        let project = seed_project(&pool).await;
+        let task = seed_task(&pool, &project.id).await;
+
+        let fetched = task_repo::get(&pool, &task.id).await.unwrap();
+        assert_eq!(fetched.id, task.id);
+        assert_eq!(fetched.task_id, task.task_id);
+        assert_eq!(fetched.title, task.title);
+    });
+}
+
+#[test]
 fn get_missing_is_not_found() {
     run(async {
         let pool = memory_pool().await;
@@ -120,6 +134,41 @@ fn list_by_project_scopes_to_one_project() {
             .unwrap();
         assert_eq!(listed.len(), 1);
         assert_eq!(listed[0].id, task_a.id);
+    });
+}
+
+#[test]
+fn list_all_returns_tasks_across_projects() {
+    run(async {
+        let pool = memory_pool().await;
+        let project_a = seed_project(&pool).await;
+        let project_b = seed_project(&pool).await;
+        let task_a = seed_task(&pool, &project_a.id).await;
+        let task_b = seed_task(&pool, &project_b.id).await;
+
+        let listed = task_repo::list_all(&pool).await.unwrap();
+        assert_eq!(listed.len(), 2);
+        let ids: Vec<&str> = listed.iter().map(|t| t.id.as_str()).collect();
+        assert!(ids.contains(&task_a.id.as_str()));
+        assert!(ids.contains(&task_b.id.as_str()));
+    });
+}
+
+#[test]
+fn list_all_orders_by_created_at_desc() {
+    run(async {
+        let pool = memory_pool().await;
+        let project = seed_project(&pool).await;
+        seed_task(&pool, &project.id).await;
+        seed_task(&pool, &project.id).await;
+        seed_task(&pool, &project.id).await;
+
+        let listed = task_repo::list_all(&pool).await.unwrap();
+        // Newest first: created_at must be non-increasing down the list.
+        let timestamps: Vec<&str> = listed.iter().map(|t| t.created_at.as_str()).collect();
+        let mut sorted = timestamps.clone();
+        sorted.sort_unstable_by(|a, b| b.cmp(a));
+        assert_eq!(timestamps, sorted);
     });
 }
 

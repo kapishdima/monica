@@ -53,6 +53,15 @@ pub async fn list_by_project(pool: &SqlitePool, project_id: &str) -> Result<Vec<
     Ok(tasks)
 }
 
+/// List every task across all projects, newest first. This backs the global
+/// tasks page; per-project listing keeps its own `position, created_at` order.
+pub async fn list_all(pool: &SqlitePool) -> Result<Vec<Task>> {
+    let tasks = sqlx::query_as::<_, Task>("SELECT * FROM tasks ORDER BY created_at DESC")
+        .fetch_all(pool)
+        .await?;
+    Ok(tasks)
+}
+
 pub async fn get(pool: &SqlitePool, id: &str) -> Result<Task> {
     let task = sqlx::query_as::<_, Task>("SELECT * FROM tasks WHERE id = ?")
         .bind(id)
