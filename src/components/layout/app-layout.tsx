@@ -6,8 +6,11 @@ import { ProjectDialogsProvider } from "@/components/projects/project-dialogs-pr
 import { TaskDialogsProvider } from "@/components/tasks/task-dialogs-provider";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Toaster } from "@/components/ui/sonner";
+import { useTrayNavigation } from "@/hooks/use-tray-navigation";
 
 export const AppLayout: React.FC = () => {
+  useTrayNavigation();
+
   return (
     <ProjectDialogsProvider>
       <TaskDialogsProvider>

@@ -62,6 +62,29 @@ pub async fn list_all(pool: &SqlitePool) -> Result<Vec<Task>> {
     Ok(tasks)
 }
 
+/// Tasks planned for a given local date (`YYYY-MM-DD`). Backs the tray and the
+/// Today/Tomorrow views; uses `idx_tasks_planned`.
+pub async fn list_by_planned_for(pool: &SqlitePool, date: &str) -> Result<Vec<Task>> {
+    let tasks = sqlx::query_as::<_, Task>(
+        "SELECT * FROM tasks WHERE planned_for = ? ORDER BY position, created_at",
+    )
+    .bind(date)
+    .fetch_all(pool)
+    .await?;
+    Ok(tasks)
+}
+
+/// Open tasks not yet assigned to any day — the candidate pool when planning.
+pub async fn list_plannable(pool: &SqlitePool) -> Result<Vec<Task>> {
+    let tasks = sqlx::query_as::<_, Task>(
+        "SELECT * FROM tasks WHERE status != 'done' AND planned_for IS NULL
+         ORDER BY position, created_at",
+    )
+    .fetch_all(pool)
+    .await?;
+    Ok(tasks)
+}
+
 pub async fn get(pool: &SqlitePool, id: &str) -> Result<Task> {
     let task = sqlx::query_as::<_, Task>("SELECT * FROM tasks WHERE id = ?")
         .bind(id)

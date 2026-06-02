@@ -34,4 +34,10 @@ impl From<std::io::Error> for AppError {
     }
 }
 
+impl From<tauri::Error> for AppError {
+    fn from(e: tauri::Error) -> Self {
+        AppError::Io(e.to_string())
+    }
+}
+
 pub type Result<T> = std::result::Result<T, AppError>;

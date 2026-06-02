@@ -6,6 +6,7 @@ export type TaskStatus = "backlog" | "todo" | "in_progress" | "in_review" | "don
 export type TaskPriority = "low" | "high" | "urgent";
 export type TaskLabel = "feat" | "fix" | "refactor" | "chore";
 export type ProjectStatus = "active" | "cancelled" | "planned";
+export type DayRating = "great" | "good" | "okay" | "bad" | "terrible";
 
 // --- Models ---
 
@@ -88,6 +89,34 @@ export interface UpdateTask {
   plannedFor?: string | null;
 }
 
+// Application settings (a singleton row). `notificationTime` is local 'HH:MM'.
+export interface Settings {
+  id: number;
+  notificationTime: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface UpdateSettings {
+  notificationTime?: string;
+}
+
+// A single day's plan: the end-of-day reflection + rating. The day's tasks are
+// linked separately via each task's `plannedFor` date.
+export interface DailyPlan {
+  date: string;
+  reflection: string | null;
+  rating: DayRating | null;
+  createdAt: string;
+  updatedAt: string;
+}
+
+// Universal patch: omit a field to leave it unchanged; pass `null` to clear.
+export interface UpdateDailyPlan {
+  reflection?: string | null;
+  rating?: DayRating | null;
+}
+
 // A pull request or issue fetched live from GitHub for the project detail tabs.
 export interface GithubItem {
   number: number;
@@ -136,7 +165,28 @@ export const tasks = {
   create: (input: NewTask) => invoke<Task>("create_task", { input }),
   list: (projectId: string) => invoke<Task[]>("list_tasks", { projectId }),
   listAll: () => invoke<Task[]>("list_all_tasks"),
+  // Tasks planned for a given local date ('YYYY-MM-DD'); backs the Today/Tomorrow views.
+  plannedFor: (date: string) => invoke<Task[]>("list_planned_tasks", { date }),
+  // Open, unassigned tasks — the candidate pool when planning a day.
+  plannable: () => invoke<Task[]>("list_plannable_tasks"),
   get: (id: string) => invoke<Task>("get_task", { id }),
   update: (id: string, patch: UpdateTask) => invoke<Task>("update_task", { id, patch }),
   remove: (id: string) => invoke<void>("remove_task", { id }),
+};
+
+export const settings = {
+  get: () => invoke<Settings>("get_settings"),
+  update: (patch: UpdateSettings) => invoke<Settings>("update_settings", { patch }),
+};
+
+export const plans = {
+  // Returns the day's plan, creating an empty one if it doesn't exist yet.
+  get: (date: string) => invoke<DailyPlan>("get_daily_plan", { date }),
+  update: (date: string, patch: UpdateDailyPlan) =>
+    invoke<DailyPlan>("update_daily_plan", { date, patch }),
+};
+
+export const tray = {
+  // Rebuild the tray menu after planning or status changes.
+  refresh: () => invoke<void>("refresh_tray"),
 };

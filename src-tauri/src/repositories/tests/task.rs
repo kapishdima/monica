@@ -311,3 +311,77 @@ fn removing_project_cascades_tasks() {
             .is_empty());
     });
 }
+
+#[test]
+fn list_by_planned_for_filters_by_date_and_orders_by_position() {
+    run(async {
+        let pool = memory_pool().await;
+        let project = seed_project(&pool).await;
+
+        // Two tasks planned for the target day, one for another day.
+        let mut a = new_task(&project.id, "A");
+        a.planned_for = Some("2026-06-02".into());
+        let a = task_repo::create(&pool, a).await.unwrap();
+
+        let mut b = new_task(&project.id, "B");
+        b.planned_for = Some("2026-06-02".into());
+        let b = task_repo::create(&pool, b).await.unwrap();
+
+        let mut other = new_task(&project.id, "Other");
+        other.planned_for = Some("2026-06-03".into());
+        task_repo::create(&pool, other).await.unwrap();
+
+        // Order b before a via position.
+        for (task, pos) in [(&a, 1), (&b, 0)] {
+            task_repo::update(
+                &pool,
+                &task.id,
+                UpdateTask {
+                    position: Some(pos),
+                    ..Default::default()
+                },
+            )
+            .await
+            .unwrap();
+        }
+
+        let listed = task_repo::list_by_planned_for(&pool, "2026-06-02")
+            .await
+            .unwrap();
+        let ids: Vec<&str> = listed.iter().map(|t| t.id.as_str()).collect();
+        assert_eq!(ids, vec![b.id.as_str(), a.id.as_str()]);
+    });
+}
+
+#[test]
+fn list_plannable_returns_only_open_unplanned_tasks() {
+    run(async {
+        let pool = memory_pool().await;
+        let project = seed_project(&pool).await;
+
+        // Open + unplanned -> included.
+        let open = seed_task(&pool, &project.id).await;
+
+        // Already planned -> excluded.
+        let mut planned = new_task(&project.id, "Planned");
+        planned.planned_for = Some("2026-06-02".into());
+        task_repo::create(&pool, planned).await.unwrap();
+
+        // Done -> excluded.
+        let done = seed_task(&pool, &project.id).await;
+        task_repo::update(
+            &pool,
+            &done.id,
+            UpdateTask {
+                status: Some(TaskStatus::Done),
+                ..Default::default()
+            },
+        )
+        .await
+        .unwrap();
+
+        let listed = task_repo::list_plannable(&pool).await.unwrap();
+        let ids: Vec<&str> = listed.iter().map(|t| t.id.as_str()).collect();
+        assert_eq!(ids, vec![open.id.as_str()]);
+    });
+}

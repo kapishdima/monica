@@ -11,7 +11,8 @@ import {
 import type { IconSvgElement } from "@hugeicons/react";
 import type { ComponentType } from "react";
 import type { LoaderFunction } from "react-router";
-import { tasks } from "@/lib/ipc";
+import { plans, tasks } from "@/lib/ipc";
+import { todayKey, tomorrowKey } from "@/lib/date";
 import { Calendar } from "@/pages/calendar";
 import { Help } from "@/pages/help";
 import { Home } from "@/pages/home";
@@ -35,7 +36,26 @@ export interface MenuItem {
 
 export const menu: MenuItem[] = [
   { label: "Search", icon: SearchIcon, url: "/search", component: Search, position: "header" },
-  { label: "Home", icon: HomeIcon, url: "/", component: Home, position: "header" },
+  {
+    label: "Home",
+    icon: HomeIcon,
+    url: "/",
+    component: Home,
+    position: "header",
+    // The daily ritual surface: today's plan + tasks, tomorrow's plan, and the
+    // backlog to pull from. One load powers both the Today and Plan-tomorrow views.
+    loader: async () => {
+      const today = todayKey();
+      const tomorrow = tomorrowKey();
+      const [plan, todayTasks, tomorrowTasks, plannable] = await Promise.all([
+        plans.get(today),
+        tasks.plannedFor(today),
+        tasks.plannedFor(tomorrow),
+        tasks.plannable(),
+      ]);
+      return { today, tomorrow, plan, todayTasks, tomorrowTasks, plannable };
+    },
+  },
   {
     label: "Projects",
     icon: FolderLibraryIcon,

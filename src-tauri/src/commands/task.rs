@@ -21,6 +21,16 @@ pub async fn list_all_tasks(db: State<'_, Db>) -> Result<Vec<Task>> {
 }
 
 #[tauri::command]
+pub async fn list_planned_tasks(db: State<'_, Db>, date: String) -> Result<Vec<Task>> {
+    task_repo::list_by_planned_for(db.pool(), &date).await
+}
+
+#[tauri::command]
+pub async fn list_plannable_tasks(db: State<'_, Db>) -> Result<Vec<Task>> {
+    task_repo::list_plannable(db.pool()).await
+}
+
+#[tauri::command]
 pub async fn get_task(db: State<'_, Db>, id: String) -> Result<Task> {
     task_repo::get(db.pool(), &id).await
 }
