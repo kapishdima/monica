@@ -18,6 +18,8 @@ interface TaskListProps {
   projectNames?: Map<string, string>;
   /** Rendered in place of the list when there are no tasks. */
   emptyState?: ReactNode;
+  /** Order of the status sections. Defaults to the canonical workflow order. */
+  statusOrder?: TaskStatus[];
 }
 
 /**
@@ -25,20 +27,27 @@ interface TaskListProps {
  * view: buckets tasks into collapsible status sections and owns the bulk-select
  * state and its clear-selection bar.
  */
-export function TaskList({ tasks, projectNames, emptyState }: TaskListProps) {
+export function TaskList({
+  tasks,
+  projectNames,
+  emptyState,
+  statusOrder = TASK_STATUS_OPTIONS,
+}: TaskListProps) {
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
 
-  // Bucket tasks by status, keeping the canonical status order for the sections.
+  // Bucket tasks by status, keeping the given status order for the sections.
   const groups = useMemo(() => {
-    const byStatus = new Map<TaskStatus, Task[]>(TASK_STATUS_OPTIONS.map((status) => [status, []]));
+    const byStatus = new Map<TaskStatus, Task[]>(statusOrder.map((status) => [status, []]));
     for (const task of tasks) {
       byStatus.get(task.status)?.push(task);
     }
-    return TASK_STATUS_OPTIONS.map((status) => ({
-      status,
-      items: byStatus.get(status) ?? [],
-    })).filter((group) => group.items.length > 0);
-  }, [tasks]);
+    return statusOrder
+      .map((status) => ({
+        status,
+        items: byStatus.get(status) ?? [],
+      }))
+      .filter((group) => group.items.length > 0);
+  }, [tasks, statusOrder]);
 
   const toggleSelected = (id: string, selected: boolean) => {
     setSelectedIds((prev) => {

@@ -2,7 +2,10 @@ import { useMemo } from "react";
 import { useLoaderData, useRouteLoaderData } from "react-router";
 import { TaskList } from "@/components/tasks/task-list";
 import { TasksEmpty } from "@/components/tasks/tasks-empty";
-import type { Project, Task } from "@/lib/ipc";
+import type { Project, Task, TaskStatus } from "@/lib/ipc";
+
+/** Section order for the Tasks page — active work first. */
+const STATUS_ORDER: TaskStatus[] = ["in_progress", "todo", "backlog", "in_review", "done"];
 
 export const Tasks: React.FC = () => {
   const tasks = useLoaderData<Task[] | undefined>() ?? [];
@@ -21,5 +24,5 @@ export const Tasks: React.FC = () => {
     );
   }
 
-  return <TaskList tasks={tasks} projectNames={projectNames} />;
+  return <TaskList tasks={tasks} projectNames={projectNames} statusOrder={STATUS_ORDER} />;
 };
