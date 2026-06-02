@@ -4,7 +4,7 @@ import { ProjectsEmpty } from "@/components/projects/project-empty";
 import type { Project } from "@/lib/ipc";
 
 export const Projects: React.FC = () => {
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
 
   if (!projects.length) {
     return (

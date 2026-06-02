@@ -2,13 +2,7 @@ import { useMemo } from "react";
 import { useLoaderData, useRouteLoaderData } from "react-router";
 import { PlanTomorrowSection } from "@/components/planner/plan-tomorrow-section";
 import { TodaySection } from "@/components/planner/today-section";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { formatDayKey } from "@/lib/date";
 import type { DailyPlan, Project, Task } from "@/lib/ipc";
 
@@ -22,8 +16,8 @@ export interface HomeLoaderData {
 }
 
 export const Home: React.FC = () => {
-  const data = useLoaderData() as HomeLoaderData;
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const data = useLoaderData<HomeLoaderData>();
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
 
   const projectNames = useMemo(
     () => new Map(projects.map((project) => [project.id, project.name])),
@@ -64,7 +58,6 @@ export const Home: React.FC = () => {
             planned={data.tomorrowTasks}
             carryover={carryover}
             plannable={data.plannable}
-            projects={projects}
             projectNames={projectNames}
           />
         </CardContent>

@@ -37,7 +37,7 @@ export function useTaskDetail(): TaskDetailContextValue {
  * reads what it needs from context instead of receiving props.
  */
 export function TaskDetailProvider({ task, children }: { task: Task; children: ReactNode }) {
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
   const navigate = useNavigate();
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);

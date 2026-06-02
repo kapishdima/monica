@@ -1,21 +1,12 @@
 import { Add01Icon, ArrowRight01Icon, Cancel01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useState } from "react";
-import { useRevalidator } from "react-router";
-import { toast } from "sonner";
+
 import { SectionLabel } from "@/components/detail/property";
 import { TaskCard } from "@/components/tasks/task-card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import { useTaskPlanning } from "@/hooks/use-task-planning";
-import { type Project, type Task, tasks, tray } from "@/lib/ipc";
+import type { Project, Task } from "@/lib/ipc";
 
 interface PlanTomorrowSectionProps {
   tomorrow: string;
@@ -25,7 +16,6 @@ interface PlanTomorrowSectionProps {
   carryover: Task[];
   /** Open, unassigned tasks across all projects. */
   plannable: Task[];
-  projects: Project[];
   projectNames: Map<string, string>;
 }
 
@@ -36,7 +26,6 @@ export function PlanTomorrowSection({
   planned,
   carryover,
   plannable,
-  projects,
   projectNames,
 }: PlanTomorrowSectionProps) {
   const { planFor } = useTaskPlanning();

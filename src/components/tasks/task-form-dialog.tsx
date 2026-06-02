@@ -66,7 +66,7 @@ export interface TaskFormDialogProps {
 
 export function TaskFormDialog({ mode, task, open, onOpenChange }: TaskFormDialogProps) {
   const revalidator = useRevalidator();
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
   const firstProjectId = projects[0]?.id ?? "";
   const noProjects = projects.length === 0;
 

@@ -9,7 +9,7 @@ import {
 import type { Task } from "@/lib/ipc";
 
 export const TaskDetail: React.FC = () => {
-  const task = useLoaderData() as Task;
+  const task = useLoaderData<Task>();
 
   return (
     <TaskDetailProvider task={task}>

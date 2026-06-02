@@ -32,7 +32,7 @@ import type { Project } from "@/lib/ipc";
 export function NavFavorites() {
   const { isMobile } = useSidebar();
   const { openCreate } = useProjectDialogs();
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
   const [editProject, setEditProject] = useState<Project | null>(null);
   const [deleteProject, setDeleteProject] = useState<Project | null>(null);
 

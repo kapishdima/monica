@@ -5,8 +5,8 @@ import { TasksEmpty } from "@/components/tasks/tasks-empty";
 import type { Project, Task } from "@/lib/ipc";
 
 export const Tasks: React.FC = () => {
-  const tasks = (useLoaderData() as Task[] | undefined) ?? [];
-  const projects = (useRouteLoaderData("root") as Project[] | undefined) ?? [];
+  const tasks = useLoaderData<Task[] | undefined>() ?? [];
+  const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
 
   const projectNames = useMemo(
     () => new Map(projects.map((project) => [project.id, project.name])),

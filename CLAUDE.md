@@ -61,6 +61,7 @@ Updates are **read-modify-write**, not a command-per-field. `Update*` patches us
 
 - **IPC boundary — `src/lib/ipc.ts`**: the *only* place that calls `invoke`. It mirrors the Rust models/enums as TS types (`snake_case` enum values, `camelCase` fields — matching the serde renames) and exposes typed `projects` / `tasks` API objects. **When you change a Rust model, command, or enum, update this file to match.**
 - **Config-driven routing**: `src/config/menu.tsx` is the single source of truth — each `MenuItem` carries its `url`, `component`, icon, and sidebar `position`. `src/router/index.tsx` generates the React Router routes by mapping over `menu` (all wrapped in `AppLayout`), and the sidebar nav reads the same array. Add a page by adding one `menu` entry, not by touching the router.
+- **Typed loader data**: pass the type as a generic to the loader hook rather than casting its result — `useRouteLoaderData<Project[] | undefined>("root")`, not `useRouteLoaderData("root") as Project[] | undefined`.
 - `@/` is aliased to `src/` (Vite + tsconfig). UI is shadcn/ui components in `src/components/ui/` (Tailwind v4); pages live in `src/pages/`.
 - **Always use the `shadcn` skill when building or modifying UI** — for adding, searching, composing, styling, or debugging components. This project is shadcn-based (`components.json`); reach for the skill rather than hand-writing components from scratch.
 

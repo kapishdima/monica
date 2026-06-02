@@ -14,7 +14,7 @@ interface LoaderData {
 }
 
 export const ProjectDetail: React.FC = () => {
-  const { project, tasks } = useLoaderData() as LoaderData;
+  const { project, tasks } = useLoaderData<LoaderData>();
 
   return (
     <ProjectDetailProvider project={project} tasks={tasks}>
