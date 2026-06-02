@@ -3,8 +3,8 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { useState } from "react";
 import { useRevalidator } from "react-router";
 import { toast } from "sonner";
-import { PlanTaskRow } from "@/components/planner/plan-task-row";
 import { SectionLabel } from "@/components/detail/property";
+import { TaskCard } from "@/components/tasks/task-card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -49,7 +49,7 @@ export function PlanTomorrowSection({
           <SectionLabel>Planned</SectionLabel>
           <div className="divide-y divide-border rounded-lg border">
             {planned.map((task) => (
-              <PlanTaskRow
+              <TaskCard
                 key={task.id}
                 task={task}
                 projectName={projectNames.get(task.projectId)}
@@ -76,16 +76,12 @@ export function PlanTomorrowSection({
             {carryover
               .filter((t) => !plannedIds.has(t.id))
               .map((task) => (
-                <PlanTaskRow
+                <TaskCard
                   key={task.id}
                   task={task}
                   projectName={projectNames.get(task.projectId)}
                   action={
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => planFor(task.id, tomorrow)}
-                    >
+                    <Button variant="ghost" size="sm" onClick={() => planFor(task.id, tomorrow)}>
                       <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} />
                       Tomorrow
                     </Button>
@@ -101,7 +97,7 @@ export function PlanTomorrowSection({
           <SectionLabel>Add from backlog</SectionLabel>
           <div className="divide-y divide-border rounded-lg border">
             {plannable.map((task) => (
-              <PlanTaskRow
+              <TaskCard
                 key={task.id}
                 task={task}
                 projectName={projectNames.get(task.projectId)}

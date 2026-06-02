@@ -5,7 +5,7 @@ import {
   MoreHorizontalCircle01Icon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import { Link } from "react-router";
 import { CopyBranchButton } from "@/components/tasks/copy-branch-button";
 import { TaskPriority } from "@/components/tasks/task-priority";
@@ -60,11 +60,19 @@ export interface TaskCardProps {
   projectName?: string;
   /** Whether this row is selected for bulk actions. */
   selected?: boolean;
-  /** Toggle this row's selection. */
+  /** Toggle this row's selection. Omit to hide the bulk-select checkbox. */
   onSelectedChange?: (selected: boolean) => void;
+  /** Extra trailing control (e.g. the planner's add/remove-from-day button). */
+  action?: ReactNode;
 }
 
-export function TaskCard({ task, projectName, selected = false, onSelectedChange }: TaskCardProps) {
+export function TaskCard({
+  task,
+  projectName,
+  selected = false,
+  onSelectedChange,
+  action,
+}: TaskCardProps) {
   const [editOpen, setEditOpen] = useState(false);
   const [deleteOpen, setDeleteOpen] = useState(false);
 
@@ -76,11 +84,13 @@ export function TaskCard({ task, projectName, selected = false, onSelectedChange
         data-selected={selected || undefined}
         className="group flex items-center gap-3 px-3 py-2 transition-colors hover:bg-muted/40 data-selected:bg-primary/5"
       >
-        <Checkbox
-          checked={selected}
-          onCheckedChange={(checked) => onSelectedChange?.(checked === true)}
-          aria-label={selected ? "Deselect task" : "Select task"}
-        />
+        {onSelectedChange && (
+          <Checkbox
+            checked={selected}
+            onCheckedChange={(checked) => onSelectedChange(checked === true)}
+            aria-label={selected ? "Deselect task" : "Select task"}
+          />
+        )}
 
         <div className="flex items-center">
           <TaskStatus taskId={task.id} status={task.status} />
@@ -95,6 +105,7 @@ export function TaskCard({ task, projectName, selected = false, onSelectedChange
 
         <div className="flex shrink-0 items-center gap-0.5">
           {task.githubBranch && <CopyBranchButton branch={task.githubBranch} />}
+          {action}
           <ActionsMenu onEdit={() => setEditOpen(true)} onDelete={() => setDeleteOpen(true)} />
         </div>
       </div>

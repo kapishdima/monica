@@ -46,48 +46,46 @@ export function TodaySection({
 
   return (
     <section className="flex flex-col gap-4">
-      <div className="rounded-lg border p-1">
-        <DropdownMenu>
-          <DropdownMenuTrigger
-            render={
-              <Button variant="ghost" className="h-9 w-full justify-start gap-2 px-2 font-normal" />
-            }
+      <DropdownMenu>
+        <DropdownMenuTrigger
+          render={
+            <Button variant="ghost" className="h-9 w-full justify-start gap-2 px-2 font-normal" />
+          }
+        >
+          {rating ? (
+            <>
+              <DayRatingIcon rating={rating} />
+              <span>{DAY_RATING_LABELS[rating]}</span>
+            </>
+          ) : (
+            <span className="text-muted-foreground">How did today go?</span>
+          )}
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="start" className="min-w-48">
+          <DropdownMenuRadioGroup
+            value={rating ?? ""}
+            onValueChange={(v) => onRating(v as DayRating)}
           >
-            {rating ? (
-              <>
-                <DayRatingIcon rating={rating} />
-                <span>{DAY_RATING_LABELS[rating]}</span>
-              </>
-            ) : (
-              <span className="text-muted-foreground">How did today go?</span>
-            )}
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="min-w-48">
-            <DropdownMenuRadioGroup
-              value={rating ?? ""}
-              onValueChange={(v) => onRating(v as DayRating)}
-            >
-              {DAY_RATING_OPTIONS.map((value) => (
-                <DropdownMenuRadioItem key={value} value={value}>
-                  <DayRatingIcon rating={value} />
-                  {DAY_RATING_LABELS[value]}
-                </DropdownMenuRadioItem>
-              ))}
-            </DropdownMenuRadioGroup>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <Textarea
-          value={reflection}
-          onChange={(e) => setReflection(e.target.value)}
-          onBlur={() => {
-            if (reflection !== (plan.reflection ?? "")) {
-              updateReflection(reflection).catch(() => setReflection(plan.reflection ?? ""));
-            }
-          }}
-          placeholder="Reflect on the day…"
-          className="min-h-20 resize-none border-0 shadow-none focus-visible:ring-0"
-        />
-      </div>
+            {DAY_RATING_OPTIONS.map((value) => (
+              <DropdownMenuRadioItem key={value} value={value}>
+                <DayRatingIcon rating={value} />
+                {DAY_RATING_LABELS[value]}
+              </DropdownMenuRadioItem>
+            ))}
+          </DropdownMenuRadioGroup>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <Textarea
+        value={reflection}
+        onChange={(e) => setReflection(e.target.value)}
+        onBlur={() => {
+          if (reflection !== (plan.reflection ?? "")) {
+            updateReflection(reflection).catch(() => setReflection(plan.reflection ?? ""));
+          }
+        }}
+        placeholder="Reflect on the day…"
+        className="min-h-20 resize-none border-0 shadow-none focus-visible:ring-0"
+      />
 
       <TaskList
         tasks={tasks}
