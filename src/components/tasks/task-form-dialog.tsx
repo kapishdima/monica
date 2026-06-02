@@ -60,11 +60,13 @@ const PILL = "h-7 gap-1.5 rounded-full px-2.5 font-normal";
 export interface TaskFormDialogProps {
   mode: "create" | "edit";
   task?: Task;
+  /** Pre-fill values for create mode (e.g. project + description from a transcript selection). */
+  initial?: { projectId?: string; description?: string };
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-export function TaskFormDialog({ mode, task, open, onOpenChange }: TaskFormDialogProps) {
+export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: TaskFormDialogProps) {
   const revalidator = useRevalidator();
   const projects = useRouteLoaderData<Project[] | undefined>("root") ?? [];
   const firstProjectId = projects[0]?.id ?? "";
@@ -94,14 +96,14 @@ export function TaskFormDialog({ mode, task, open, onOpenChange }: TaskFormDialo
     setExpanded(false);
     reset({
       ...BLANK,
-      projectId: task?.projectId ?? firstProjectId,
+      projectId: task?.projectId ?? initial?.projectId ?? firstProjectId,
       title: task?.title ?? "",
-      description: task?.description ?? "",
+      description: task?.description ?? initial?.description ?? "",
       priority: task?.priority ?? "low",
       label: task?.label ?? "",
       status: task?.status ?? "todo",
     });
-  }, [open, task, reset, firstProjectId]);
+  }, [open, task, initial, reset, firstProjectId]);
 
   const projectId = watch("projectId");
   const projectName = projects.find((p) => p.id === projectId)?.name;

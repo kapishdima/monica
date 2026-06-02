@@ -26,7 +26,7 @@ export const TasksEmpty: React.FC = () => {
         </EmptyDescription>
       </EmptyHeader>
       <EmptyContent className="flex-row justify-center gap-2">
-        <Button onClick={openCreate}>Create Task</Button>
+        <Button onClick={() => openCreate()}>Create Task</Button>
       </EmptyContent>
     </Empty>
   );
