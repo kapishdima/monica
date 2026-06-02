@@ -2260,6 +2260,7 @@ dependencies = [
  "tauri-build",
  "tauri-plugin-notification",
  "tauri-plugin-opener",
+ "tempfile",
  "thiserror 2.0.18",
  "time",
  "tokio",

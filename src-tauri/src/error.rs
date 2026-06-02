@@ -34,6 +34,12 @@ impl From<std::io::Error> for AppError {
     }
 }
 
+impl From<serde_json::Error> for AppError {
+    fn from(e: serde_json::Error) -> Self {
+        AppError::Validation(format!("json parse error: {e}"))
+    }
+}
+
 impl From<tauri::Error> for AppError {
     fn from(e: tauri::Error) -> Self {
         AppError::Io(e.to_string())

@@ -7,7 +7,7 @@ export const CreateTaskBtn: React.FC = () => {
   const { openCreate } = useTaskDialogs();
 
   return (
-    <Button variant="outline" size="sm" onClick={openCreate}>
+    <Button variant="outline" size="sm" onClick={() => openCreate()}>
       <HugeiconsIcon icon={TaskAdd01Icon} strokeWidth={2} />
       Add task
     </Button>
