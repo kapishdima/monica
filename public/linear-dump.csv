@@ -1,0 +1,1895 @@
+"ID","Team","Title","Description","Status","Estimate","Priority","Project ID","Project","Creator","Assignee","Labels","Cycle Number","Cycle Name","Cycle Start","Cycle End","Created","Updated","Started","Triaged","Completed","Canceled","Archived","Due Date","Parent issue","Initiatives","Project Milestone ID","Project Milestone","SLA Status","UUID","Time in status (minutes)","Related to","Blocked by","Duplicate of"
+"KAP-5","KapishDima","Setup evn","'- [X] Создать репозиторий
+- [X] Создать файловую структуру","Done",,"High",,,"kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Wed Oct 15 2025 09:33:28 GMT+0000 (GMT+00:00)","Mon Oct 20 2025 07:54:32 GMT+0000 (GMT+00:00)",,,"Mon Oct 20 2025 07:54:32 GMT+0000 (GMT+00:00)",,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)","Thu Oct 16 2025 21:00:00 GMT+0000 (GMT+00:00)",,"",,,,"d461aab2-2d6f-4239-a924-0fff4f5e928d",324050,,,
+"KAP-6","KapishDima","Milestone 1: Form UI Primitives","Перенести все базовые UI элементы для форм
+
+- [X] TextField
+- [X] SelectField
+- [X] CheckboxField
+- [X] RadioField
+- [X] TextAreaField
+
+Использовать для всего этого kibo-ui, например, вот для TextField
+[https://www.kibo-ui.com/patterns/field/basic-inputs/field-basic-inputs-2](https://www.kibo-ui.com/patterns/field/basic-inputs/field-basic-inputs-2)","Done",,"High",,,"kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Wed Oct 15 2025 09:37:11 GMT+0000 (GMT+00:00)","Mon Oct 20 2025 07:54:39 GMT+0000 (GMT+00:00)",,,"Mon Oct 20 2025 07:54:39 GMT+0000 (GMT+00:00)",,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)","Thu Oct 16 2025 21:00:00 GMT+0000 (GMT+00:00)",,"",,,,"48c1c2c9-e7d9-449d-abd4-c5f6016d39bc",324050,,,
+"KAP-7","KapishDima","Добавить возможность transform перед отправкой форм",,"Done",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Thu Oct 16 2025 10:02:29 GMT+0000 (GMT+00:00)","Fri Oct 24 2025 18:39:14 GMT+0000 (GMT+00:00)",,,"Fri Oct 24 2025 18:39:14 GMT+0000 (GMT+00:00)",,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)",,,"",,,,"f41a3219-c62d-4009-b9b8-8cc3df38479a",317646,,,
+"KAP-8","KapishDima","Добавить поддержку ивентов формы",,"Done",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Thu Oct 16 2025 10:29:00 GMT+0000 (GMT+00:00)","Fri Oct 24 2025 18:39:10 GMT+0000 (GMT+00:00)",,,"Fri Oct 24 2025 18:39:10 GMT+0000 (GMT+00:00)",,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)",,,"",,,,"0fc40107-77a4-4316-b617-efec34208cd9",317646,,,
+"KAP-9","KapishDima","Покрытие тестами","Добавить тесты на отправку форму используя msw. Проверить что форма действительно отправляется с нужными данными. Проверить что срабатывает transform
+","Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Fri Oct 17 2025 08:19:44 GMT+0000 (GMT+00:00)","Fri Oct 17 2025 08:19:44 GMT+0000 (GMT+00:00)",,,,,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)",,,"",,,,"42323771-85c8-43a9-bdf5-8c2f440fe562",328345,,,
+"KAP-10","KapishDima","Wandry UI Fields","'- [X] Datepicker FIeld
+- [X] File field
+- [X] Timepicker FIeld
+- [X] Slider Field
+- [X] Dropzone Field
+- [X] Choises Field
+- [X] Colorpicker Field
+- [ ] Editor FIeld
+- [ ] Tags Field
+- [ ] Country Field
+- [ ] Address Field - country, city, address, zipcode
+- [X] Array Field","Canceled",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Tue Oct 21 2025 13:28:38 GMT+0000 (GMT+00:00)","Sat May 09 2026 12:05:44 GMT+0000 (GMT+00:00)",,,,"Sat May 09 2026 12:05:44 GMT+0000 (GMT+00:00)",,,,"",,,,"6ce551c7-e7bc-493f-8c93-8ac9adee653e",34359,,,
+"KAP-11","KapishDima","Добавить типизацию value",,"Canceled",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Fri Oct 24 2025 18:39:49 GMT+0000 (GMT+00:00)","Sat Apr 25 2026 12:14:18 GMT+0000 (GMT+00:00)",,,,"Sat Apr 25 2026 12:14:18 GMT+0000 (GMT+00:00)",,,,"",,,,"43b9b24a-7899-4ec8-81a1-713ae167a412",54511,,,
+"KAP-12","KapishDima","Отображение статистики зависимых от registry приложений",,"Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Mon Nov 10 2025 08:09:36 GMT+0000 (GMT+00:00)","Mon Nov 10 2025 08:09:36 GMT+0000 (GMT+00:00)",,,,,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)",,,"",,,,"be39115e-afe6-4e82-9e28-6df5d0e14494",293795,,,
+"KAP-13","KapishDima","Работа с private registries",,"Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Mon Nov 10 2025 08:10:22 GMT+0000 (GMT+00:00)","Mon Nov 10 2025 08:10:22 GMT+0000 (GMT+00:00)",,,,,"Mon Apr 13 2026 07:50:20 GMT+0000 (GMT+00:00)",,,"",,,,"0e080318-a43f-4592-ba67-2cb60235f1ca",293794,,,
+"KAP-14","KapishDima","Registry Updated",,"Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Mon Dec 01 2025 22:37:38 GMT+0000 (GMT+00:00)","Mon Dec 01 2025 22:37:38 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"d4668a0f-708a-499d-98e4-e1e386d17fc1",262687,,,
+"KAP-15","KapishDima","Registry Updated",,"Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Mon Dec 01 2025 22:54:31 GMT+0000 (GMT+00:00)","Mon Dec 01 2025 22:54:31 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"7a7d6440-0602-468e-9f3d-1863650f5f2b",262670,,,
+"KAP-16","KapishDima","Registry Updated",,"Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Mon Dec 01 2025 22:56:21 GMT+0000 (GMT+00:00)","Mon Dec 01 2025 22:56:21 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"be714a46-61a9-42fa-9ebf-5898dd7c02ed",262668,,,
+"KAP-17","KapishDima","Design registry data model & storage","Design entities and storage for shadcn/rss registry tracking.
+
+**Goal**
+Have a clear data model to store registries, components, and changes (history), ready to be used by fetchers, diff engine, and UI.
+
+**Scope**
+
+* Define entities: `Registry`, `Component`, `Change` (and related helpers if needed).
+* Decide how to store change history (append-only log vs snapshots + derived views).
+* Add schema/migrations in the codebase.
+
+**Acceptance criteria**
+
+* ER diagram or equivalent schema documented in the repo.
+* Database schema/migrations merged.
+* Example records can be inserted without ambiguity.","In Progress",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:03:15 GMT+0000 (GMT+00:00)","Wed May 06 2026 14:59:26 GMT+0000 (GMT+00:00)","Mon Dec 15 2025 20:37:07 GMT+0000 (GMT+00:00)",,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"31f44fe1-9fa6-4755-8a32-b89a5ab72d42",242648,,,
+"KAP-18","KapishDima","Implement registry fetcher for trusted registries","Implement a service that fetches data from trusted shadcn registries and normalizes it into the internal data model.
+
+**Goal**
+Have a reliable fetcher that can pull the current state of each trusted registry on demand.
+
+**Scope**
+
+* Read registry list (e.g. directory.json / config) with URLs and metadata.
+* Implement HTTP client with basic retry / timeout strategy.
+* Normalize remote data into `Registry`, `Component` (and related) entities.
+* Store the fetched snapshot in the database.
+
+**Acceptance criteria**
+
+* Running the fetcher locally populates the database for all configured trusted registries.
+* Errors are logged with enough context (which registry, which URL, status code).
+* At least one simple test registry is used in automated tests.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:03:49 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:44 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"bc2e0930-50c1-4f42-b73b-c15600fc484c",249821,,,
+"KAP-19","KapishDima","Implement change detection pipeline (diff engine)","Implement a diff engine that compares previous and current registry snapshots and produces `Change` records.
+
+**Goal**
+Be able to detect added/updated/removed components (and other relevant changes) between two points in time.
+
+**Scope**
+
+* Decide what constitutes a “change” (add / remove / update, and minimal fields to track).
+* Implement comparison between two snapshots for a single registry.
+* Produce `Change` entities with type, timestamp, registry, component, and payload.
+* Handle idempotency: re-running diff should not duplicate already-processed changes.
+
+**Acceptance criteria**
+
+* Given two sample snapshots, diff engine produces predictable `Change` records.
+* Unit tests cover add / update / remove scenarios.
+* Diff output is stored and can be queried via the data layer.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:04:11 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:44 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"1d66f887-5490-4583-8599-d22d8ed805fa",249821,,,
+"KAP-20","KapishDima","Expose public API endpoint to list registry changes","Add a public API endpoint to query registry changes with basic filters.
+
+**Goal**
+Allow the frontend (and later external consumers) to fetch changes in a structured way.
+
+**Scope**
+
+* Add endpoint (e.g. `GET /api/changes`).
+* Support filters: `registry`, `from` / `to` date, `changeType` (add/update/remove).
+* Implement pagination (cursor or page/limit).
+* Return a stable, documented response shape.
+
+**Acceptance criteria**
+
+* Endpoint returns changes from the database for at least one real registry.
+* Filters work and are covered by tests (at least minimal integration tests).
+* Basic API docs / README section added.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:04:47 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:44 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"184ed726-fe37-48f9-a0c0-1ec1c913d417",249820,,,
+"KAP-21","KapishDima","Build basic UI for the Registry Change Feed","Implement the initial UI that shows a feed of registry changes with minimal filtering.
+
+**Goal**
+Provide a simple but usable view where users can see what changed in registries.
+
+**Scope**
+
+* Page with a list of changes (date, registry name, change type, short summary).
+* Filters: registry select, date range.
+* Loading / empty / error states.
+* Link each change to the registry detail (or external GitHub/PR link if available).
+
+**Acceptance criteria**
+
+* Page is accessible from main navigation.
+* A user can filter by one registry and see only its changes.
+* Reasonable performance on initial dataset.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:04:56 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:43 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"ee5443ba-3735-405e-bce9-64f42eac92fb",249820,,,
+"KAP-22","KapishDima","Add scheduler & logging for fetch + diff jobs","Set up a minimal scheduling mechanism to periodically fetch registry data and run the diff engine, with logging for observability.
+
+**Goal**
+Keep the change feed reasonably fresh without manual triggers.
+
+**Scope**
+
+* Add scheduled job (cron/queue) to run fetch + diff for all trusted registries.
+* Ensure jobs are safe to re-run (idempotent or guarded).
+* Log summary per run: how many registries processed, how many changes detected, how many errors.
+
+**Acceptance criteria**
+
+* Job can be triggered locally (e.g. via CLI / dev command) and runs end-to-end.
+* Logs clearly show progress and failures.
+* No duplicate `Change` records when the job is re-run for the same data.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:05:10 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:43 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"a697a9bf-7de1-4ccf-81b7-06b99abb1560",249820,,,
+"KAP-23","KapishDima","Classify change severity (breaking / minor / docs-only)","Add a basic classification layer on top of raw `Change` records to mark their severity.
+
+**Goal**
+Make the change feed more meaningful by labeling changes by impact level.
+
+**Scope**
+
+* Define simple heuristics for: `breaking`, `minor`, `docs-only` (or equivalent).
+* Extend `Change` model to include `severity` field.
+* Apply classification in the diff pipeline or a post-processing step.
+* Surface severity in API and UI.
+
+**Acceptance criteria**
+
+* `Change` entities include a `severity` value.
+* UI shows severity (e.g. badge) per change.
+* Tests cover at least a few example changes for each severity type.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:06:24 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:43 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"ccbc4a55-e0ce-4256-ac3b-512deec483d5",249818,,,
+"KAP-24","KapishDima","Add seed data and fixtures for local development","Provide a small, realistic dataset for local development and tests so the change feed is easy to work on.
+
+**Goal**
+Make it easy for contributors to run the app locally and immediately see changes in the feed.
+
+**Scope**
+
+* Add fixtures for 1–2 registries with multiple snapshots.
+* Script/command to seed the database with registries, components, and changes.
+* Ensure seeds don’t conflict with production config.
+
+**Acceptance criteria**
+
+* Running a single command seeds local DB with demo registries and changes.
+* The UI shows a non-empty change feed after seeding.
+* Docs mention how to run seeds.","Backlog",,"Low","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:07:29 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:55 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"eed9230a-0f78-4f4a-8c12-6e3ac0207f2f",249817,,,
+"KAP-25","KapishDima","Document MVP architecture and usage for the registry change feed","Write documentation that explains how the registry change feed works and how to work with it as a developer.
+
+**Goal**
+Make it clear how the system is structured (fetch → diff → API → UI) and how to extend it.
+
+**Scope**
+
+* High-level architecture diagram or markdown section.
+* Describe data flow: fetcher → snapshots → diff engine → changes → API → UI.
+* Add instructions for running jobs, seeding data, and accessing the UI locally.
+
+**Acceptance criteria**
+
+* Docs live in the repo (`README` or `/docs`), linked from root.
+* A new contributor can read the docs and understand where to plug new registries or change logic.
+* MVP responsibilities and limitations are clearly stated.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:07:44 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:24:43 GMT+0000 (GMT+00:00)",,,,,,,,"","9358ef38-47ed-45e2-a4f5-69819f64d8e8","Registry Change Feed",,"7f35644a-6dd3-4b3f-a470-aca0701dd26c",249817,,,
+"KAP-26","KapishDima","Extend data model with registry metadata & health stats","Extend the existing data model to store metadata and simple health metrics for each registry.
+
+**Goal**
+Support a public directory that can show per-registry info (type, status, activity/health).
+
+**Scope**
+
+* Add fields for: type (trusted/community), homepage URL, GitHub repo, description, tags.
+* Add computed fields or separate table for basic metrics: last change date, number of changes in N days, health score.
+* Backfill data for existing registries.
+
+**Acceptance criteria**
+
+* Registry entities contain all required metadata fields.
+* Basic health metrics are computed and persisted or derivable efficiently.
+* Existing registries show non-null metadata where available.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:10:10 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"732268fb-e61a-461a-9672-5bc5a5912887",249815,,,
+"KAP-27","KapishDima","Implement registry health scoring logic","Define and implement a simple scoring system that ranks registries by “health” / activity.
+
+**Goal**
+Provide a single, understandable signal to surface in the public directory (active / stable / low activity).
+
+**Scope**
+
+* Define what goes into the score (e.g. last update recency, number of changes in last 30/90 days).
+* Map numeric score to labels: “Highly active”, “Stable”, “Low activity”, etc.
+* Store score + label for each registry and update it on schedule.
+
+**Acceptance criteria**
+
+* Each registry has a `healthScore` and `healthLabel`.
+* Health labels align with expectations for a few hand-picked registries (manual spot check).
+* Score recomputes correctly when new changes land.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:10:36 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"fb048df1-4391-4c8d-aba9-d3e30807dfdc",249814,,,
+"KAP-28","KapishDima","Build public registries directory page (/registries)","Implement the main directory page listing all registries with key metadata and health signals.
+
+**Goal**
+Make shadcn/rss the default way to discover and compare registries at a glance.
+
+**Scope**
+
+* Page at `/registries` with list/table/grid of registries.
+* Show: name, type (trusted/community), health label, last update date, short description.
+* Add basic filters: by type, by health label, search by name.
+* Loading/empty/error states.
+
+**Acceptance criteria**
+
+* `/registries` lists all active registries from the DB.
+* Filters and search work as expected.
+* Page feels responsive on initial dataset.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:10:55 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"81be1edf-86dc-40a4-8e81-45e0194e0e59",249814,,,
+"KAP-29","KapishDima","Add registry detail page with change timeline","Create a detail page for an individual registry that shows metadata and its change history.
+
+**Goal**
+Provide a shareable URL for each registry with both a summary and a timeline of changes.
+
+**Scope**
+
+* Route like `/registry/[slug]` (human-readable slug based on name/id).
+* Show full metadata: name, type, description, links (docs, GitHub, demo).
+* Include a timeline of recent changes (powered by existing change feed API).
+* Link to external resources (e.g. GitHub repo, registry homepage).
+
+**Acceptance criteria**
+
+* Each registry has a stable URL and slug.
+* Visiting a registry page displays its metadata and recent changes.
+* Navigating from the directory to a registry page works smoothly.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:11:07 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"8fdd0091-3e69-4e4c-901a-9a73cf80202f",249814,,,
+"KAP-30","KapishDima","Add visual activity indicators to registry pages","Add lightweight visualizations to better communicate registry activity over time.
+
+**Goal**
+Make registry activity easier to understand than raw lists of changes.
+
+**Scope**
+
+* On the registry detail page, add a simple chart or sparkline for changes over time (e.g. per week/month).
+* Optionally add a compact indicator on the `/registries` list (e.g. tiny sparkline per row).
+* Re-use existing change data; avoid heavy/complex charting.
+
+**Acceptance criteria**
+
+* Activity chart renders for registries with sufficient data.
+* No significant performance degradation on the directory page.
+* Visual indicators align with the health score/label (no obvious contradictions).","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:11:20 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"54c16de4-975e-4c9d-a6bc-7dda188b2ac2",249814,,,
+"KAP-31","KapishDima","Expose API endpoints for registry directory and details","Add API endpoints to power the directory and detail pages, and to allow future consumers (agents/integrations) to query registry info.
+
+**Goal**
+Provide a clean, versionable API surface for registries.
+
+**Scope**
+
+* `GET /api/registries` with filters (type, health, search, pagination).
+* `GET /api/registries/[id-or-slug]` for a single registry with metadata + basic stats.
+* Ensure responses are consistent and documented.
+
+**Acceptance criteria**
+
+* Frontend uses these endpoints (no duplicated logic in client).
+* API responses include all data needed for current UI.
+* Docs or schema for both endpoints are added.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:11:38 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"915bca34-d965-4e12-a756-ea041c0aff6f",249813,,,
+"KAP-32","KapishDima","Improve SEO and sharing for registry directory & detail pages","Optimize registry pages for discovery and sharing.
+
+**Goal**
+Make `/registries` and `/registry/[slug]` discoverable via search and nice to share on social.
+
+**Scope**
+
+* Set descriptive `<title>` and meta description for directory and detail pages.
+* Add Open Graph / Twitter card tags for registry detail pages (name, description, type).
+* Ensure URLs are clean, stable, and indexable.
+
+**Acceptance criteria**
+
+* View source / devtools shows correct meta tags for a sample registry.
+* Sharing a registry URL in X/Discord generates a reasonable preview.
+* Directory and detail pages don’t expose obviously broken SEO metadata.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:11:58 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:15:06 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"4523e5c4-6819-40aa-b4cf-9a32dd7dba09",249813,,,
+"KAP-33","KapishDima","Add tests & QA checklist for registry directory","Cover the directory and registry pages with basic tests and document a minimal QA checklist.
+
+**Goal**
+Keep the directory stable as new registries and features are added.
+
+**Scope**
+
+* Add unit/integration tests for directory filtering/search and registry detail fetching.
+* Add at least one end-to-end flow: user opens `/registries`, filters, opens a registry, sees timeline.
+* Document a short manual QA checklist for new registry-related changes.
+
+**Acceptance criteria**
+
+* Tests pass and cover main happy paths.
+* CI fails if core directory behaviour is broken.
+* QA checklist lives in the repo and is referenced from the project docs.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:12:11 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:10 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"07dddfbf-bea0-4f4d-8426-9b9550563a01",249813,,,
+"KAP-34","KapishDima","Backfill and sync job for registry metadata & stats","Ensure all registries have up-to-date metadata and health stats via a periodic sync job.
+
+**Goal**
+Keep directory data fresh without manual updates.
+
+**Scope**
+
+* Script/command to backfill metadata and health stats for existing registries.
+* Periodic job to recompute stats (health score, last update, counts).
+* Log summary of how many registries were updated and any failures.
+
+**Acceptance criteria**
+
+* Running the job updates stats for all registries without errors (or with logged errors).
+* New registries start appearing in `/registries` with reasonable defaults.
+* Directory doesn’t show obviously stale stats after sync.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:13:32 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:15:25 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"90cc0b62-ccd3-4d7b-a0e4-1efc4e914d14",249811,,,
+"KAP-35","KapishDima","Document registry directory and how to add/update registries","Add documentation for how the registry directory works and how to add/update registries as a maintainer.
+
+**Goal**
+Make it easy for future contributors (and future you) to understand and extend the directory.
+
+**Scope**
+
+* Describe data model: registry metadata, health stats, activity charts.
+* Explain how `/registries` and `/registry/[slug]` are powered (API, caching, jobs).
+* Add a step-by-step guide for adding a new registry or updating metadata.
+
+**Acceptance criteria**
+
+* Docs live in the repo (`/docs` or main README) and are easy to find.
+* A new contributor can follow the docs and successfully add/update a registry.
+* Directory limitations and future ideas (nice-to-haves) are briefly noted.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:13:43 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:14:55 GMT+0000 (GMT+00:00)",,,,,,,,"","8c56b57a-f070-4dac-ba53-3ee6c4e9365c","Public Registry Directory",,"1777df57-1aad-4439-900b-d876c7bff7b2",249811,,,
+"KAP-36","KapishDima","Design user & watchlist data model","Design the data model for users and their registry watchlists.
+
+**Goal**
+Support authenticated users with a persistent list of registries they follow.
+
+**Scope**
+
+* Define `User` entity (GitHub-based identity, minimal profile fields).
+* Define `Watchlist` / `UserRegistry` relationship (which registries a user follows).
+* Decide how to store future per-user settings (notifications, preferences).
+* Add migrations/schema to the codebase.
+
+**Acceptance criteria**
+
+* User & watchlist entities are defined and documented.
+* Migrations/schema are merged and can be applied.
+* A user can be associated with multiple registries (and vice versa).","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:14:58 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"756cdf4b-6b17-4f92-8907-cc5f949f9259",249810,,,
+"KAP-37","KapishDima","Implement GitHub OAuth login","Add GitHub OAuth as the primary authentication method for shadcn/rss.
+
+**Goal**
+Allow users to log in with GitHub so we can attach watchlists and future settings to an account.
+
+**Scope**
+
+* Configure GitHub OAuth app and environment variables.
+* Implement login/logout flow in the app.
+* On first login, create a `User` record; on subsequent logins, reuse it.
+* Store minimal profile data (id, username, avatar, email if available).
+
+**Acceptance criteria**
+
+* Users can log in and log out using GitHub.
+* A `User` record exists for logged-in users.
+* Basic error handling for failed/denied auth is in place","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:15:12 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"a59d736c-e5c3-4aac-8e84-efd0ae2ea664",249810,,,
+"KAP-38","KapishDima","Add backend endpoints for managing user watchlists","Add API endpoints that allow users to manage which registries they follow.
+
+**Goal**
+Provide a simple CRUD API for watchlists to power the UI.
+
+**Scope**
+
+* `GET /api/me/watchlist` – list registries the user follows.
+* `POST /api/me/watchlist` – add a registry to watchlist.
+* `DELETE /api/me/watchlist/:registryId` – remove a registry from watchlist.
+* All endpoints require authentication and are scoped to the current user.
+
+**Acceptance criteria**
+
+* Authenticated user can add/remove registries from their watchlist via API.
+* Duplicate entries are prevented or handled gracefully (idempotency).
+* API returns clear errors for unauthenticated or invalid requests.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:15:44 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"bba4e2fe-7e13-45e6-b695-734e7e6c4d31",249809,,,
+"KAP-39","KapishDima","Build login entry point and ""My Watchlist"" page","Implement the UI pieces for logging in and managing a personal watchlist.
+
+**Goal**
+Give users a clear way to sign in and see/edit their watchlist.
+
+**Scope**
+
+* Add login/logout controls in the main navigation (GitHub button).
+* Add a “My Watchlist” page listing followed registries.
+* Allow adding/removing registries from the watchlist (e.g. toggle/star).
+* Show states: empty watchlist, loading, error.
+
+**Acceptance criteria**
+
+* Logged-out users see a prompt to log in to use watchlists.
+* Logged-in users can see a list of their followed registries.
+* Toggling follow/unfollow updates both UI and backend.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:15:58 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"3bcc12f7-2413-45cd-84f4-548add599f4d",249809,,,
+"KAP-40","KapishDima","Integrate watchlist into the change feed (My registries filter)","Connect user watchlists with the change feed so users can see updates only for registries they follow.
+
+**Goal**
+Make the change feed feel personal and reduce noise.
+
+**Scope**
+
+* Add an option like “My registries” / “Watchlist only” to the change feed.
+* When enabled, only show changes for registries on the user’s watchlist.
+* Provide a sensible fallback for logged-out users (e.g. disable the toggle).
+
+**Acceptance criteria**
+
+* Logged-in users can filter the feed to only their registries.
+* Switching between “All registries” and “My registries” works as expected.
+* Logged-out users don’t see broken UI for this feature.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:16:08 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"2ae3b5d5-0f87-470b-9fb6-d2486c2499f3",249809,,,
+"KAP-41","KapishDima","Track read/unread status for changes per user","Add data structures to track which changes a user has already seen/read.
+
+**Goal**
+Enable unread indicators and “inbox-like” experience for registry changes.
+
+**Scope**
+
+* Design and implement a `UserChangeState` (or similar) entity to store read/unread per user+change.
+* Decide on default state (all new changes start as unread).
+* Ensure the model can scale reasonably (e.g. pruning old records).
+
+**Acceptance criteria**
+
+* For a given user and change, the system can answer: is this read or unread?
+* New changes for a watched registry appear as unread by default.
+* Basic tests cover creation and querying of read/unread state.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1, ✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:16:20 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:24 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"b51757e7-dff1-4369-9174-36fd8d3987d4",249809,,,
+"KAP-42","KapishDima","Add unread indicators and mark-as-read interactions in the feed","Surface read/unread state in the UI and let users mark changes as read.
+
+**Goal**
+Make the change feed feel like an inbox, not just a raw log.
+
+**Scope**
+
+* Show unread indicator for changes (e.g. dot/badge) in the feed.
+* Allow users to mark a single change as read.
+* Optionally, add “Mark all as read” for the current view / registry.
+
+**Acceptance criteria**
+
+* Unread changes are visually distinct from read ones.
+* Marking a change as read updates both backend and UI.
+* “Mark all as read” (if implemented) behaves predictably and doesn’t break state.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1, ✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:16:30 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:39 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"51636973-28af-46fb-bd4f-b5c6fc514c35",249808,,,
+"KAP-43","KapishDima","Add foundation for per-user notification preferences","Prepare the data model to store per-user notification preferences, even if actual delivery (email/Telegram/etc.) comes later.
+
+**Goal**
+Make it possible to later plug in notification channels without changing the user/Watchlist core.
+
+**Scope**
+
+* Add a `NotificationPreferences` (or similar) model linked to `User`.
+* Fields for: preferred channels (email/none), frequency (realtime/daily/weekly), and scope (all changes / breaking only / watchlist only).
+* Add default preferences for new users.
+
+**Acceptance criteria**
+
+* A user has a persisted notification preferences object.
+* Preferences can be read/updated via backend (even if no UI yet).
+* Defaults are sane and documented.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:17:39 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:17:26 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"1ec8e51e-f632-42b2-9f4c-21abe717e129",249807,,,
+"KAP-44","KapishDima","Add tests & QA checklist for accounts & watchlist","Cover the main account and watchlist flows with automated tests and a minimal QA checklist.
+
+**Goal**
+Make sure login + watchlist + read/unread behaviour stays stable over time.
+
+**Scope**
+
+* Tests for: GitHub login, creating a user, creating/removing watchlist entries.
+* Tests for: My Watchlist page behaviour (empty, non-empty, permissions).
+* Tests for: read/unread state and “My registries” filter integration.
+* Write a short manual QA checklist for account/watchlist features.
+
+**Acceptance criteria**
+
+* CI covers main happy paths for auth + watchlist + feed integration.
+* Breaking changes to these flows are caught by tests.
+* QA checklist lives in the repo and is easy to find.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:17:49 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:25:54 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"ddbb0083-0010-43c7-b97b-9a3e2484cebf",249807,,,
+"KAP-45","KapishDima","Document accounts, watchlists, and personal feed behaviour","Document how accounts, watchlists, and per-user feed behaviour work from both user and developer perspectives.
+
+**Goal**
+Make it easy to understand what “logging in” gives you and how to work with watchlists in code.
+
+**Scope**
+
+* User-facing overview: what you get with an account (watchlist, personal feed, unread markers).
+* Dev-facing notes: data model (User, Watchlist, UserChangeState, NotificationPreferences), key APIs.
+* Instructions: how to run auth locally (GitHub app config), and how to test watchlist flows.
+
+**Acceptance criteria**
+
+* Docs are added to README or `/docs` and referenced from the project.
+* A new contributor can read and understand how to extend account-related features.
+* Behaviour/limitations for logged-out vs logged-in users are clearly described.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:18:03 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:17:40 GMT+0000 (GMT+00:00)",,,,,,,,"","6fdf13b0-e2da-47e8-a807-41705646e4b6","Accounts & Watchlist",,"10bdec95-67cf-4ea4-99c1-891cf18de991",249807,,,
+"KAP-46","KapishDima","Design notification events and delivery model","Design the core model for notification events and deliveries for shadcn/rss.
+
+**Goal**
+Have a clear abstraction for “what happened” (events) and “how/when it was sent” (deliveries) independent of channels.
+
+**Scope**
+
+* Define `NotificationEvent` (e.g. new change, breaking change, new registry on watchlist).
+* Define `NotificationDelivery` (channel, status, timestamp, error if any).
+* Decide how events are generated (sync/async) and how deliveries are scheduled.
+* Add DB schema/migrations.
+
+**Acceptance criteria**
+
+* Data model for events & deliveries is documented and merged.
+* It’s possible to record “this user should be notified about change X on channel Y”.
+* Model does not depend on a specific channel implementation.","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:19:30 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"22995fa4-192a-47c0-aad6-d97baaeb1143",249805,,,
+"KAP-47","KapishDima","Generate notification events from change pipeline","Hook into the change detection pipeline to generate notification events based on user watchlists and preferences.
+
+**Goal**
+Automatically create events whenever something happens that a user opted into.
+
+**Scope**
+
+* For each new `Change`, determine affected users (watchlists).
+* Apply basic preference filters (e.g. breaking-only, watchlist-only).
+* Create `NotificationEvent` records for those users.
+* Ensure idempotency (no duplicate events if job re-runs for same change).
+
+**Acceptance criteria**
+
+* When a new change is stored, corresponding events are created for relevant users.
+* Re-running the job for the same change does not duplicate events.
+* Unit tests cover simple scenarios (1 user, many users, no users).","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:19:42 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"c50bd007-906d-4df8-be60-33e081606ebb",249805,,,
+"KAP-48","KapishDima","Implement email delivery worker (digest + realtime foundations)","Implement an email delivery worker that can send notifications based on queued events, starting with a simple digest.
+
+**Goal**
+Send actual emails using existing notification preferences (daily/weekly to start).
+
+**Scope**
+
+* Integrate with chosen email provider (SMTP/service) and config.
+* Implement worker that reads pending `NotificationEvent` records and groups them into email payloads per user.
+* Support at least daily digest (e.g. “changes for your watchlist in the last 24h”).
+* Record `NotificationDelivery` outcomes (success/failure).
+
+**Acceptance criteria**
+
+* Running the worker produces at least one real email in a dev/test environment.
+* Deliveries are logged as `success` or `failed` with error info.
+* Basic retry/backoff behaviour is defined (even if minimal).","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:19:53 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"a525213c-b6a2-4509-b70c-c4fe2e09677f",249805,,,
+"KAP-49","KapishDima","Add webhook delivery for project automation","Allow users to configure a webhook endpoint that will receive change notifications for their watchlist.
+
+**Goal**
+Make it easy to integrate shadcn/rss with custom scripts, bots, or other tools.
+
+**Scope**
+
+* Add model/API to store per-user webhook config (URL, secret, enabled flag).
+* Implement a worker that sends POST requests for relevant events.
+* Include minimal payload (registry, component, change type, severity, timestamp).
+* Verify signatures or provide a simple HMAC-based mechanism using the shared secret.
+
+**Acceptance criteria**
+
+* Users can save a webhook URL and secret via UI or API.
+* When a change event is created, a webhook POST is sent (if enabled).
+* Failed webhooks are logged; repeated failures eventually disable the webhook (or mark as unhealthy).","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:20:30 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"b10b67f5-6d29-4722-bb81-6356407922b2",249804,,,
+"KAP-50","KapishDima","Build UI for notification settings","Add a settings page where users can control when and how they get notifications.
+
+**Goal**
+Give users a clear way to customize notification channels and frequency.
+
+**Scope**
+
+* “Notifications” section in user settings.
+* Controls for: email on/off, email frequency (daily/weekly/none).
+* Controls for: RSS feed (show/copy/regenerate URL).
+* Controls for: webhook URL + secret + enable/disable.
+
+**Acceptance criteria**
+
+* Changes in the UI persist to `NotificationPreferences` and related models.
+* Settings page clearly indicates which channels are active.
+* Dangerous actions (e.g. regenerate RSS token) are confirmed.","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:20:39 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"fe28477e-4600-413f-993c-05798589e8b6",249804,,,
+"KAP-51","KapishDima","Respect notification preferences in event generation and delivery","Ensure that notification events and deliveries strictly follow user preferences.
+
+**Goal**
+Avoid spamming users and ensure they receive only what they asked for.
+
+**Scope**
+
+* When generating events, honour scope preferences (breaking-only / all changes / specific registries).
+* When delivering emails/webhooks/RSS, honour frequency and channel toggles.
+* Add safeguards to avoid sending anything if all channels are disabled.
+
+**Acceptance criteria**
+
+* Users with email disabled do not receive emails.
+* Users with “breaking only” do not get events for non-breaking changes.
+* Tests cover at least a few preference combinations.","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:20:53 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"daf3eba8-0e93-4d95-a91f-87b2b2579b25",249804,,,
+"KAP-52","KapishDima","Create digest email template and copy","Design and implement a simple but readable email template for change digests.
+
+**Goal**
+Make digest emails easy to scan and pleasant to receive.
+
+**Scope**
+
+* Layout for digest email (group changes by registry, show severity badges, timestamps).
+* Short intro copy explaining what the email is and how to change settings.
+* Include links back to shadcn/rss pages (change feed, specific registry).
+
+**Acceptance criteria**
+
+* Digest email renders correctly in at least major email clients (Gmail, Apple Mail).
+* Email includes a link to notification settings/unsubscribe flow.
+* Content is concise and useful even for 5–20 changes.","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:21:02 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"b9bbc510-7a47-4ff0-a478-35f66fca220d",249804,,,
+"KAP-53","KapishDima","Add logging, observability, and basic rate limiting for notifications","Make notification delivery debuggable and prevent runaway spam scenarios.
+
+**Goal**
+Be able to understand what’s going on if notifications misbehave and cap worst-case send volume.
+
+**Scope**
+
+* Structured logging around event generation and delivery attempts.
+* Basic metrics (counters for events created, delivered, failed) if metrics infra exists, or at least logs.
+* Simple rate limits per user/channel (e.g. max N emails per day).
+
+**Acceptance criteria**
+
+* It’s possible to inspect logs and see how many notifications were sent and to whom.
+* Delivery failures are visible (not silent).
+* Rate limiting prevents obvious abuse or accidental spam loops.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:21:14 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:18:25 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"7a11ac71-be09-44bd-b684-645c48e29841",249804,,,
+"KAP-54","KapishDima","Document notifications: email, and webhooks","Document how notifications work and how users can configure them.
+
+**Goal**
+Make it clear what channels exist, how to enable them, and how to integrate webhooks.
+
+**Scope**
+
+* User-facing docs explaining email digests, personal RSS, and webhooks.
+* Developer-facing docs for webhook payload format and security (secrets, signatures).
+* Notes on how to run notification workers locally.
+
+**Acceptance criteria**
+
+* Docs live in the repo and are linked from the app (or at least from README).
+* Users can follow docs to set up their own RSS/webhook integration.
+* Webhook payload is documented enough to build simple automations.","Backlog",,"Medium","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:21:31 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:52 GMT+0000 (GMT+00:00)",,,,,,,,"","aa3ef0a4-5a32-409e-9e30-61b94ac4168b","Notifications (Email /  Webhooks)",,"5a460cb5-f672-4406-89b1-7c6e5d87b38f",249803,,,
+"KAP-55","KapishDima","Design repo-aware data model for registry & component usage","Design the data model to represent GitHub repositories tracked by shadcn/rss and which registries/components they use.
+
+**Goal**
+Be able to say: “this repo uses these registries and these components” in a structured way.
+
+**Scope**
+
+* Define entities like `TrackedRepo` (GitHub repo binding), `RepoRegistryUsage`, `RepoComponentUsage`.
+* Decide identifiers to store (GitHub repo id, owner/name, default branch, etc.).
+* Add migrations/schema to the codebase.
+
+**Acceptance criteria**
+
+* Data model is documented and merged.
+* A repo can be linked to multiple registries and components in the DB.
+* Example records can be inserted without ambiguity.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:26:38 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"100ae35e-8294-40a2-bcbf-c4d7dae0804a",249798,,,
+"KAP-56","KapishDima","Implement backend for linking GitHub repositories","Implement backend APIs to link a GitHub repository to a shadcn/rss user/account.
+
+**Goal**
+Allow authenticated users to register a GitHub repo as “tracked” inside shadcn/rss.
+
+**Scope**
+
+* API to list available GitHub repos for the current user (using their GitHub auth/app).
+* API to create a `TrackedRepo` entry for a selected repo.
+* Store minimal metadata (id, owner, name, URL, default branch).
+* Ensure per-user access: users can only link repos they have access to.
+
+**Acceptance criteria**
+
+* Authenticated user can link at least one of their GitHub repos via API.
+* Linked repos are persisted as `TrackedRepo` records.
+* Unauthorized linking attempts are rejected.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:26:45 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"99ece4e7-6b25-4132-ad83-ef61629b781f",249798,,,
+"KAP-57","KapishDima","Build UI for selecting and managing tracked GitHub repos","Add a UI where users can connect their GitHub repos to shadcn/rss and manage tracked ones.
+
+**Goal**
+Make it easy to pick repos to track and see what’s already connected.
+
+**Scope**
+
+* “Tracked repositories” section in the app (e.g. under account/settings).
+* List of currently tracked repos (name, owner, status, last scan time).
+* Flow to add a repo (select from GitHub list or enter manually if needed).
+* Ability to un-link a repo.
+
+**Acceptance criteria**
+
+* Logged-in user can see which repos are tracked.
+* Adding/removing a repo updates both UI and backend.
+* Error/empty/loading states are handled gracefully.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:26:57 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"ce928051-218d-4352-ad8d-fef79f3940d8",249798,,,
+"KAP-58","KapishDima","Implement repo usage discovery via config file","Implement the first version of repo usage discovery using a config file inside the repo.
+
+**Goal**
+Avoid heavy static analysis by starting with an explicit config that describes which registries/components are used.
+
+**Scope**
+
+* Define a simple config format (e.g. `components.json`) describing used registries/components.
+* Implement logic to fetch the config from GitHub (via API) for a tracked repo.
+* Parse the config into `RepoRegistryUsage` / `RepoComponentUsage` records.
+
+**Acceptance criteria**
+
+* For a repo with a valid config file, usage records are created/updated.
+* Missing/invalid config is handled with clear errors or warnings.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:27:50 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"dd9c438e-4798-40e3-a525-e05c5e94a37e",249797,,,
+"KAP-59","KapishDima","Add optional lightweight code scanning for registry/component imports (v1)","Add an optional code scanning step that inspects repo source files for registry/component imports.
+
+**Goal**
+Provide a fallback/augmentation to config-based discovery without full static analysis complexity.
+
+**Scope**
+
+* Define patterns for common import styles (e.g. registry paths, known aliases).
+* Fetch a subset of repo files (or specific directories) via GitHub API.
+* Extract candidate registry/component usages and map them into usage records.
+* Mark discovered usages as “inferred” vs “explicit” (from config).
+
+**Acceptance criteria**
+
+* For a sample repo, scanning identifies at least some real component usages.
+* Inferred usages are clearly flagged in data.
+* Performance characteristics are understood and documented (no crazy API overuse).","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have, V2",,,,,"Wed Dec 10 2025 21:28:16 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"88f1b3b6-f237-422b-ad65-3473110960e0",249797,,,
+"KAP-60","KapishDima","Add scheduled job to refresh repo usage (config + scan)","Periodically refresh the usage information for tracked repos based on config and/or scanning.
+
+**Goal**
+Keep the mapping from repos to registries/components reasonably up to date.
+
+**Scope**
+
+* Job that iterates over `TrackedRepo` records and updates usage data.
+* Respect rate limits and add simple batching/throttling.
+* Log summary: number of repos processed, successes/failures.
+
+**Acceptance criteria**
+
+* Running the job updates usage for all tracked repos without crashing.
+* Logs clearly show progress and failed repos.
+* Re-running the job is idempotent / safe.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:28:24 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"a99dfb8d-74d5-4518-ac76-75a327e58b0c",249796,,,
+"KAP-61","KapishDima","Add project view to show changes for a specific repo","Add a dedicated view that shows registry changes filtered by what a given repo actually uses.
+
+**Goal**
+Let users see “changes that affect this repo” instead of the entire global feed.
+
+**Scope**
+
+* UI entry point: select a tracked repo and open its project view.
+* List of changes limited to registries/components used by that repo.
+* Filters for severity (breaking vs all) and date range.
+
+**Acceptance criteria**
+
+* For a repo with usage data, project view shows a non-empty, filtered list of changes.
+* Switching between different repos updates the view correctly.
+* Logged-out users cannot access repo-specific views.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:28:36 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"b58a246f-ef4e-4d9a-a598-5e7d7ff14d93",249796,,,
+"KAP-62","KapishDima","Highlight breaking changes for components used by the repo","Emphasize breaking changes in the project view to make risk obvious.
+
+**Goal**
+Help teams quickly see which components in their repo are affected by breaking changes.
+
+**Scope**
+
+* In the project view, surface breaking changes in a separate section or with stronger visual treatment.
+* Group breaking changes by registry and/or component.
+* Provide links to the global change detail / diff view.
+
+**Acceptance criteria**
+
+* Breaking changes are visually distinct from non-breaking ones.
+* It’s easy to see “how many breaking changes affect this repo right now”.
+* Normal change lists remain usable and not overloaded.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:28:51 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:34 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"f79922e2-5a92-43e1-9ac9-f3e304871cb5",249796,,,
+"KAP-63","KapishDima","Add optional GitHub issue creation for breaking changes (v1)","Allow users to optionally create GitHub issues in a tracked repo for breaking changes that affect it.
+
+**Goal**
+Bring registry risks into the repo’s workflow (backlog) instead of keeping them only in shadcn/rss.
+
+**Scope**
+
+* Per-repo setting: allow/disallow auto-issue creation.
+* For a breaking change affecting a repo, create a GitHub issue with summary, registry/component, and links.
+* Avoid duplicates (one issue per change per repo).
+
+**Acceptance criteria**
+
+* When enabled, breaking changes trigger issue creation in a sample repo.
+* Issues have clear titles and descriptions and link back to shadcn/rss.
+* Logging / error handling for failed issue creation is in place.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have, V2",,,,,"Wed Dec 10 2025 21:29:12 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:33 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"76d3eeca-8b2e-4be8-990c-445dbc254849",249796,,,
+"KAP-64","KapishDima","Add tests & QA checklist for repo-aware mode","Cover main repo-aware flows with tests and write a QA checklist.
+
+**Goal**
+Ensure linking repos and showing repo-specific changes is stable.
+
+**Scope**
+
+* Tests for: linking a repo, discovering usage from config, refreshing usage.
+* Tests for: project view showing only relevant changes.
+* If issue creation is implemented, tests for avoiding duplicates.
+* QA checklist describing manual steps to validate repo-aware behaviour.
+
+**Acceptance criteria**
+
+* CI covers key repo-aware flows.
+* Regression in repo-aware logic is likely to be caught.
+* QA checklist lives in the repo.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:29:21 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:33 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"52a588da-1208-43a3-bdde-dab9c888d4f3",249795,,,
+"KAP-65","KapishDima","Document repo-aware mode and GitHub integration","Document how to connect repos, how usage is discovered, and how project-specific views work.
+
+**Goal**
+Help users/teams understand why they’d want repo-aware mode and how to set it up.
+
+**Scope**
+
+* User-facing docs: what repo-aware mode does, benefits, how to link a repo.
+* Dev-facing docs: data model (TrackedRepo, usage tables), scanning/config strategy, jobs.
+* Notes about limitations of v1 and future improvements.
+
+**Acceptance criteria**
+
+* Docs live in the repo and are linked from settings/UI where relevant.
+* A new user can follow docs to enable repo-aware mode on their repo.
+* A contributor can understand where to extend scanning or integration.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:29:59 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:33 GMT+0000 (GMT+00:00)",,,,,,,,"","a6133408-b216-4f7f-99c9-a98a987cf287","Repo-aware Mode (GitHub Integration v1)",,"9bf18cb0-e59b-457d-a72f-29246c4a6415",249795,,,
+"KAP-66","KapishDima","Design public API surface for shadcn/rss","Define the initial public API for shadcn/rss that can be used by MCP servers, IDE plugins, and other integrations.
+
+**Goal**
+Have a clear, documented set of endpoints that expose registries, changes, and repo-aware views.
+
+**Scope**
+
+* List core use cases: list registries, fetch changes, fetch diffs, fetch repo-specific changes.
+* Define endpoints, request params, and response schemas.
+* Decide on authentication model for API consumers (token/user-based).
+
+**Acceptance criteria**
+
+* API spec is written (markdown or OpenAPI) and lives in the repo.
+* Endpoints cover MVP needs for MCP + IDE integration.
+* Auth requirements per endpoint are clear.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:30:33 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:13 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"0f2ce226-ca1a-4ba8-a1d5-555460d0c016",249794,,,
+"KAP-67","KapishDima","Implement versioned public API endpoints","Implement the core API endpoints defined in the public API spec with a versioned prefix (e.g. `/api/v1`).
+
+**Goal**
+Provide a stable foundation that MCP and IDE integrations can rely on.
+
+**Scope**
+
+* Implement endpoints such as:
+  * `GET /api/v1/registries`
+  * `GET /api/v1/changes` (with filters)
+  * `GET /api/v1/changes/:id` (detail/diff)
+  * `GET /api/v1/repos/:id/changes` (repo-aware)
+* Use consistent response shapes and error handling.
+
+**Acceptance criteria**
+
+* Endpoints return data consistent with the spec.
+* Basic integration tests cover main endpoints.
+* API prefix/versioning is in place for future evolution.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:30:43 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:03 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"60fd3bca-412b-4e73-80a6-8300bfe2e554",249794,,,
+"KAP-68","KapishDima","Add API authentication and rate limiting for integrations","Secure the public API with token-based auth and basic rate limiting suitable for MCP/IDE use.
+
+**Goal**
+Allow safe external access without exposing internal endpoints or risking abuse.
+
+**Scope**
+
+* Implement API token model (per user or per integration key).
+* Require tokens for sensitive endpoints (user-specific / repo-aware).
+* Add basic rate limiting per token (and possibly per IP).
+
+**Acceptance criteria**
+
+* Requests without valid tokens are rejected where appropriate.
+* Rate-limited behaviour is predictable and logged.
+* Docs explain how to obtain and use an API token.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","✨ Nice-to-have",,,,,"Wed Dec 10 2025 21:30:52 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:19:54 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"46931858-19d9-4b0b-838c-97bfbc867004",249794,,,
+"KAP-69","KapishDima","Design MCP methods for shadcn/rss","Define the MCP methods that expose shadcn/rss functionality to AI agents (Cursor, VS Code agents, etc.).
+
+**Goal**
+Provide a small but powerful MCP surface that maps onto the public API.
+
+**Scope**
+
+* Define methods such as:
+  * `listRegistries`
+  * `getRegistryChanges(registryId, since)`
+  * `getChangeDetails(changeId)`
+  * `getRepoChanges(repoId, since)`
+* Specify inputs, outputs, and error models.
+
+**Acceptance criteria**
+
+* MCP method definitions are documented.
+* Methods map cleanly to existing API endpoints.
+* MVP covers key agent use cases (what changed, where, and how it impacts a repo).","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:31:05 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:13 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"668a0434-9dc6-4e21-8682-83d6449bef33",249794,,,
+"KAP-70","KapishDima","Implement shadcn/rss MCP server (v1)","Implement an MCP server that exposes shadcn/rss data using the designed methods.
+
+**Goal**
+Allow compatible MCP clients (Cursor, VS Code agents, Claude Desktop, etc.) to query registry changes via MCP.
+
+**Scope**
+
+* Implement MCP server in the chosen language/runtime.
+* Wire MCP methods to the public API (or internal service layer).
+* Support configuration for API base URL and token.
+
+**Acceptance criteria**
+
+* MCP server starts and responds to method calls in a local/dev setup.
+* At least one MCP client can connect and successfully call `listRegistries` and `getRegistryChanges`.
+* Basic logging for MCP requests/responses exists for debugging.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:31:16 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:13 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"4a35c5af-44b9-44ef-812f-75bd35bce866",249794,,,
+"KAP-71","KapishDima","Document how to use the shadcn/rss MCP server","Provide documentation for developers to install/configure the MCP server and hook it into their tools.
+
+**Goal**
+Make it easy for devs to plug shadcn/rss into Cursor / VS Code / agents.
+
+**Scope**
+
+* Install instructions (from source, package, or binary).
+* Config examples (API base URL, token).
+* Example configuration snippets for popular clients (Cursor, Claude, etc.).
+
+**Acceptance criteria**
+
+* Docs live in `/docs` or MCP repo and are discoverable.
+* A developer can follow docs and get a working setup locally.
+* Key options and environment variables are described.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:31:23 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:13 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"bcdd83fb-4dfa-43ff-a47f-3662bc2bf66b",249793,,,
+"KAP-72","KapishDima","Add tests and contract checks for API & MCP integration","Ensure the public API and MCP methods remain compatible and stable.
+
+**Goal**
+Catch breaking changes to the API that would break MCP or IDE clients.
+
+**Scope**
+
+* Integration tests for key API endpoints used by MCP and IDE.
+* Tests for MCP methods (mocking API responses).
+* Optional: basic schema/contract checks to detect response shape changes.
+
+**Acceptance criteria**
+
+* CI fails if responses deviate from the expected shape.
+* MCP methods are covered by at least basic happy-path tests.
+* There is a documented process for updating the API/MCP contract.","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:31:43 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:13 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"66d9ec02-ef11-49e7-83f7-aa8f55857d09",249793,,,
+"KAP-73","KapishDima","Publish API reference and integration examples","Provide a concise API reference and a few concrete examples for using shadcn/rss programmatically.
+
+**Goal**
+Make third-party integrations and experiments easy to start.
+
+**Scope**
+
+* API reference for the main endpoints (registries, changes, repo changes).
+* Code examples (curl/JS/TS) for common tasks.
+* Short section “Building your own integration” with best practices (rate limits, auth).
+
+**Acceptance criteria**
+
+* API reference is accessible from README/site.
+* Examples are copy-pastable and work against a dev or staging environment.
+* Guidance exists on how not to abuse the API (throttling, caching).","Backlog",,"High","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V1",,,,,"Wed Dec 10 2025 21:31:53 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:26:12 GMT+0000 (GMT+00:00)",,,,,,,,"","e2760a15-5dac-41a5-961d-3252ca20f25a","API / MCP & IDE Integration (v1)",,"ee1a2b01-5431-4d2c-b929-c647c61a178d",249793,,,
+"KAP-74","KapishDima","Design model for registry ownership and author profiles","Design how registries are linked to their authors and what data we store about authors.
+
+**Goal**
+Support author-specific views (dashboards) and metrics.
+
+**Scope**
+
+* Define `Author` entity (user or external identity).
+* Link registries to authors (one or multiple owners).
+* Decide how ownership is verified (GitHub account, email, manual claim).
+* Add schema/migrations.
+
+**Acceptance criteria**
+
+* Authors and author–registry relations are modeled in the DB.
+* A registry can be linked to one or more authors.
+* Example author + registry associations can be stored.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:33:48 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"eb939dfe-a8c8-4a5b-9029-8652ff266598",249791,,,
+"KAP-75","KapishDima","Implement registry claim and verification flow for authors","Allow registry authors to claim ownership of a registry inside shadcn/rss.
+
+**Goal**
+Enable authors to access “author mode” and their dashboards safely.
+
+**Scope**
+
+* UI to “Claim this registry” on registry detail pages.
+* Backend flow to verify ownership (e.g. via GitHub repo ownership or verification token).
+* Admin override flow to approve/deny claims if needed.
+
+**Acceptance criteria**
+
+* A logged-in user can request ownership of a registry.
+* Verified owners are persisted and used for access control.
+* Invalid/fake claims are rejected or flagged for review.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:45:36 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"9e3a8d67-c4bb-40b4-b014-38ad6d2fd87c",249779,,,
+"KAP-76","KapishDima","Build author dashboard overview page","Create an “Author dashboard” landing page that shows high-level stats for all registries an author owns.
+
+**Goal**
+Give authors a quick overview of how their registries are doing in the ecosystem.
+
+**Scope**
+
+* Overview card per registry: name, health label, last update, usage highlights.
+* Aggregate stats: total watchers, total tracked repos using their registries, recent changes count.
+* Access restricted to registry owners.
+
+**Acceptance criteria**
+
+* Verified authors see a dashboard summarizing their registries.
+* Non-authors cannot access these views.
+* At least basic metrics are displayed correctly for test data.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:45:43 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"dbd871ab-0f68-4b5b-a971-ab3b9dbb2689",249779,,,
+"KAP-77","KapishDima","Add per-registry analytics for usage and watchlists","Show authors how their registry is used across shadcn/rss users and repos.
+
+**Goal**
+Provide insight into how popular a registry is and where it’s being used.
+
+**Scope**
+
+* For each registry, show:
+  * number of user watchlists including this registry,
+  * number of tracked repos using the registry,
+  * trend over time if available.
+* Add a dedicated section/tab in the author view for a single registry.
+
+**Acceptance criteria**
+
+* Authors can see watchlist + repo usage counts per registry.
+* Numbers line up with underlying data (spot checks).
+* UI makes clear what each metric represents.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:45:54 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"782e9e14-7822-48be-afc9-49d447cf5059",249779,,,
+"KAP-78","KapishDima","Add analytics for registry change activity and breaking changes","Provide authors with stats on how often their registry changes and how “risky” those changes are.
+
+**Goal**
+Help authors understand their own shipping patterns and stability.
+
+**Scope**
+
+* Metrics per registry:
+  * number of changes in last 30/90 days,
+  * number of breaking vs non-breaking changes,
+  * simple chart/timeline of activity.
+* Visualize these on the per-registry author page.
+
+**Acceptance criteria**
+
+* Authors can see distribution of breaking vs non-breaking changes over time.
+* Charts/metrics reflect underlying `Change` data.
+* No major performance issues on realistic data.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:46:08 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"3432995b-c091-4df7-87db-89cb50778f95",249779,,,
+"KAP-79","KapishDima","Track and surface traffic from shadcn/rss to registries","Show authors how much traffic shadcn/rss sends to their registry/docs/GitHub.
+
+**Goal**
+Demonstrate value to authors and encourage them to engage with shadcn/rss.
+
+**Scope**
+
+* Track clicks from shadcn/rss to registry external links (docs, GitHub, demo).
+* Store aggregated click counts per registry and per link type.
+* Display these stats in the author dashboard (e.g. “Clicks from shadcn/rss last 30 days”).
+
+**Acceptance criteria**
+
+* Clicks are recorded when users follow outbound links.
+* Authors can see at least basic click stats per registry.
+* Tracking respects privacy and is documented.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:46:19 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"a41e2c02-df3d-420f-a76d-848684d85d53",249779,,,
+"KAP-80","KapishDima","Add ""share this"" tools for authors (social cards & links)","Provide authors with ready-to-use share links and cards to promote their registry using shadcn/rss data.
+
+**Goal**
+Make it easy for authors to share their registry stats and drive more traffic back to shadcn/rss.
+
+**Scope**
+
+* Generate a simple share card/URL for each registry (e.g. short summary image or OG card).
+* Pre-built share links for X/Bluesky/etc (with UTM-tags if appropriate).
+* UI in the author view to copy/share these.
+
+**Acceptance criteria**
+
+* Authors can copy a shareable link/card for their registry.
+* Shared links lead back to registry detail pages on shadcn/rss.
+* Optional: UTM or ref data is captured for ecosystem analytics.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:46:35 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"b156c99d-4e16-4a50-842e-cd596a5255b6",249778,,,
+"KAP-81","KapishDima","Provide widgets/embeds for registry sites","Offer small embeddable widgets that registry authors can place on their own sites to show stats from shadcn/rss.
+
+**Goal**
+Bring shadcn/rss presence to external registry sites and drive reciprocal traffic.
+
+**Scope**
+
+* Design a small “Powered by shadcn/rss” widget showing basic stats (health, activity, watchers).
+* Implement as an embeddable script or iframe with minimal setup.
+* Provide embed code in the author dashboard.
+
+**Acceptance criteria**
+
+* Authors can copy-paste embed code into their site.
+* Widget renders correctly and shows live data for that registry.
+* Embed is performant and doesn’t leak sensitive data.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:46:51 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:55 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"131103ab-66e6-445d-a04f-f1147ed9ecff",249778,,,
+"KAP-82","KapishDima","Add public ""Top registries"" and ""Trending"" views","Create public views highlighting active/popular registries using author/usage data.
+
+**Goal**
+Give more visibility to active registries and create incentives for authors.
+
+**Scope**
+
+* Add sections/pages like “Top registries” (by watchers/usage) and “Trending” (recent activity).
+* Use existing metrics (watchers, tracked repos, changes) to rank.
+* Link prominently to registry detail pages.
+
+**Acceptance criteria**
+
+* Public can see top/trending registries and navigate to them.
+* Rankings update based on live data (with some caching).
+* Authors see their registries reflected in these views.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:49:57 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:54 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"51bd6764-0d58-4de7-b7c5-d75decedc23f",249775,,,
+"KAP-83","KapishDima","Add tests & QA checklist for author dashboard and embeds","Cover the core author-related flows and embeds with tests and a QA checklist.
+
+**Goal**
+Keep author features stable as the product evolves.
+
+**Scope**
+
+* Tests for: claiming a registry, accessing author dashboard, viewing metrics.
+* Tests for: tracking clicks and showing correct stats.
+* Tests (or at least manual QA steps) for embeds/widgets.
+
+**Acceptance criteria**
+
+* CI covers main author flows.
+* QA checklist exists for author dashboard changes.
+* Regression in analytics/ownership logic is likely to be caught.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:50:06 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:54 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"bf5d70f3-a589-46e1-900d-26c280919f9a",249775,,,
+"KAP-84","KapishDima","Document author mode and ecosystem hooks","Document how registry authors can use shadcn/rss: dashboards, stats, embeds, sharing tools.
+
+**Goal**
+Encourage registry authors to claim and actively use their dashboards.
+
+**Scope**
+
+* User-facing docs: how to claim a registry, what you get as an author.
+* Explain available stats (usage, clicks, activity) and how to interpret them.
+* Explain how to add widgets/embeds and use share links/cards.
+
+**Acceptance criteria**
+
+* Docs are linked from the UI (e.g. “Learn more about author mode”).
+* A registry author can follow docs to claim their registry and use the dashboard.
+* Ecosystem hooks (embeds, sharing) are clearly explained.","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com","kapishdima@gmail.com","V2",,,,,"Wed Dec 10 2025 21:50:32 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 22:20:54 GMT+0000 (GMT+00:00)",,,,,,,,"","72b44938-7d9a-431e-a97a-529f21b2b0c8","Author Dashboard & Ecosystem Hooks",,"280145cf-60ce-4a2a-b2d1-5136a913571e",249774,,,
+"KAP-85","KapishDima","Product risks & guardrails for shadcn/rss","## Why this issue exists
+
+A short list of key product risks for shadcn/rss and concrete product decisions that should mitigate them.
+
+This is not a roadmap and not full documentation — it’s “guardrails” to keep in mind when designing new features and UI.
+
+When working on a new feature or changing an existing one — quickly skim this list.
+
+---
+
+## 1\. Breaking detection (errors in identifying breaking changes)
+
+**Risk:**
+
+We may mark a change as breaking when it isn’t, or miss a real breaking change.
+
+**Product guardrails:**
+
+- [ ] Introduce three levels instead of a boolean: `Breaking`, `Minor`, `Unknown` (with badges/colors in the UI).
+- [ ] By default, show/send **only Breaking** in the feed and notifications.
+- [ ] Add filters by change type (checkboxes: Breaking / Minor / Unknown).
+- [ ] For each change, add a “Why” popover explaining which rules triggered the classification.
+- [ ] Add a simple feedback loop on each change: buttons like `Not breaking` / `Actually breaking` (even if at first we just log it).
+
+---
+
+## 2\. Registry parsing/structure breaks
+
+**Risk:**
+
+Authors change registry structure, JSON formats, move repos — our adapters break.
+
+**Product guardrails:**
+
+- [ ] Each registry has a status: `OK` / `Degraded` / `Unknown` (visible in the UI).
+- [ ] If an adapter fails, don’t break the whole system — mark the registry as `Degraded` and temporarily stop updating it.
+- [ ] On the registry detail page, show a clear message, e.g.:
+
+  ```
+  “Data for this registry may be incomplete — we’re working on the adapter.”
+  ```
+- [ ] Have an internal (admin) view listing all registries with `Degraded/Unknown` status so they can be fixed quickly.
+
+---
+
+## 3\. Notification noise & fatigue (email, webhooks, GitHub issues)
+
+**Risk:**
+
+Too many emails, events, and issues → users will disable everything.
+
+**Product guardrails:**
+
+- [ ] Strong defaults:
+  - Email: weekly digest, Breaking only.
+  - Webhooks: disabled by default.
+  - GitHub issues: disabled by default.
+- [ ] A global “noise mode” in settings:
+  - Quiet (recommended) / Normal.
+- [ ] For GitHub issues: create issues for **Breaking** changes only.
+- [ ] Each channel should have a clear, easy “off switch”:
+  - “Pause all notifications” / “Turn off emails” / “Stop creating issues for this repo”.
+- [ ] Add a simple rate limit per user/repo (e.g. max N issues per day).
+
+---
+
+## 4\. GitHub trust (permissions, security)
+
+**Risk:**
+
+People are afraid to grant GitHub access / don’t understand what we can do.
+
+**Product guardrails:**
+
+- [ ] When connecting GitHub, show a short, human-readable list: “What we can do / what we can’t do”.
+- [ ] Auto-issues are enabled **only via an explicit toggle on a specific repo**.
+- [ ] For each connected repo, provide a clear `Stop creating issues` button.
+- [ ] Prefer a GitHub App with minimal permissions (read + create issues) over raw tokens.
+- [ ] Support modes for reading code:
+  * default: `Config only` (use only a config file),
+  * `Light scan` — optional, not mandatory.
+
+---
+
+## 5\. Niche focus (only shadcn registries)
+
+**Risk:**
+
+Audience is too narrow → low user count.
+
+**Product guardrails:**
+
+- [ ] Make support for **trusted shadcn registries** very strong (no obvious holes or hacks).
+- [ ] Design models with abstractions (DesignSystem / Registry) so we can later add other UI kits without rewriting everything.
+- [ ] On pages and onboarding, gently highlight:
+
+  ```
+  “Want the same kind of tracking for other UI kits?” → link/form to collect interest.
+  ```
+
+---
+
+## 6\. Reliability for teams (is this safe for production workflows?)
+
+**Risk:**
+
+Teams don’t see shadcn/rss as stable enough to build workflows on top of it.
+
+**Product guardrails:**
+
+- [ ] Version the API from day one: `/api/v1/...`.
+- [ ] Label features as `Stable` / `Beta`:
+  * core (feed, watchlist, notifications) → no `Beta` badge,
+  * repo-aware, MCP, author dashboards → explicitly marked as `Beta` in the UI.
+- [ ] Add a short “How often data updates / what we guarantee” section:
+  * approximate job frequency,
+  * basic expectations around stability.
+
+---
+
+## 7\. UX complexity (users don’t understand what’s going on)
+
+**Risk:**
+
+Too many concepts: registry, feed, watchlist, webhooks, repo-aware, MCP, authors.
+
+**Product guardrails:**
+
+- [ ] On the first screen, focus on **one primary scenario**:
+  - “Connect GitHub → get issues when registries break.”
+- [ ] Add quick presets:
+  - “Follow all trusted registries”
+  - “Follow registries from my project” (after GitHub is connected).
+- [ ] Provide good empty states:
+  - If the feed is empty → explain why and show a button “Open registry list”.
+- [ ] Hide advanced features (repo-aware, MCP, author dashboards) behind separate tabs / “Advanced” sections; don’t show everything at once.
+
+---
+
+## 8\. Security & privacy
+
+**Risk:**
+
+Fear that the service reads private code, stores too much, or does something unclear.
+
+**Product guardrails:**
+
+- [ ] Add a simple “What data we store” section:
+  * explicitly list what we store / what we definitely do not store.
+- [ ] When choosing repos, enable “Show public repos only” by default.
+- [ ] Provide a `Delete my account & data` button in settings (even if behind the scenes it’s an async process).
+- [ ] When scanning repos, clearly show the mode:
+  * “We only analyze config / only specific paths, we do not read the entire codebase.”","Backlog",,"No priority","6304c171-c9c4-4946-b645-0fe90a2bdca7","shadcn/rss","kapishdima@gmail.com",,"",,,,,"Wed Dec 10 2025 23:18:50 GMT+0000 (GMT+00:00)","Wed Dec 10 2025 23:18:50 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"c18fc14d-9df7-4297-b6f3-3baff75abde1",249686,,,
+"KAP-86","KapishDima","better auth PR for improve fastify integration docs","Add fastify app plugin
+
+```
+fastify.addHook(""preHandler"", app.authenticate);
+```
+
+```
+import { FastifyPluginAsync, FastifyRequest, FastifyReply } from ""fastify"";
+import { fromNodeHeaders } from ""better-auth/node"";
+import fp from ""fastify-plugin"";
+
+import { auth, Session, User } from ""@uirules/auth"";
+
+// Extend Fastify types for custom decorations
+declare module ""fastify"" {
+  interface FastifyInstance {
+    authenticate: (
+      request: FastifyRequest,
+      reply: FastifyReply
+    ) => Promise<void>;
+  }
+
+  interface FastifyRequest {
+    session?: Session;
+    user?: User;
+  }
+}
+
+const authPlugin: FastifyPluginAsync = fp(async (fastify) => {
+  fastify.decorate(
+    ""authenticate"",
+    async (request: FastifyRequest, reply: FastifyReply) => {
+      try {
+        const authHeader = request.headers.authorization;
+
+        if (!authHeader || !authHeader.startsWith(""Bearer "")) {
+          return reply.code(401).send({ error: ""Unauthorized"" });
+        }
+
+        // Verify token using Better Auth
+        const sessionData = await auth.api.getSession({
+          headers: fromNodeHeaders(request.headers),
+        });
+
+        if (!sessionData) {
+          return reply.code(401).send({ error: ""Invalid or expired token"" });
+        }
+
+        // Attach session details to the request for later use
+        request.session = sessionData.session;
+        request.user = sessionData.user;
+      } catch (err) {
+        return reply.code(500).send({ error: ""Authentication error"" });
+      }
+    }
+  );
+});
+
+export default fp(authPlugin);
+```","Backlog",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com",,"",,,,,"Sun Jan 04 2026 11:40:13 GMT+0000 (GMT+00:00)","Sun Jan 04 2026 11:40:13 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"d5684d1f-9caf-4caa-881f-a4064e3459ce",214385,,,
+"KAP-87","KapishDima","shadcn multiselect PR",,"Canceled",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com",,"",,,,,"Tue Jan 06 2026 11:33:38 GMT+0000 (GMT+00:00)","Wed Jan 07 2026 13:14:45 GMT+0000 (GMT+00:00)",,,,"Wed Jan 07 2026 13:14:45 GMT+0000 (GMT+00:00)",,,,"",,,,"54e43bb8-7757-4040-b1d9-e1099644aff4",209970,,,
+"KAP-88","KapishDima","tanstack start","fixed scaffolding prisma + neon
+
+fixed prisma generate nitro wasm 
+
+```typescript
+WebAssembly.instantiate(): expected magic word 00 61 73 6d, found 63 6f 6e 73 @+0] {
+  cause: [CompileError: WebAssembly.instantiate(): expected magic word 00 61 73 6d, found 63 6f 6e 73 @+0],
+```","Backlog",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com",,"",,,,,"Sun Jan 11 2026 18:26:38 GMT+0000 (GMT+00:00)","Sun Jan 11 2026 22:17:09 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"dd575f0a-00c5-40c2-9b73-bf5a93ee5d8e",203898,,,
+"KAP-89","KapishDima","8bitcn","fixed registry
+
+* separator - need dep: @radix-ui/react-separator","Backlog",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com",,"",,,,,"Sun Jan 11 2026 18:27:02 GMT+0000 (GMT+00:00)","Sun Jan 11 2026 18:27:02 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"c5a0ec03-e898-45ce-a813-ce27148596bb",203898,,,
+"KAP-90","KapishDima","dev-quests","randomizer of ideas
+leaderboard
+","Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Wed Jan 14 2026 15:52:17 GMT+0000 (GMT+00:00)","Wed Jan 14 2026 15:52:18 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"639f5fa8-7ac7-466e-9e67-f58e46199e2f",199733,,,
+"KAP-91","KapishDima","PR to fix Tooltip docs for shadcn/ui",,"Backlog",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com",,"",,,,,"Tue Jan 20 2026 12:33:01 GMT+0000 (GMT+00:00)","Tue Jan 20 2026 12:33:01 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"c92a082f-272a-4c83-a4b4-8de6b9ff7980",191292,,,
+"KAP-92","KapishDima","Приложение с медатекой Вики","Вытащить все видео/видео сообщения с Валиной переписки","Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Sun Jan 25 2026 16:15:08 GMT+0000 (GMT+00:00)","Sun Jan 25 2026 16:15:08 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"064ec03f-8fe7-4938-bb91-4e324c978480",183870,,,
+"KAP-93","KapishDima","Refactoring","'- [X] Вынести логику поиска, сортировки, фильтрации отдельно
+- [X] Разделить компоненты в sound-page
+- [X] Исправить ошибки biomejs
+- [X] Вынести общий компоненты по всему приложение
+- [X] Настроить nextjs caching ","Done",,"Urgent","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Mon Feb 16 2026 13:47:27 GMT+0000 (GMT+00:00)","Mon Feb 16 2026 19:44:42 GMT+0000 (GMT+00:00)",,,"Mon Feb 16 2026 19:44:42 GMT+0000 (GMT+00:00)",,,,,"",,,,"44f0f3bd-d02b-4027-8cbe-72b8bf6bb566",151980,,,
+"KAP-98","KapishDima","showcases","Добавить страницу с showcases в которой показать как люди используют soundcn
+
+[https://x.com/davidhdev/status/2044099761041481833](<https://x.com/davidhdev/status/2044099761041481833>)
+
+[https://x.com/iamncdai/status/2045164308590649556](<https://x.com/iamncdai/status/2045164308590649556>)
+
+[https://x.com/radiumcoders/status/2040800245064544569](<https://x.com/radiumcoders/status/2040800245064544569>)
+
+[https://x.com/kostyniuk00/status/2039735393159872645](<https://x.com/kostyniuk00/status/2039735393159872645>)
+
+[https://x.com/bossadizenith/status/2024578835094581550](<https://x.com/bossadizenith/status/2024578835094581550>)
+
+[https://x.com/gakeez1/status/2023326196692627681](<https://x.com/gakeez1/status/2023326196692627681>)
+
+[https://x.com/nathan_brodin/status/2023841318490005528](<https://x.com/nathan_brodin/status/2023841318490005528>)
+
+[https://x.com/Garvit1000/status/2049513976862822753](<https://x.com/Garvit1000/status/2049513976862822753>)
+
+[https://x.com/shabanhr/status/2031439222880850273](<https://x.com/shabanhr/status/2031439222880850273>)","Todo",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Thu Feb 19 2026 21:15:33 GMT+0000 (GMT+00:00)","Sun May 03 2026 16:57:24 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"8be80724-e918-4d6b-a8e1-634227bc4693",48986,"KAP-128",,
+"KAP-99","KapishDima","New Components","'- [ ] **Achievement Badge Unlock** — pop с анимацией | fanfare / jingle | Jingles |
+- [ ] **XP / Points Gained** — +100 float-анимация | coin collect | Game |
+- [ ] **Streak Tracker** — ежедневный streak | streak chime | Game |
+- [ ] **Level Up Bar** — заполнение + level up | level up jingle | Game |
+- [ ] **Spin Wheel / Lottery** — крутёж + результат | spin + reveal | Game |
+- [ ] **Typewriter Text** — клик на каждый символ | keyboard click | UI |
+- [ ] **Keyboard Shortcut Visualizer** — нажатие клавиши | key press | UI |
+- [ ] **Like / Heart Button** — toggle с анимацией | click + collect | UI |
+- [ ] **Toast — Success** | success chime | Feedback |
+- [ ] **Toast — Error** | error buzz | Feedback |
+- [ ] **Toast — Warning** | warning ping | Feedback |
+- [ ] **Toast — Info** | info tone | Feedback |
+- [ ] **Progress Bar** — заполнение + завершение | fill + complete | Feedback |
+- [ ] **Countdown Timer** — тик + финальный звонок | tick + alarm | Tones
+- [ ] **Copy to Clipboard Button** — иконка меняется на ✓ | click + confirm | UI |
+- [ ] **Password Strength Meter** — feedback при вводе | warning → success | Feedback |","Todo",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Tue Feb 24 2026 12:11:52 GMT+0000 (GMT+00:00)","Wed Apr 29 2026 08:19:02 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"b3d54b71-46e5-42c6-a96c-e4cccc926663",140913,,,
+"KAP-100","KapishDima","boilerplate продаваемый","Возьми стек который ты спроектировал для wardrobe app — Next.js + Bun/Hono + Drizzle + Better Auth + Cloudflare R2 + Vercel AI SDK — и продай
+
+его как boilerplate.
+
+Почему именно это:
+
+* Это современный стек который ещё плохо покрыт (create-t3-app = tRPC/Prisma/NextAuth, это старый стандарт)
+* Твоя аудитория — разработчики которые именно сейчас выбирают стек для нового проекта
+* Zero cold start: продукт готов сразу, не нужно набирать пользователей
+* Время сборки: 3-5 недель вместо 6-12 месяцев на wardrobe app
+* Wardrobe app становится demo application внутри boilerplate","Backlog",,"No priority",,,"kapishdima@gmail.com",,"",,,,,"Sun Mar 01 2026 18:03:01 GMT+0000 (GMT+00:00)","Sun Mar 01 2026 18:03:01 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"82c53a84-4ffd-4b40-9c9f-d9c40167c6a1",133362,,,
+"KAP-101","KapishDima","shadcn v4 new ideas","1. ~~Preset Marketplace (Preset System)~~
+
+Shadcn/create позволяет создавать presets с живым превью и делиться ими через коды. Идея: платформа, где дизайнеры продают presets (полные design systems) как
+
+NFT-like коды.
+
+Проблема с идеей: shadcn уже строит это сами через shadcn/create. Ты будешь конкурировать с самим инструментом.
+
+Реальная ниша: вертикальные presets — shadcn-saas-preset, shadcn-dashboard-preset, shadcn-docs-preset — пакеты под конкретные типы приложений. Монетизация
+
+через Gumroad/Lemon Squeezy.
+
+---
+
+2. CI/CD: Component Drift Monitor
+
+\--diff показывает расхождение между registry и локальной версией. Идея: GitHub Action, которая на каждый PR:
+
+* Запускает shadcn diff по всем установленным компонентам
+* Показывает в PR комментарии: ""Button отстал на 2 версии, вот diff""
+* Блокирует merge, если critical components разошлись больше порога
+
+Критика: Кто реально страдает от drift? Команды 5+ разработчиков с кастомизированными компонентами. Это узкий рынок, но боль острая — ты кастомизировал Button,
+
+upstream поправил a11y баг, ты его пропустил. Проблема реальная, решение простое — можно сделать за выходные. Open source, монетизация через hosted dashboard
+
+с историей drift.
+
+---
+
+3. ~~**Font Pairing Registry (done)**~~
+
+registry:font — шрифты как first-class элемент. Идея: кураторский реестр не отдельных шрифтов, а пар и троек (heading + body + mono), уже сконфигурированных с
+
+CSS-переменными, fallback стеками, и size/weight рекомендациями.
+
+shadcn add font-pairing/editorial → получаешь Playfair Display + Source Serif + JetBrains Mono с настроенными scale ratios.
+
+Критика: Google Fonts есть. [Fontpair.co](<http://Fontpair.co>) есть. Но ни один не даёт установку в один клик с правильными CSS-переменными. Это маленький, но приятный open source
+
+проект. Монетизация сомнительна — это скорее community-building инструмент.
+
+---
+
+4. Monorepo Component Audit Tool (--monorepo + shadcn info)
+
+В монорепо разные packages могут использовать разные версии компонентов. Инструмент: сканирует все packages в монорепо через shadcn info, строит матрицу
+
+совместимости, выявляет дублирование и конфликты версий.
+
+Реальная боль в enterprise, где есть 10+ packages в одном monorepo.
+
+---
+
+5. shadcn info → Project Health Dashboard
+
+shadcn info возвращает framework, компоненты, доки. Идея: локальный веб-дашборд (think npx shadcn-health), который визуализирует:
+
+* Какие компоненты установлены, какие доступны
+* Drift от upstream (через --diff)
+* Покрытие компонентами (сколько из доступных ты используешь)
+* Зависимости между компонентами (граф)
+
+---
+
+6. ~~**MCP-сервер поверх shadcn/skills + shadcn docs (done и ждет shadcn)**~~
+
+shadcn/skills даёт контекст агентам, shadcn docs возвращает документацию из CLI. Идея: MCP-сервер, который:
+
+* Проксирует shadcn info → агент знает, какие компоненты уже в проекте
+* Проксирует shadcn docs <component> → агент читает API-референс
+* Использует shadcn/skills → агент знает паттерны и best practices
+* Может выполнять shadcn add с --dry-run → агент предлагает установку, показывает diff
+
+Результат: любой AI-инструмент (Claude Code, Cursor, Cline) работает с shadcn как native.
+
+Критика: shadcn/skills уже интегрирован в Claude и v0. Но MCP — это стандарт, который работает везде. Сейчас каждый AI-инструмент пишет свою интеграцию.
+
+MCP-сервер решает это раз и навсегда. Это наиболее реалистичная и полезная идея.","Todo",,"Urgent",,,"kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Fri Mar 06 2026 20:27:36 GMT+0000 (GMT+00:00)","Wed Apr 29 2026 13:49:46 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"089bfdb3-d833-4282-84ea-44551dae8fb7",126016,,,
+"KAP-104","KapishDima","Premium ideas","# Монетизация fonttrio — Все варианты
+
+## Продуктовые
+
+### White-label Typography Registry
+
+Приватный fonttrio-реестр под брендом компании. Разработчик делает `shadcn add https://fonts.company.com/r/brand-docs.json` и получает шрифты + type scale + CSS variables, совпадающие с Figma tokens. Dashboard для управления пэйрингами, API ключи для CI/CD, Figma sync, audit log. Тарифы: $49-299/мес per org.
+
+### fonttrio Pro CLI
+
+Расширение для shadcn CLI. Сканирует проект, определяет текущие шрифты, предлагает улучшения. `npx fonttrio scan` → ""Your Inter + system mono pair scores 6/10. Try 'modern-clean' for better hierarchy."" Бесплатный скан, платный auto-fix.
+
+### Typography Audit SaaS
+
+Вставляешь URL → получаешь отчёт по типографике (контраст, размеры, line-height, consistency) + рекомендацию пэйринга из fonttrio. Freemium модель.
+
+### Lighthouse-style CLI Scoring
+
+`npx fonttrio audit https://site.com` → Typography Score 73/100. Подсвечивает: ""too many font weights loaded"", ""line-height too tight on mobile"", ""no fallback font defined"". Бесплатный отчёт, платный мониторинг ($9/мес — еженедельный скан + алерты).
+
+### Font Pairing A/B Testing
+
+Сниппет для тестирования 2 пэйрингов на реальных юзерах. Показывает метрики: readability time, scroll depth, bounce rate. SaaS для контент-сайтов и блогов. $19-49/мес.
+
+### Typography Tokens as a Service
+
+Полный набор: font-face + type scale + fluid typography + responsive breakpoints + dark mode adjustments. npm-пакет `@fonttrio/tokens-editorial`. $5-15 per token set, one-time.
+
+### Font Analytics Dashboard
+
+""Google Analytics для типографики"". Какие шрифты популярны в каких нишах, тренды, что растёт. Бесплатный публичный отчёт привлекает трафик, детальный API для агентств — платный.
+
+---
+
+## Плагины и интеграции
+
+### Figma плагин
+
+Дизайнеры выбирают пэйринг визуально в Figma → экспорт в shadcn-совместимый формат. Мост дизайн→код для типографики. \~$5-9 разово или $3/мес.
+
+### VS Code Extension
+
+Autocomplete для CSS typography. Пишешь `font-` → предлагает пэйринги из fonttrio с превью прямо в редакторе. Бесплатный с 6 пэйрингами, Pro ($9 one-time) с полной библиотекой.
+
+### Storybook Addon
+
+Переключалка пэйрингов внутри Storybook. Дизайнер ревьюит компоненты с разными пэйрингами. Бесплатный аддон → лиды на white-label.
+
+### Webflow / Framer / WordPress плагины
+
+No-code аудитория огромная и платит за плагины. Fonttrio picker встроенный в UI платформы. Маркетплейсы берут 30%, но дают дистрибуцию.
+
+### Browser Extension
+
+Показывает шрифты на любом сайте + предлагает ""better pairing"" из fonttrio. Freemium: бесплатный анализ, платная рекомендация + one-click apply.
+
+### Embeddable Font Pairing Widget
+
+`<script src=""fonttrio.xyz/widget.js"">` для блогов, docs-сайтов, Notion-like платформ. Бесплатный с брендингом, white-label за деньги.
+
+---
+
+## Партнёрские
+
+### Vercel Integration / Marketplace
+
+fonttrio как Vercel integration: подключил → выбрал пэйринг → автоматически настроено в проекте. Vercel платит за popular integrations.
+
+### Интеграция в shadcn/ui
+
+Стать ""official font registry"" для shadcn. Открывает путь к спонсорству от Vercel. shadcn уже имеет themes — fonts логичное расширение.
+
+### Template Partnerships
+
+Авторы шаблонов (Tailwind UI, shadcn themes, Envato) получают ready-made пэйринг + ""install"" кнопку. Revenue share: шаблон $49, fonttrio получает $5.
+
+### Коллаборация с шрифтовыми сервисами
+
+Fontshare, Bunny Fonts и др. хотят трафик. Платят за интеграцию своих шрифтов в fonttrio как дистрибуционный канал (CPA/CPM модель).
+
+### Email Template Typography
+
+Email-safe font stacks с fallbacks, протестированные в 50+ клиентах. `fonttrio add --email editorial`. Маркетинг-команды платят. $29-99 per set.
+
+---
+
+## Комьюнити и маркетплейс
+
+### User-submitted Pairings Marketplace
+
+Юзеры создают пэйринги, загружают в fonttrio. Лучшие курируются в основной реестр. Автор получает 70%, fonttrio 30%. $3-7 за пэйринг. Как Raycast extensions, но для шрифтов.
+
+### Design Agency Directory
+
+""Agencies that use fonttrio"". Платный листинг $29-49/мес для агентств, которые хотят показать экспертизу в типографике. Трафик fonttrio → лиды для агентств.
+
+### ""Powered by fonttrio"" Badge
+
+Бесплатно с бейджом, $29 разово за удаление. Модель Crisp, Tally и подобных.
+
+---
+
+## Образовательные
+
+### Интерактивный курс ""Typography for Developers""
+
+Встроен в fonttrio как `/learn`. Бесплатные базовые уроки → платный продвинутый модуль ($29-49): responsive typography, fluid scales, accessibility. Каждый урок заканчивается `shadcn add`.
+
+### Certification Badge
+
+""fonttrio Typography Certified"". Курс + тест → бейдж для LinkedIn/GitHub. $19 за сертификацию.
+
+### Платная рассылка ""Font of the Week""
+
+Каждую неделю разбор одного пэйринга: почему работает, где использовать, live examples. Бесплатная — 1 раз в месяц. Paid — $4/мес.
+
+### YouTube / контент воронка
+
+Видео ""I redesigned X's typography in 5 minutes with fonttrio"" → трафик → конвертация в платные продукты.
+
+### Курс / гайд по Font Pairing
+
+Платный PDF/видео ""Font Pairing for Developers"" за $19-29. fonttrio как бесплатный инструмент привлекает аудиторию, курс монетизирует экспертизу.
+
+---
+
+## B2B нишевые
+
+### Accessibility Compliance Reports
+
+Автоматическая проверка типографики на WCAG: контраст, минимальные размеры, spacing. Нужен юридическим и гос-сайтам. $49-99 per audit.
+
+### Лицензирование датасета
+
+Курированные пэйринги с mood/tags — structured data. AI-компании и дизайн-тулы (Canva, Figma, Framer) могут лицензировать для font recommendation engines.
+
+### Custom Pairing API (AI)
+
+AI-генерация пэйрингов под конкретный бренд/mood. Freemium: 3 бесплатных генерации, дальше платно.
+
+---
+
+## Мерч и физические продукты
+
+### Font Pairing Poster Prints
+
+Красиво свёрстанные постеры с пэйрингами. Print-on-demand через Printful. $19-29 за постер. Ноль затрат на инвентарь.
+
+### Cheat Sheet Cards
+
+Физические или PDF карточки: на одной стороне пэйринг + mood, на другой — `shadcn add` команда + use cases. Набор из 20 карточек $12.
+
+---
+
+## Consulting и лиды
+
+### Consulting Leads
+
+fonttrio как портфолио → заказы на дизайн-системы и типографику для компаний.
+
+### API для SaaS-билдеров
+
+Website builders, CMS, Framer-like тулы встраивают fonttrio font picker в свой UI. Платный API по запросам. Модель Unsplash API.","Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com",,"",,,,,"Sun Mar 22 2026 19:53:05 GMT+0000 (GMT+00:00)","Sun Mar 22 2026 20:26:27 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"d3c95b86-f759-4627-8f67-d8887050be4d",103012,,,
+"KAP-105","KapishDima","Инициализация монорепо","Создать pnpm workspace + turborepo. Настроить pnpm-workspace.yaml, turbo.json, корневой package.json. Добавить MIT LICENSE.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:24:29 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"58b42502-92a9-4004-a6e1-9481b17c4a18",2777,,,
+"KAP-106","KapishDima","Scaffold registry пакета","Создать packages/registry/ со структурой: src/animations/, src/text/, src/transitions/, src/backgrounds/, src/compositions/.
+
+Настроить package.json с peerDependency на remotion. Создать начальный registry.json manifest для shadcn.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:37:26 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"266a7fdc-29d3-492a-b6d9-d4dec8600cee",2777,,,
+"KAP-107","KapishDima","Scaffold сайта","Создать apps/web/ на Next.js. Подключить Fumadocs для docs секции. Настроить @remotion/player для preview компонентов. Базовый
+
+layout: landing page + docs sidebar.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:37:32 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"ef33ce1c-5702-4e0f-9e90-a67d2a69e9d7",2777,,,
+"KAP-108","KapishDima","Primitives. Text Animations","'- [ ] FadeText.Компонент появления текста с fade. Props: text, duration, delay. Реализация через useCurrentFrame() + interpolate() opacity
+- [ ] BlurText.Появление текста из размытия. Props: text, duration, delay, blurAmount. Анимация filter: blur() через interpolate.
+- [ ] SplitText. Побуквенная/пословная анимация появления. Props: text, splitBy (""char"" | ""word""), duration, stagger.
+- [ ] TypeWriter.Эффект печатающегося текста. Props: text, speed, cursor.
+- [ ] CountUp. Анимация счётчика чисел. Props: from, to, duration, format.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:38:28 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"cfbc9e4f-b509-4661-b549-ceaad43a7108",2777,,,
+"KAP-109","KapishDima","Primitives - Element Animations","'- [ ] FadeIn. Универсальный fade вход для children. Props: duration, delay, direction (опционально — fade + slide)
+- [ ] SlideIn.Вход со стороны. Props: direction (""left"" | ""right"" | ""top"" | ""bottom""), duration, delay, distance.
+- [ ] ScaleIn. Вход с масштабированием. Props: initialScale, duration, delay.
+- [ ] RotateIn. Вход с вращением. Props: degrees, duration, delay.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:39:11 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"3d5adb78-dee5-43d1-8b69-9a34acfa78a1",2777,,,
+"KAP-110","KapishDima","Primitives - Transitions","'- [ ] CrossFade. Плавный переход между двумя сценами. Props: durationInFrames, children (две сцены).
+- [ ] Wipe. Wipe transition. Props: direction (""left"" | ""right"" | ""top"" | ""bottom""), durationInFrames.
+- [ ] SlideTransition. Slide между сценами. Props: direction, durationInFrames.
+- [ ] ","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:39:34 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"d5cef461-47ff-4951-88e2-4afb86155c88",2777,,,
+"KAP-111","KapishDima","Primitives - Backgrounds","'- [ ] GradientBackground. Анимированный градиент фон. Props: colors, angle, animate.
+- [ ] GridBackground. Grid pattern фон. Props: color, spacing, lineWidth.
+- [ ] DotBackground. Dot pattern фон. Props: color, spacing, radius.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:39:55 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"6047219a-4edc-4b50-8600-1e936ebb10bd",2777,,,
+"KAP-112","KapishDima","Compositions","'- [ ] IntroScene. Сцена-интро: лого + заголовок + background. Использует FadeIn, FadeText, GradientBackground. Props: logo, title, subtitle,background.
+- [ ] FeatureScene. Сцена демонстрации фичи: скриншот + текст. Использует SlideIn, FadeText. Props: image, title, description, layout (""left"" |   ""right"").
+- [ ] OutroScene. Финальная сцена: CTA + ссылка + лого. Использует FadeIn, FadeText. Props: logo, cta, url.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:40:25 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"46933fed-7aa6-4652-8b91-bfd16a22bc8c",2777,,,
+"KAP-113","KapishDima","Registry Integration","Настройка shadcn registry manifest
+
+Заполнить registry.json для всех компонентов: файлы, зависимости между компонентами (compositions → primitives),
+
+peerDependencies. Протестировать npx shadcn add remocn/<component>.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:40:30 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"5efd6607-4f71-4e97-9e1c-b9ef5ab611da",2777,,,
+"KAP-114","KapishDima","Docs & Landing","Landing page
+
+Дизайн и реализация landing page: value proposition, демо видео (Remotion Player), getting started, список компонентов.
+
+Docs — компоненты
+
+MDX страница для каждого компонента: live Remotion Player preview, таблица props, команда установки, пример использования.
+
+Getting Started guide
+
+Документация: как добавить remocn в существующий Remotion проект, prerequisites, первый компонент, сборка полного видео.","Done",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com",,"",,,,,"Thu Mar 26 2026 16:40:52 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 10:27:22 GMT+0000 (GMT+00:00)",,,,,"",,,,"24ed5f06-c528-4682-8ab9-3b69460ac6a9",2777,,,
+"KAP-115","KapishDima","Новые пресеты","* b1Lg9Ly3Xk
+* b5r7j1SkEM
+* b13teh1aMq
+* b6tOz2I0x (shadcn)
+* b4ZVZIPi9h (shadcn)
+* b4aRK5K0fb (shadcn)
+* b5HCiD38LI (shadcn)
+* b2uSxOFzLE (shaban)","Done",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com",,"",,,,,"Thu Apr 23 2026 15:39:15 GMT+0000 (GMT+00:00)","Wed May 06 2026 08:13:26 GMT+0000 (GMT+00:00)",,,"Wed May 06 2026 08:13:25 GMT+0000 (GMT+00:00)",,,,,"",,,,"07caf4fb-5a5c-4a28-b2b7-111ec894cbed",38911,,,
+"KAP-116","KapishDima","Сверстать preview вместо iframe",,"Done",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com",,"",,,,,"Thu Apr 23 2026 15:39:25 GMT+0000 (GMT+00:00)","Mon Apr 27 2026 15:03:38 GMT+0000 (GMT+00:00)",,,"Mon Apr 27 2026 15:03:38 GMT+0000 (GMT+00:00)",,,,,"",,,,"a1c08d7f-21ab-40b5-a8e3-fef1b92356b8",51461,,,
+"KAP-117","KapishDima","Скролить sidebar к активному preset при переключении с помощью клавиатуры",,"Done",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com",,"",,,,,"Thu Apr 23 2026 15:40:14 GMT+0000 (GMT+00:00)","Mon Apr 27 2026 15:03:36 GMT+0000 (GMT+00:00)",,,"Mon Apr 27 2026 15:03:36 GMT+0000 (GMT+00:00)",,,,,"",,,,"559aa533-5640-4cc2-84c2-865b143c09c7",51461,,,
+"KAP-118","KapishDima","баг: если в query params source=community после перезагрузки - грузится весь список",,"Done",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com",,"",,,,,"Fri Apr 24 2026 14:43:12 GMT+0000 (GMT+00:00)","Wed May 06 2026 08:13:24 GMT+0000 (GMT+00:00)",,,"Wed May 06 2026 08:13:24 GMT+0000 (GMT+00:00)",,,,,"",,,,"5f924183-ae37-4d75-b528-2174694c09ab",38911,,,
+"KAP-119","KapishDima","Переверстать используя shadcn так чтобы можно было легко подменять пресеты",,"Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Wed Apr 29 2026 07:57:53 GMT+0000 (GMT+00:00)","Sun May 03 2026 15:20:49 GMT+0000 (GMT+00:00)",,,"Sun May 03 2026 15:20:49 GMT+0000 (GMT+00:00)",,,,,"",,,,"4e3a3ef6-3322-4698-ba02-84c2db755d52",42804,,,
+"KAP-120","KapishDima","Вытащить DESIGN.md из ref сайта",,"Done",,"No priority","7042d383-4558-4453-a378-e28d5ea18b2c","DKV","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 12:29:50 GMT+0000 (GMT+00:00)","Mon May 11 2026 08:31:01 GMT+0000 (GMT+00:00)",,,"Mon May 11 2026 08:31:01 GMT+0000 (GMT+00:00)",,,,,"",,,,"66cde6af-c6f9-4b6b-8d98-2056e949a9f9",31694,,,
+"KAP-121","KapishDima","Выкачать сайт и применить стилязацию из DESIGN.md",,"Done",,"No priority","7042d383-4558-4453-a378-e28d5ea18b2c","DKV","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 12:30:12 GMT+0000 (GMT+00:00)","Mon May 11 2026 08:31:03 GMT+0000 (GMT+00:00)",,,"Mon May 11 2026 08:31:03 GMT+0000 (GMT+00:00)",,,,,"",,,,"48baa5ee-4ca8-48b2-96d4-70e05cf6f887",31694,,,
+"KAP-122","KapishDima","Добавить в админке возможность добавлять статьи",,"In Progress",,"No priority","7042d383-4558-4453-a378-e28d5ea18b2c","DKV","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 12:30:29 GMT+0000 (GMT+00:00)","Sat May 23 2026 18:23:35 GMT+0000 (GMT+00:00)","Sat May 23 2026 18:23:35 GMT+0000 (GMT+00:00)",,,,,,,"",,,,"20416111-94ea-4f56-b3ef-42bcdd0acdaf",13821,,,
+"KAP-123","KapishDima","Деплой и CI/CD",,"Backlog",,"No priority","7042d383-4558-4453-a378-e28d5ea18b2c","DKV","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 12:30:38 GMT+0000 (GMT+00:00)","Sun May 03 2026 12:30:38 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"bd5ce247-7928-45ea-ae33-a2025d42c9f6",42974,,,
+"KAP-124","KapishDima","Заменить CodeBlockInstallation на chandai","[https://chanhdai.com/components/code-block-command](<https://chanhdai.com/components/code-block-command>)","Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 12:59:30 GMT+0000 (GMT+00:00)","Sun May 03 2026 15:20:53 GMT+0000 (GMT+00:00)",,,"Sun May 03 2026 15:20:53 GMT+0000 (GMT+00:00)",,,,,"",,,,"c1e40c5d-e4a1-41ff-8eca-6b4ca02659aa",42804,,,
+"KAP-125","KapishDima","Добавить gold sponsor баннер","Баннер который будет висеть в layout","Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 15:21:17 GMT+0000 (GMT+00:00)","Wed May 06 2026 08:13:44 GMT+0000 (GMT+00:00)",,,"Wed May 06 2026 08:13:44 GMT+0000 (GMT+00:00)",,,,,"",,,,"1e65e571-25dc-499e-a587-51664874617d",38911,,,
+"KAP-126","KapishDima","Переделать sponsor страницу","Показать статистику из vercel analytics
+Добавить несколько тиров","Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 15:21:56 GMT+0000 (GMT+00:00)","Mon May 04 2026 16:10:00 GMT+0000 (GMT+00:00)","Sun May 03 2026 16:56:52 GMT+0000 (GMT+00:00)",,"Mon May 04 2026 16:10:00 GMT+0000 (GMT+00:00)",,,,,"",,,,"a48dc948-f8d6-45c4-9b21-8963a2f08c3b",41315,,,
+"KAP-127","KapishDima","Пофиксить темную тему",,"Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 16:57:03 GMT+0000 (GMT+00:00)","Wed May 06 2026 08:13:40 GMT+0000 (GMT+00:00)",,,"Wed May 06 2026 08:13:40 GMT+0000 (GMT+00:00)",,,,,"",,,,"a46b2c2a-bd6c-4da8-9fd7-6a306a17fa5e",38911,,,
+"KAP-128","KapishDima","Сделать страницу showcases","[KAP-98](https://linear.app/kapishdima/issue/KAP-98/showcases) здесь ссылку на примеры","Backlog",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 16:57:24 GMT+0000 (GMT+00:00)","Sun May 03 2026 16:57:24 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"a93e2383-fedc-44cc-b9d4-a3b25416f0d6",42707,"KAP-98",,
+"KAP-129","KapishDima","Добавить глобальные настройки звука",,"Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 16:57:42 GMT+0000 (GMT+00:00)","Wed May 06 2026 08:13:37 GMT+0000 (GMT+00:00)",,,"Wed May 06 2026 08:13:37 GMT+0000 (GMT+00:00)",,,,,"",,,,"46a20dd3-eae9-4504-9c27-a529bc4d4977",38911,,,
+"KAP-130","KapishDima","Рефакторинг: компоненты которые нужно удалить/переделать","Компоненты /components
+
+* components/empty-sponsors.tsx — EmptySponsors
+* components/hero-bars.tsx — HeroBars (агент пропустил, проверено отдельно)
+* components/hero-installation-code.tsx — HeroInstallationCode
+* components/metal-pill.tsx — MetaPill
+* components/sound-installation-block.tsx — SoundInstallBlock
+* components/sponsor-card.tsx — SponsorCard
+* components/sponsor-ticket.tsx — SponsorTicker
+
+Скрипты /scripts
+
+* scripts/build-registry-items.ts — нет в package.json, нигде не вызывается
+* scripts/migrate-add-sound-engine.ts — одноразовая миграция, не используется
+
+Дополнительные наблюдения (не dead, но обрати внимание)
+
+* Дубликат copy-button: есть components/copy-button.tsx (используется в 3 местах, одно из которых — мёртвый sound-installation-block.tsx) и
+
+components/copy-button/copy-button.tsx (используется в 3 местах). Это разные реализации.
+
+* lib/sponsors.ts имеет двух импортеров, но один из них — мёртвый sponsor-card.tsx. После удаления остаётся жив через sponsors-page.tsx.
+* Markdown в корне: [design.md](<http://design.md>), [IMPLEMENTATION.md](<http://IMPLEMENTATION.md>) — документация, не код, оставляю на твоё усмотрение.","Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 17:00:29 GMT+0000 (GMT+00:00)","Mon May 04 2026 16:09:46 GMT+0000 (GMT+00:00)",,,"Mon May 04 2026 16:09:46 GMT+0000 (GMT+00:00)",,,,,"",,,,"41dcedbc-00ff-47c7-a8ab-9324ced0c02c",41315,,,
+"KAP-131","KapishDima","Добавить кнопку скопировать прямо на карточке, чтобы можно было быстро это сделать",,"Done",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Sun May 03 2026 17:01:44 GMT+0000 (GMT+00:00)","Mon May 04 2026 16:09:42 GMT+0000 (GMT+00:00)",,,"Mon May 04 2026 16:09:42 GMT+0000 (GMT+00:00)",,,,,"",,,,"adaa73e1-0400-4747-8f38-ad7e80b61398",41315,,,
+"KAP-132","KapishDima","Добавить build with soundncn на главную",,"Backlog",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com",,"",,,,,"Mon May 04 2026 16:50:21 GMT+0000 (GMT+00:00)","Mon May 04 2026 16:50:22 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"2c179124-361c-48ef-9f34-6b8874d9f1e6",41274,,,
+"KAP-133","KapishDima","Купить и настроить VPS на Hezner",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:15:22 GMT+0000 (GMT+00:00)","Fri May 08 2026 16:36:47 GMT+0000 (GMT+00:00)",,,"Fri May 08 2026 16:36:47 GMT+0000 (GMT+00:00)",,,,,"",,,,"d3df58a9-8670-4dfa-b7f8-77fef0442181",35528,,,
+"KAP-134","KapishDima","Установить Coolify на VPS","[https://coolify.io/docs/get-started/installation#self-hosted-installation](<https://coolify.io/docs/get-started/installation#self-hosted-installation>)","Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:15:32 GMT+0000 (GMT+00:00)","Fri May 08 2026 16:36:50 GMT+0000 (GMT+00:00)",,,"Fri May 08 2026 16:36:50 GMT+0000 (GMT+00:00)",,,,,"",,,,"8a5417fa-1009-4a05-813c-b2453ee96ff1",35528,,,
+"KAP-135","KapishDima","Настроить Github CI/CD и автодеплой",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:15:57 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:00 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:00 GMT+0000 (GMT+00:00)",,,,,"",,,,"c355f1dc-ba05-41b6-8a94-0b90ce6af030",29888,,,
+"KAP-136","KapishDima","Настроить Preview деплой",,"Canceled",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:16:04 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:44:12 GMT+0000 (GMT+00:00)",,,,"Sun May 31 2026 09:44:12 GMT+0000 (GMT+00:00)",,,,"",,,,"7e1e9161-f0c3-4a74-9a26-b81595affa5c",2821,,,
+"KAP-137","KapishDima","Перести Fonttrio",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:16:10 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:03 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:03 GMT+0000 (GMT+00:00)",,,,,"",,,,"c765794c-98d3-4011-ac8e-fb01eb7af190",29888,,,
+"KAP-138","KapishDima","Перести Soundcn",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:16:15 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:06 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:06 GMT+0000 (GMT+00:00)",,,,,"",,,,"7dc25a3c-564c-4d7c-971d-e064f7264d55",29888,,,
+"KAP-139","KapishDima","Перенести Dialectcn",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:16:21 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:07 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:07 GMT+0000 (GMT+00:00)",,,,,"",,,,"92508cfd-12bf-4413-bcdf-abbf4eac7eca",29888,,,
+"KAP-140","KapishDima","Перенести Remocn",,"Done",,"Low","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 08:16:28 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:09 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:09 GMT+0000 (GMT+00:00)",,,,,"",,,,"6f2a3c44-8e2b-4c76-a583-ce5d4522e247",29888,,,
+"KAP-141","KapishDima","Экспорт данных с Vercel","* Вытащить env переменные
+* ","Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 11:10:42 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:36:53 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:36:53 GMT+0000 (GMT+00:00)",,,,,"",,,,"ad9dd8d8-15e6-4639-a09f-53b78304e781",29888,,,
+"KAP-142","KapishDima","Изменить настройки Доменов - использовать новый ip server",,"Done",,"High","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 11:11:42 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:36:56 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:36:56 GMT+0000 (GMT+00:00)",,,,,"",,,,"487468e2-2a08-4cd4-84ba-81d4c69e3a98",29888,,,
+"KAP-143","KapishDima","Подключить Аналитику","Пока что вариант OpenPanel если меня возьмут в OpenSource Program, но нужно еще посмотреть варианты","Done",,"No priority","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com",,"",,,,,"Wed May 06 2026 11:12:26 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:12 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:12 GMT+0000 (GMT+00:00)",,,,,"",,,,"62ddb331-9105-4fb2-9bbc-74f2a78221ae",29888,,,
+"KAP-144","KapishDima","Установка OpenPanel Self Hosted","[https://openpanel.dev/docs/self-hosting/deploy-coolify](<https://openpanel.dev/docs/self-hosting/deploy-coolify>)","Done",,"No priority","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Fri May 08 2026 09:36:21 GMT+0000 (GMT+00:00)","Tue May 12 2026 14:37:15 GMT+0000 (GMT+00:00)",,,"Tue May 12 2026 14:37:15 GMT+0000 (GMT+00:00)",,,,,"",,,,"074e755d-6ede-401a-86ce-52225cd738eb",29888,,,
+"KAP-145","KapishDima","Добавить форму обратной связи","Кнопку связаться и отправку сообщений на почту или куда-то в другое место
+Сохранять в админку заявки","In Progress",,"No priority","7042d383-4558-4453-a378-e28d5ea18b2c","DKV","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Mon May 11 2026 08:32:27 GMT+0000 (GMT+00:00)","Sat May 23 2026 18:23:40 GMT+0000 (GMT+00:00)","Sat May 23 2026 18:23:40 GMT+0000 (GMT+00:00)",,,,,,,"",,,,"230295de-b8fc-4099-9e88-0c4dda9034fa",13821,,,
+"KAP-146","KapishDima","shadcn cli remove command","* New `shadcn remove [components...]` command - the inverse of `add`
+* Deletes a component's own files only. Does not touch `package.json`, `globals.css`, `tailwind.config.*`, or transitive `registryDependencies`
+* Prints follow-up notices listing which registry deps and npm packages might now be orphaned, with a ready-to-copy follow-up command
+
+## Motivation
+
+`shadcn add` installs components into a user's project, but there is currently no inverse operation. To remove a component, users have to manually delete files and remember which paths each component touched (UI files, hooks, blocks, registry pages). This command closes that loop. 
+The implementation is intentionally minimal: it reuses the same registry resolver and file-path planner that `add` uses, so it inherits support for all component types (`registry:ui`, `registry:hook`, `registry:component`, `registry:block`, `registry:page`, `registry:lib`, `registry:file`) without type-specific branching
+
+## Usage
+
+```bash
+shadcn remove button
+shadcn remove button card input
+shadcn remove https://example.com/r/styles/new-york-v4/login-01.json
+shadcn remove @ncdai/github-contributions
+shadcn remove button --dry-run
+shadcn remove @ncdai/github-contributions --force
+```
+
+Behavior
+
+1. Validates arguments - empty list exits with a friendly error
+2. Loads components.json (errors if missing)
+3. Fetches the requested items from the registry (handles names + URLs)
+4. Validates every target path through isSafeTarget the same security guard add uses against path-traversal payloads
+5. Plans the absolute paths via resolveFilePath + findCommonRoot (same utilities add uses)
+6. Critical-files guard: blocks deletion of `tailwind.config.*, globals.css, app/globals.css, lib/utils.ts` unless `--force` is set.
+7. Deletes each existing planned path (fs.unlink wrapped in try/catch)
+8. Prints a deletion summary, a warning per component whose files were all absent (likely installed with a custom --path), and info notices listing transitive `registryDependencies` and merged npm dependencies
+
+The info notice for registry deps now includes a ready-to-copy follow-up:
+
+```
+The following registry components were installed as dependencies they may still be used elsewhere in your project. Check before removing them: button, primitive-dialog
+
+To remove them too, run:
+shadcn remove button primitive-dialog
+```
+
+What it does NOT do:
+
+* No npm dependency removal. Components share npm packages (e.g. lucide-react); a reverse-use analysis is needed to know whether removal is safe. Surfaced as an info notice instead
+* No CSS variable / Tailwind config cleanup. Same reason - shared state.
+* No transitive registryDependencies cascade. A dialog removal doesn't auto-remove button, because button is often used by other installed components. The info notice gives the user a copy-paste command if they want to remove them
+* No import scanning in user code. Deleting a component may break references elsewhere. This is left to the user / typecheck / linter to surface
+
+Known limitations
+
+* Components installed with a custom --path are detected as ""no files found"" and skipped with a warning  the files at the custom path are not deleted
+* Empty directories left behind are not cleaned up","In Progress",,"No priority","6c602f4c-a4fc-46d4-aa90-4b9a0be5d455","OSS","kapishdima@gmail.com","kapishdima@gmail.com","Feature",,,,,"Wed May 13 2026 18:03:46 GMT+0000 (GMT+00:00)","Wed May 13 2026 18:03:56 GMT+0000 (GMT+00:00)","Wed May 13 2026 18:03:56 GMT+0000 (GMT+00:00)",,,,,,,"",,,,"1e8c5fd7-1fcf-48de-a8b7-1e538b6ffa0b",28241,,,
+"KAP-147","KapishDima","Исправить аналитику Remocn",,"Backlog",,"No priority","319f28b9-5a26-4f17-b16e-31ee074fa0fd","Infra","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Thu May 14 2026 10:01:30 GMT+0000 (GMT+00:00)","Thu May 14 2026 10:01:30 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"9282a2f9-1974-4a9a-ac6a-d3380bfd805d",27283,,,
+"KAP-148","KapishDima","Обновить Readme","'- [ ] Убрать упоминание WoW
+- [X] Обновить спонсоров","Backlog",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Fri May 15 2026 07:31:44 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:42:43 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"e7b767cf-dce0-4cad-bd33-e3c9f85d27a0",25993,,,
+"KAP-149","KapishDima","Добавить анимации текста с помощью skill","[Animate text skill for your AI agent.](https://pixelpoint.io/skills/animate-text/)","Backlog",,"No priority","53f3ba29-da40-4fe1-b641-d8defde99500","remocn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sat May 16 2026 14:28:22 GMT+0000 (GMT+00:00)","Sat May 16 2026 14:28:22 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"85f6f6b7-e088-4d83-80f9-04d4bc6f8b0e",24136,,,
+"KAP-150","KapishDima","Обновить спонсоров",,"Done",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 17 2026 10:52:46 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:36:42 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 09:36:42 GMT+0000 (GMT+00:00)",,,,,"",,,,"85844a36-9eb9-438e-ab99-21d6b3709bad",2828,,,
+"KAP-151","KapishDima","Testimonials - заменить на kiboui",,"Done",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 17 2026 10:56:21 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:36:26 GMT+0000 (GMT+00:00)",,,"Sun May 31 2026 09:36:26 GMT+0000 (GMT+00:00)",,,,,"",,,,"4dfb6995-efe6-4065-85a3-240d7b2678a0",2828,,,
+"KAP-152","KapishDima","Отдельная страница Sponsors",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Tue May 19 2026 08:56:41 GMT+0000 (GMT+00:00)","Tue May 19 2026 08:56:41 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"ead29d16-9ec1-43b8-9743-d1b61595f9fa",20148,,,
+"KAP-153","KapishDima","v3","Изменяем основной акцент на шрифт, не шрифтовые пары, а одиночные шрифты. Для этого делаем так: 
+
+1. Убираем landing page
+2. Делаем чтобы страница шрифтов была root
+3. Переделываем ui страницы шрифтов
+4. Страницу шрифтовых пар оставляем, но так же переделываем
+
+Нужно сделать страницу шрифтов такой же как в fonts.google.com, а именно сами карточки шрифтов - в ряд, не сеткой. При нажатии открываем страницу, а не модалку. Слева должны быть фильтры, которые по-дефолту закрыты, сверху должен быть поиск
+Контейнер должен быть таким, чтобы сбоку всегда было место для спонсоров на любой страница
+
+В фильтрах добавляем возможность ввести текст который примениться ко всем шрифтам
+
+На странице одного шрифта показываем все как в specimen, только без большого редактора
+Нужна command block installation для того чтобы можно было скопировать шрифт, также добавить в ""корзину"" можно выбрать несколько шрифтов и добавить их","Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Wed May 20 2026 12:17:36 GMT+0000 (GMT+00:00)","Wed May 20 2026 12:17:36 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"7f813eb2-2c79-4eee-913e-0473d6390870",18507,,,
+"KAP-154","KapishDima","Выбрать название",,"Done",,"Urgent","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sat May 23 2026 18:03:07 GMT+0000 (GMT+00:00)","Thu May 28 2026 18:54:15 GMT+0000 (GMT+00:00)",,,"Thu May 28 2026 18:54:15 GMT+0000 (GMT+00:00)",,,,,"",,,,"aad39ffc-7241-498a-96a2-174324503b7b",6591,,,
+"KAP-155","KapishDima","Picker script","Нужно сделать минимальную первую версию скрипта, который должен определять варианты и показывать picker
+
+* Варианты могут быть в разных блоков
+* Вариантов неограниченное кол-во
+* Нужно дать возможность клиентами выбирать варианты и добавлять комментарии","Done",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sat May 23 2026 18:05:00 GMT+0000 (GMT+00:00)","Thu May 28 2026 18:54:09 GMT+0000 (GMT+00:00)",,,"Thu May 28 2026 18:54:09 GMT+0000 (GMT+00:00)",,,,,"","2828b61e-a9ae-40be-9e29-9bbd8e5d9452","v1",,"8785b870-0ab0-4470-ae37-936aaa9206c3",6591,,,
+"KAP-157","KapishDima","React компоненты","Можно распространять через shadcn
+Wrapper - блок для которого устанавливаются варианты
+Variant Option - сам вариант
+Provider - компонент который добавлять нужные css куски, подключение самого скрипта","Done",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sat May 23 2026 18:08:06 GMT+0000 (GMT+00:00)","Thu May 28 2026 18:54:12 GMT+0000 (GMT+00:00)",,,"Thu May 28 2026 18:54:12 GMT+0000 (GMT+00:00)",,,,,"","2828b61e-a9ae-40be-9e29-9bbd8e5d9452","v1",,"ec9bb199-5cbe-4fdd-b98f-99db0e58f347",6591,,,
+"KAP-162","KapishDima","Аналитика",,"Done",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sat May 23 2026 18:19:18 GMT+0000 (GMT+00:00)","Thu May 28 2026 18:54:05 GMT+0000 (GMT+00:00)",,,"Thu May 28 2026 18:54:05 GMT+0000 (GMT+00:00)",,,,,"",,,,"c064b25e-97b2-48d7-83fa-ee0ecc730520",6591,,,
+"KAP-163","KapishDima","ЗаЦепленное изменение","переключатель зацепленности если включен при переключении одного переключаются все","Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Thu May 28 2026 16:06:30 GMT+0000 (GMT+00:00)","Thu May 28 2026 16:06:30 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"ae6ab6ec-edc2-418a-b750-f2c742d63309",6758,,,
+"KAP-164","KapishDima","Улучшение docs",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Thu May 28 2026 18:54:34 GMT+0000 (GMT+00:00)","Thu May 28 2026 18:54:34 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"f392d514-2a98-4712-8071-4bb75b729052",6590,,,
+"KAP-165","KapishDima","Изолированные sandbox","Например если нужно выбирать между разными shadcn preset","Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 09:33:18 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:33:18 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"4bf49d63-2de7-488b-8280-341e7971ee6b",2832,,,
+"KAP-166","KapishDima","Redesign",,"Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com",,"",,,,,"Sun May 31 2026 09:37:42 GMT+0000 (GMT+00:00)","Mon Jun 01 2026 19:59:19 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"8915a745-f3f0-4586-9ceb-7dac45ae7146",2827,,,
+"KAP-167","KapishDima","Актуализировать шрифты и шрифтовые пары","Сейчас их много и по большей части они бесполезные . Нужно привести их в порядок","Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 09:40:22 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:40:22 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"50c15027-05d9-4d1d-878d-c14d18457d66",2824,,,
+"KAP-168","KapishDima","Отдельная страница для каждого проекта",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 09:42:15 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:42:15 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"574d4952-8fcf-4d8e-825a-580f3d906869",2823,,,
+"KAP-169","KapishDima","Счетчик посещений",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 09:42:27 GMT+0000 (GMT+00:00)","Sun May 31 2026 09:42:27 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"bf9a7be8-e8e4-42c6-9f7c-6b37acfee43a",2822,,,
+"KAP-170","KapishDima","Улучшить UI проектов",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:01:26 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:01:26 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"2f17fde1-78a0-4bee-b008-466c6086a828",2803,,,
+"KAP-171","KapishDima","Сделать блок Ачивок","* Claude OSS
+* ","Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:03:54 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:03:54 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"2d83ec03-2427-4d20-9238-3f090685cc42",2801,,,
+"KAP-172","KapishDima","Добавить Full Name + Username",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:04:06 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:04:06 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"bd8f6d93-8ee6-466a-bb00-7b254d998832",2801,,,
+"KAP-173","KapishDima","Улучшить og:image сделать полноценную визитку",,"Backlog",,"No priority","693ff530-fad1-49a6-b531-028968268b74","kapish.dev","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:04:33 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:04:33 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"41b31876-13a9-4c28-a27f-9be54342e95e",2800,,,
+"KAP-174","KapishDima","API для сохранение review из picker",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com",,"",,,,,"Sun May 31 2026 10:05:54 GMT+0000 (GMT+00:00)","Sun May 31 2026 16:02:49 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"7e4cc5ea-59e7-4b81-b110-4f8d576e632b",2799,,,
+"KAP-175","KapishDima","Dashboard для отображения выбранных вариантов",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:06:11 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:06:11 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"68b53fe7-ee6b-424b-a43e-fe9e1009dc52",2799,,,
+"KAP-176","KapishDima","'@whichly/vanilla",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:06:32 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:07:03 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"c471df2c-4a45-49d4-a82f-719420cc1218",2798,,,
+"KAP-177","KapishDima","'@whichly/vue",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:06:40 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:06:40 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"8e6fffb0-7c49-40c6-a332-70c2b8c5117c",2798,,,
+"KAP-178","KapishDima","'@whichly/astro",,"Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:06:56 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:06:56 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"d6616e7c-cd02-4a5a-8f43-a9709cb5e9b3",2798,,,
+"KAP-179","KapishDima","API для поиска и получения шрифтов",,"Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:09:21 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:09:21 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"b600a19b-5afb-412f-8ac4-39c97eff457b",2795,,,
+"KAP-180","KapishDima","Переключатель шрифтов прям на сайте",,"Backlog",,"No priority","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:09:57 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:09:57 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"dd6ff55e-faab-41c2-b0d4-f9ca65aeb258",2795,,,
+"KAP-181","KapishDima","VS Code Extension","Выбор и подставление шрифтов прямо из vs code, cursor","Backlog",,"Low","ad30a888-9cc1-48a7-aa95-2071a77975b1","fonttrio","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:10:48 GMT+0000 (GMT+00:00)","Mon Jun 01 2026 19:47:05 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"a2d52f44-3e91-4135-9cbd-f4039a9825e0",2794,,,
+"KAP-182","KapishDima","Вынести в отдельный пакет core для воспроизведения аудио",,"Backlog",,"No priority","c3ede762-cd6c-4ed4-a93d-73cd7d85ab74","soundcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:22:24 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:22:24 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"00757e52-57b3-4a66-b5d7-5d42c9e5cd8d",2782,,,
+"KAP-183","KapishDima","Переключатель preset-ов прямо в проекте",,"Backlog",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:24:50 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:24:50 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"02b68cf5-f157-44dc-a4de-3db5d715fe2e",2780,,,
+"KAP-184","KapishDima","vs code extension для получение и отображение preset-ов",,"Backlog",,"No priority","67674d9b-6111-4f1e-ab3c-15fdd38caa4d","dialectcn","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:25:09 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:25:09 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"8e5cbe5e-9618-4dde-ae89-4054c37079fb",2780,,,
+"KAP-185","KapishDima","Learning",,"Backlog",,"No priority",,,"kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:27:03 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:27:03 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"23c0175c-f66b-4d13-99cf-06a5ac19528e",2778,,,
+"KAP-186","KapishDima","Протестировать на разных код базах",,"Backlog",,"No priority","e3e2614b-63b4-4eb6-8285-545979562400","WhyUseClient","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:31:17 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:31:17 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"33b56935-3ae2-4ca5-a02b-2d05f8ee2613",2774,,,
+"KAP-187","KapishDima","Опубликовать ext чтобы его можно было установить",,"Backlog",,"No priority","e3e2614b-63b4-4eb6-8285-545979562400","WhyUseClient","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:31:31 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:31:31 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"ed2443c0-bff9-4e18-8652-d09f07e7356a",2773,,,
+"KAP-188","KapishDima","Сделать возможность копирования AI Promt чтобы убрать use client",,"Backlog",,"No priority","e3e2614b-63b4-4eb6-8285-545979562400","WhyUseClient","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:32:00 GMT+0000 (GMT+00:00)","Sun May 31 2026 10:32:00 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"7e173bca-76fe-45c4-b60b-e549f2846c4d",2773,,,
+"KAP-189","KapishDima","Сделать пост в X",,"In Progress",,"No priority","e3e2614b-63b4-4eb6-8285-545979562400","WhyUseClient","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 10:32:16 GMT+0000 (GMT+00:00)","Sun May 31 2026 12:50:10 GMT+0000 (GMT+00:00)","Sun May 31 2026 12:50:10 GMT+0000 (GMT+00:00)",,,,,,,"",,,,"f29d56a5-2d6d-479f-b2e1-257bd896cc6b",2635,,,
+"KAP-190","KapishDima","CLI","команда  apply  которая будет оставлять в коде только указанный вариант","Backlog",,"No priority","995f8f35-762f-4328-b619-be1e0bf56647","whichly","kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 16:03:17 GMT+0000 (GMT+00:00)","Sun May 31 2026 16:03:17 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"460a2242-64c7-434f-9797-152d41f161ff",2442,,,
+"KAP-191","KapishDima","cha-ching sound nofication",,"Backlog",,"No priority",,,"kapishdima@gmail.com","kapishdima@gmail.com","",,,,,"Sun May 31 2026 17:41:10 GMT+0000 (GMT+00:00)","Sun May 31 2026 17:41:10 GMT+0000 (GMT+00:00)",,,,,,,,"",,,,"015c748d-0553-4e2c-aa22-d2a5b47dc712",2344,,,
