@@ -2,7 +2,13 @@ import { useMemo } from "react";
 import { useLoaderData, useRouteLoaderData } from "react-router";
 import { PlanTomorrowSection } from "@/components/planner/plan-tomorrow-section";
 import { TodaySection } from "@/components/planner/today-section";
-import { Separator } from "@/components/ui/separator";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { formatDayKey } from "@/lib/date";
 import type { DailyPlan, Project, Task } from "@/lib/ipc";
 
@@ -31,35 +37,38 @@ export const Home: React.FC = () => {
   );
 
   return (
-    <div className="max-w-3xl space-y-2">
-      <header className="flex flex-col gap-1">
-        <h1 className="text-2xl font-semibold tracking-tight">Today</h1>
-        <p className="text-sm text-muted-foreground">{formatDayKey(data.today)}</p>
-      </header>
+    <div className="max-w-3xl space-y-4">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">Today</CardTitle>
+          <CardDescription>{formatDayKey(data.today)}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <TodaySection
+            date={data.today}
+            plan={data.plan}
+            tasks={data.todayTasks}
+            projectNames={projectNames}
+          />
+        </CardContent>
+      </Card>
 
-      <TodaySection
-        date={data.today}
-        plan={data.plan}
-        tasks={data.todayTasks}
-        projectNames={projectNames}
-      />
-
-      <Separator />
-
-      <section className="flex flex-col gap-4">
-        <header className="flex flex-col gap-1">
-          <h2 className="text-lg font-semibold tracking-tight">Plan tomorrow</h2>
-          <p className="text-sm text-muted-foreground">{formatDayKey(data.tomorrow)}</p>
-        </header>
-        <PlanTomorrowSection
-          tomorrow={data.tomorrow}
-          planned={data.tomorrowTasks}
-          carryover={carryover}
-          plannable={data.plannable}
-          projects={projects}
-          projectNames={projectNames}
-        />
-      </section>
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-lg">Plan tomorrow</CardTitle>
+          <CardDescription>{formatDayKey(data.tomorrow)}</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <PlanTomorrowSection
+            tomorrow={data.tomorrow}
+            planned={data.tomorrowTasks}
+            carryover={carryover}
+            plannable={data.plannable}
+            projects={projects}
+            projectNames={projectNames}
+          />
+        </CardContent>
+      </Card>
     </div>
   );
 };
