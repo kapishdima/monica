@@ -40,5 +40,15 @@ export function useTaskUpdate() {
     }
   };
 
-  return { updateStatus, updatePriority, updateLabel };
+  const updateDescription = async (taskId: string, description: string | null) => {
+    try {
+      await tasks.update(taskId, { description });
+      revalidator.revalidate();
+    } catch (err) {
+      toast.error("Failed to update description", { description: String(err) });
+      throw err;
+    }
+  };
+
+  return { updateStatus, updatePriority, updateLabel, updateDescription };
 }
