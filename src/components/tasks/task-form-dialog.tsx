@@ -23,6 +23,7 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { type Project, type Task, tasks } from "@/lib/ipc";
 import { cn } from "@/lib/utils";
+import { TaskDescriptionEditor } from "./task-description-editor";
 import {
   TASK_LABEL_LABELS,
   TASK_LABEL_OPTIONS,
@@ -74,6 +75,8 @@ export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: Task
 
   const [createMore, setCreateMore] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  // Bumped whenever the form is reset, to remount the (uncontrolled) editor.
+  const [editorKey, setEditorKey] = useState(0);
 
   const {
     control,
@@ -94,6 +97,7 @@ export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: Task
     if (!open) return;
     setCreateMore(false);
     setExpanded(false);
+    setEditorKey((k) => k + 1);
     reset({
       ...BLANK,
       projectId: task?.projectId ?? initial?.projectId ?? firstProjectId,
@@ -125,6 +129,7 @@ export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: Task
         if (createMore) {
           // Keep the composer open for the next task, preserving the project.
           reset({ ...BLANK, projectId: values.projectId });
+          setEditorKey((k) => k + 1);
           setFocus("title");
           return;
         }
@@ -215,7 +220,7 @@ export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: Task
         </div>
 
         <form onSubmit={onSubmit} className="flex flex-col">
-          {/* Composer: borderless title + description. */}
+          {/* Composer: borderless title + rich-text description. */}
           <div className="flex flex-col gap-1 px-5 pt-2">
             {/* biome-ignore lint/a11y/noAutofocus: composer should focus the title on open */}
             <input
@@ -225,11 +230,22 @@ export function TaskFormDialog({ mode, task, initial, open, onOpenChange }: Task
               className="w-full bg-transparent text-lg font-medium outline-none placeholder:text-muted-foreground/50"
               {...register("title")}
             />
-            <textarea
-              placeholder="Add description…"
-              rows={expanded ? 6 : 3}
-              className="w-full resize-none bg-transparent text-sm outline-none placeholder:text-muted-foreground/50"
-              {...register("description")}
+            <Controller
+              control={control}
+              name="description"
+              render={({ field }) => (
+                <TaskDescriptionEditor
+                  key={editorKey}
+                  value={field.value}
+                  onChange={field.onChange}
+                  onBlur={field.onBlur}
+                  containerClassName={cn(
+                    "-mx-1 max-h-[55vh] transition-[min-height]",
+                    expanded ? "min-h-72" : "min-h-40",
+                  )}
+                  className="px-1"
+                />
+              )}
             />
           </div>
 
