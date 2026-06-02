@@ -22,9 +22,12 @@ fn create_applies_defaults_without_label() {
         assert!(matches!(task.status, TaskStatus::Todo));
         assert!(matches!(task.priority, TaskPriority::Low));
         assert_eq!(task.position, 0);
-        // No label -> no auto branch.
+        // No label -> branch still auto-generated with the `feat` default prefix.
         assert!(task.label.is_none());
-        assert!(task.github_branch.is_none());
+        assert_eq!(
+            task.github_branch.as_deref(),
+            Some(&*format!("feat/{}", task.task_id))
+        );
         assert_eq!(task.created_at, task.updated_at);
     });
 }

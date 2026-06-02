@@ -1,3 +1,4 @@
+mod claude_code;
 mod commands;
 mod db;
 mod error;
@@ -61,6 +62,8 @@ pub fn run() {
             commands::settings::update_settings,
             commands::daily_plan::get_daily_plan,
             commands::daily_plan::update_daily_plan,
+            commands::claude_code::list_task_sessions,
+            commands::claude_code::get_task_session,
             tray::refresh_tray,
         ])
         .run(tauri::generate_context!())

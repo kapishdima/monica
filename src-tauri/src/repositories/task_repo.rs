@@ -14,10 +14,14 @@ pub async fn create(pool: &SqlitePool, input: NewTask) -> Result<Task> {
     let now = now_timestamp();
     let priority = input.priority.unwrap_or(TaskPriority::Low);
     let status = TaskStatus::Todo;
-    // Branch is auto-generated from label + short id, e.g. `feat/a1B2c3`.
-    let github_branch = input
-        .label
-        .map(|label| format!("{}/{}", label.as_str(), task_id));
+    // Branch is always auto-generated as `<prefix>/<task_id>` (e.g. `feat/a1B2c3`):
+    // the label's prefix when set, otherwise the `feat` default. This guarantees
+    // every task has a branch to copy and to match Claude Code sessions against.
+    let github_branch = format!(
+        "{}/{}",
+        input.label.map(|label| label.as_str()).unwrap_or("feat"),
+        task_id
+    );
 
     let task = sqlx::query_as::<_, Task>(
         "INSERT INTO tasks

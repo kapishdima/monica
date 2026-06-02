@@ -140,6 +140,61 @@ export interface GithubRepo {
   issues: number;
 }
 
+// --- Claude Code session transcripts (read from ~/.claude/projects) ---
+
+// A session in the list rail. `path` re-opens its full transcript.
+export interface ClaudeSession {
+  sessionId: string;
+  path: string;
+  gitBranch: string | null;
+  title: string | null;
+  messageCount: number;
+  startedAt: string | null;
+  updatedAt: string | null;
+}
+
+// One normalized transcript entry — discriminated union keyed by `kind`.
+export type SessionEvent =
+  | { kind: "userText"; uuid: string | null; timestamp: string | null; text: string }
+  | {
+      kind: "assistant";
+      uuid: string | null;
+      timestamp: string | null;
+      text: string;
+      model: string | null;
+    }
+  | { kind: "thinking"; uuid: string | null; timestamp: string | null; text: string }
+  | {
+      kind: "toolUse";
+      uuid: string | null;
+      timestamp: string | null;
+      id: string | null;
+      name: string;
+      input: unknown;
+    }
+  | {
+      kind: "toolResult";
+      uuid: string | null;
+      timestamp: string | null;
+      toolUseId: string | null;
+      content: string;
+      isError: boolean;
+    }
+  | {
+      kind: "system";
+      uuid: string | null;
+      timestamp: string | null;
+      subtype: string | null;
+      content: string;
+      level: string | null;
+    };
+
+export interface SessionTranscript {
+  sessionId: string;
+  gitBranch: string | null;
+  events: SessionEvent[];
+}
+
 // --- API: errors reject as { kind, message } from the Rust AppError ---
 
 export const projects = {
@@ -184,6 +239,13 @@ export const plans = {
   get: (date: string) => invoke<DailyPlan>("get_daily_plan", { date }),
   update: (date: string, patch: UpdateDailyPlan) =>
     invoke<DailyPlan>("update_daily_plan", { date, patch }),
+};
+
+export const claudeSessions = {
+  // Sessions whose git branch matches `branch` (prefix), newest first.
+  list: (branch: string) => invoke<ClaudeSession[]>("list_task_sessions", { branch }),
+  // The full parsed transcript for one session, by its file `path`.
+  get: (path: string) => invoke<SessionTranscript>("get_task_session", { path }),
 };
 
 export const tray = {
