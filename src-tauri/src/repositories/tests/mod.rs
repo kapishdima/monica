@@ -7,6 +7,7 @@
 mod support;
 
 mod daily_plan;
+mod import;
 mod project;
 mod settings;
 mod task;

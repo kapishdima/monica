@@ -234,6 +234,20 @@ export const settings = {
   update: (patch: UpdateSettings) => invoke<Settings>("update_settings", { patch }),
 };
 
+export interface ImportSummary {
+  projectsCreated: number;
+  projectsReused: number;
+  tasksImported: number;
+  skippedCanceled: number;
+  skippedNoProject: number;
+}
+
+export const imports = {
+  // Import a Linear CSV export (raw file contents). Appends — existing projects
+  // are reused by name, nothing is deleted.
+  linearCsv: (csv: string) => invoke<ImportSummary>("import_linear_csv", { csv }),
+};
+
 export const plans = {
   // Returns the day's plan, creating an empty one if it doesn't exist yet.
   get: (date: string) => invoke<DailyPlan>("get_daily_plan", { date }),
