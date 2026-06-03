@@ -28,6 +28,8 @@
     "@tailwindcss/vite": "^4.3.0",
     "@tauri-apps/api": "^2",
     "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-process": "^2",
+    "@tauri-apps/plugin-updater": "^2",
     "@whichly/react": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
