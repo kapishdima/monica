@@ -1,4 +1,5 @@
 pub mod daily_plan_repo;
+pub mod import_repo;
 pub mod project_repo;
 pub mod settings_repo;
 pub mod task_repo;

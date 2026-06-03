@@ -58,6 +58,7 @@ pub fn run() {
             commands::task::get_task,
             commands::task::update_task,
             commands::task::remove_task,
+            commands::import::import_linear_csv,
             commands::settings::get_settings,
             commands::settings::update_settings,
             commands::daily_plan::get_daily_plan,
