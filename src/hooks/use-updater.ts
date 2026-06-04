@@ -1,13 +1,10 @@
-import { relaunch } from "@tauri-apps/plugin-process";
-import { check } from "@tauri-apps/plugin-updater";
 import { useEffect, useRef } from "react";
-import { toast } from "sonner";
+import { checkForUpdateOnLaunch } from "@/lib/updater";
 
 /**
- * Checks GitHub releases for a newer version once on app launch. If one is
- * available, prompts the user via a toast; on confirm it downloads, installs,
- * and relaunches into the new version. Failures (offline, dev build, no signed
- * release) are logged and swallowed so a failed check never blocks the UI.
+ * Checks GitHub releases for a newer version once on app launch and, if one is
+ * available, prompts the user via a toast. The manual "Check for updates" button
+ * in Settings reuses the same underlying logic (see `@/lib/updater`).
  */
 export function useUpdater() {
   const checked = useRef(false);
@@ -15,36 +12,6 @@ export function useUpdater() {
   useEffect(() => {
     if (checked.current) return;
     checked.current = true;
-
-    (async () => {
-      try {
-        const update = await check();
-        if (!update) return;
-
-        toast(`Доступна версия ${update.version}`, {
-          description: "Готово к установке",
-          duration: Number.POSITIVE_INFINITY,
-          action: {
-            label: "Обновить",
-            onClick: async () => {
-              const progress = toast.loading("Загрузка обновления…", {
-                duration: Number.POSITIVE_INFINITY,
-              });
-              try {
-                await update.downloadAndInstall();
-                await relaunch();
-              } catch (err) {
-                toast.error("Не удалось установить обновление", {
-                  id: progress,
-                  description: String(err),
-                });
-              }
-            },
-          },
-        });
-      } catch (err) {
-        console.error("Update check failed", err);
-      }
-    })();
+    void checkForUpdateOnLaunch();
   }, []);
 }

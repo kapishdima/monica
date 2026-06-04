@@ -1,3 +1,4 @@
+import { getVersion } from "@tauri-apps/api/app";
 import { CloudUploadIcon, Csv01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { useEffect, useRef, useState } from "react";
@@ -8,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { imports, type Settings as ISettings, settings } from "@/lib/ipc";
+import { manualCheckAndInstall } from "@/lib/updater";
 import { cn } from "@/lib/utils";
 
 export const Settings: React.FC = () => {
@@ -65,7 +67,48 @@ export const Settings: React.FC = () => {
       </section>
 
       <ImportSection />
+
+      <UpdateSection />
     </div>
+  );
+};
+
+const UpdateSection: React.FC = () => {
+  const [version, setVersion] = useState<string | null>(null);
+  const [checking, setChecking] = useState(false);
+
+  useEffect(() => {
+    getVersion()
+      .then(setVersion)
+      .catch(() => {});
+  }, []);
+
+  const onCheck = async () => {
+    setChecking(true);
+    try {
+      // Resolves to "up to date"; if an update is found the app installs it and
+      // relaunches, so this state never gets reset in that path (by design).
+      await manualCheckAndInstall();
+    } finally {
+      setChecking(false);
+    }
+  };
+
+  return (
+    <section className="flex flex-col gap-2">
+      <SectionLabel>Software update</SectionLabel>
+      <PropertyGroup>
+        <div className="flex items-center justify-between gap-4 px-2 py-1.5">
+          <div className="flex flex-col">
+            <span className="text-sm">Version</span>
+            <span className="text-xs text-muted-foreground">{version ? `monica ${version}` : "…"}</span>
+          </div>
+          <Button variant="outline" onClick={onCheck} disabled={checking} className="shrink-0">
+            {checking ? "Checking…" : "Check for updates"}
+          </Button>
+        </div>
+      </PropertyGroup>
+    </section>
   );
 };
 
