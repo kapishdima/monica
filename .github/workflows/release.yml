@@ -29,6 +29,29 @@ jobs:
 
       - run: bun install --frozen-lockfile
 
+      # The git tag is the single source of truth for the release version.
+      # We rewrite it into every version file before building so latest.json
+      # (and thus the in-app updater) always matches the tag — no manual bumps.
+      - name: Set version from tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+([-.+].*)?$ ]]; then
+            echo "::error::Tag '$GITHUB_REF_NAME' is not a semver version (expected vX.Y.Z)"
+            exit 1
+          fi
+          echo "Releasing version $VERSION"
+
+          # tauri.conf.json — source of truth for the updater manifest
+          tmp=$(mktemp)
+          jq --arg v "$VERSION" '.version = $v' src-tauri/tauri.conf.json > "$tmp" && mv "$tmp" src-tauri/tauri.conf.json
+
+          # package.json
+          tmp=$(mktemp)
+          jq --arg v "$VERSION" '.version = $v' package.json > "$tmp" && mv "$tmp" package.json
+
+          # Cargo.toml — replace only the first `version = ` line ([package].version)
+          perl -i -pe 'if (!$done && /^version\s*=/) { s/^version\s*=.*/version = "'"$VERSION"'"/; $done = 1 }' src-tauri/Cargo.toml
+
       - uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
