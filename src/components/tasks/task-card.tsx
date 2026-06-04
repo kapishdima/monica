@@ -8,6 +8,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { type ReactNode, useState } from "react";
 import { Link } from "react-router";
 import { CopyBranchButton } from "@/components/tasks/copy-branch-button";
+import { CopyClaudeCommandButton } from "@/components/tasks/copy-claude-command-button";
 import { TaskPriority } from "@/components/tasks/task-priority";
 import { TaskStatus } from "@/components/tasks/task-status";
 import { Badge } from "@/components/ui/badge";
@@ -105,6 +106,7 @@ export function TaskCard({
 
         <div className="flex shrink-0 items-center gap-0.5">
           {task.githubBranch && <CopyBranchButton branch={task.githubBranch} />}
+          {task.githubBranch && <CopyClaudeCommandButton branch={task.githubBranch} />}
           {action}
           <ActionsMenu onEdit={() => setEditOpen(true)} onDelete={() => setDeleteOpen(true)} />
         </div>

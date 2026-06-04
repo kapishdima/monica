@@ -5,6 +5,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { CopyBranchButton } from "@/components/tasks/copy-branch-button";
+import { CopyClaudeCommandButton } from "@/components/tasks/copy-claude-command-button";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -24,6 +25,7 @@ export function TaskDetailToolbar() {
   return (
     <div className="flex shrink-0 items-center gap-0.5 rounded-lg border p-0.5">
       {task.githubBranch && <CopyBranchButton branch={task.githubBranch} />}
+      {task.githubBranch && <CopyClaudeCommandButton branch={task.githubBranch} />}
       <Button
         variant="ghost"
         size="icon-sm"

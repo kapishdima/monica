@@ -1,4 +1,5 @@
 import { CopyBranchButton } from "@/components/tasks/copy-branch-button";
+import { CopyClaudeCommandButton } from "@/components/tasks/copy-claude-command-button";
 import { useTaskDetail } from "./task-detail-context";
 import { SectionLabel } from "./task-property";
 
@@ -16,6 +17,7 @@ export function TaskBranchSection() {
       <div className="flex items-center gap-1 rounded-lg border p-1">
         <span className="min-w-0 flex-1 truncate px-1.5 font-mono text-sm">{task.githubBranch}</span>
         <CopyBranchButton branch={task.githubBranch} />
+        <CopyClaudeCommandButton branch={task.githubBranch} />
       </div>
     </section>
   );
