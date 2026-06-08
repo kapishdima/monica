@@ -1,0 +1,322 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1780914769643,
+  "projectRoot": "/Users/dev_wandry/projects/opensource/monica",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.1.0",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.1.0",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "7.0.4",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "echo \"=== stale shortcut refs (expect none) ===\"; grep -rn \"mod+shift+t\" src/ || echo \"none\"; echo; echo \"=== final build ===\"; bun run build 2>&1 | tail -4",
+    "testCommand": null,
+    "lintCommand": "npm run lint",
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "preview": "vite preview",
+      "tauri": "tauri",
+      "typecheck": "tsc --noEmit",
+      "lint": "biome lint .",
+      "format": "biome format --write .",
+      "check": "biome check .",
+      "check:ci": "biome ci .",
+      "import:linear": "bun run scripts/import-linear.ts"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": "type-based"
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "scripts",
+      "src"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 5,
+      "lastAccessed": 1780914769589,
+      "keyFiles": [
+        "app-icon.png",
+        "index.html",
+        "linear-dump.csv",
+        "tauri.svg",
+        "vite.svg"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 4,
+      "lastAccessed": 1780914769590,
+      "keyFiles": [
+        "app-icon.png",
+        "linear-dump.csv",
+        "tauri.svg",
+        "vite.svg"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 2,
+      "lastAccessed": 1780914769617,
+      "keyFiles": [
+        "backfill-task-branches.ts",
+        "import-linear.ts"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 3,
+      "lastAccessed": 1780914769617,
+      "keyFiles": [
+        "globals.css",
+        "main.tsx",
+        "vite-env.d.ts"
+      ]
+    },
+    "src-tauri": {
+      "path": "src-tauri",
+      "purpose": null,
+      "fileCount": 5,
+      "lastAccessed": 1780914769617,
+      "keyFiles": [
+        "Cargo.lock",
+        "Cargo.toml",
+        "build.rs",
+        "tauri.conf.json"
+      ]
+    },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 10,
+      "lastAccessed": 1780914769619,
+      "keyFiles": [
+        "geist-cyrillic-ext-wght-normal-DjL33-gN.woff2",
+        "geist-cyrillic-wght-normal-BEAKL7Jp.woff2",
+        "geist-latin-ext-wght-normal-DC-KSUi6.woff2"
+      ]
+    },
+    "src/assets": {
+      "path": "src/assets",
+      "purpose": "Static assets",
+      "fileCount": 1,
+      "lastAccessed": 1780914769620,
+      "keyFiles": [
+        "react.svg"
+      ]
+    },
+    "src/components": {
+      "path": "src/components",
+      "purpose": "UI components",
+      "fileCount": 7,
+      "lastAccessed": 1780914769620,
+      "keyFiles": [
+        "app-sidebar.tsx",
+        "markdown.tsx",
+        "nav-actions.tsx"
+      ]
+    },
+    "src/config": {
+      "path": "src/config",
+      "purpose": "Configuration files",
+      "fileCount": 1,
+      "lastAccessed": 1780914769621,
+      "keyFiles": [
+        "menu.tsx"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 4,
+      "lastAccessed": 1780914769621,
+      "keyFiles": [
+        "date.ts",
+        "ipc.ts",
+        "updater.ts"
+      ]
+    },
+    "src/pages": {
+      "path": "src/pages",
+      "purpose": "Page components",
+      "fileCount": 10,
+      "lastAccessed": 1780914769621,
+      "keyFiles": [
+        "calendar.tsx",
+        "help.tsx",
+        "home.tsx"
+      ]
+    },
+    "src-tauri/migrations": {
+      "path": "src-tauri/migrations",
+      "purpose": "Database migrations",
+      "fileCount": 4,
+      "lastAccessed": 1780914769622,
+      "keyFiles": [
+        "0001_init.sql",
+        "0002_add_github_metrics.sql",
+        "0003_planner.sql"
+      ]
+    },
+    "src-tauri/src": {
+      "path": "src-tauri/src",
+      "purpose": "Source code",
+      "fileCount": 7,
+      "lastAccessed": 1780914769622,
+      "keyFiles": [
+        "claude_code.rs",
+        "error.rs",
+        "favicon.rs"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "src/components/tasks/task-dialogs-provider.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1780915522461,
+      "type": "file"
+    },
+    {
+      "path": "src/components/tasks/task-form-dialog.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1780915183348,
+      "type": "file"
+    },
+    {
+      "path": "src/router/index.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780915035652,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/app-layout.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780915036138,
+      "type": "file"
+    },
+    {
+      "path": "src/config/menu.tsx",
+      "accessCount": 2,
+      "lastAccessed": 1780915036522,
+      "type": "file"
+    },
+    {
+      "path": "src/pages/project-detail.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914859108,
+      "type": "file"
+    },
+    {
+      "path": "src/components/projects/project-detail/project-detail-context.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914869196,
+      "type": "file"
+    },
+    {
+      "path": "src/components/projects/project-detail/project-detail-toolbar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914876100,
+      "type": "file"
+    },
+    {
+      "path": "src/components/tasks/create-task-btn.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914876310,
+      "type": "file"
+    },
+    {
+      "path": "src/components/nav-actions.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914880046,
+      "type": "file"
+    },
+    {
+      "path": "src/components/projects/project-detail/project-detail-content.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914880542,
+      "type": "file"
+    },
+    {
+      "path": "src/components/projects/project-dialogs-provider.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914885471,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 1,
+      "lastAccessed": 1780914888199,
+      "type": "file"
+    },
+    {
+      "path": "src/components/layout/app-header.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914888603,
+      "type": "file"
+    },
+    {
+      "path": "src/components/app-sidebar.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1780914892124,
+      "type": "file"
+    },
+    {
+      "path": "src/components/projects/project-detail/index.ts",
+      "accessCount": 1,
+      "lastAccessed": 1780914901486,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

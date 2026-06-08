@@ -1,0 +1,31 @@
+Task: Global 'C' hotkey opens create-task modal; project pages pre-select their project.
+
+Implementation (single file): src/components/tasks/task-dialogs-provider.tsx
+- Replaced the old "mod+shift+t" hotkey with a single-key "c" hotkey (Linear-style).
+  - No enableOnFormTags -> react-hotkeys-hook default disables it inside inputs /
+    textarea / contenteditable, so typing "c" in the title or Plate description editor
+    never opens the dialog.
+  - Guards `if (createOpen) return;` so pressing 'c' while the composer is open is a no-op.
+- openCreate now derives projectId from the current route when the caller omits one:
+  added projectIdFromPath() matching /^\/projects\/([^/]+)/. Explicit init.projectId
+  (task-sessions.tsx, create-task-floating.tsx) still wins. On /projects list or any
+  other page, no project is forced and the dialog's existing first-project default applies.
+- Added useLocation() from react-router; openCreate depends on location.pathname.
+
+Why this design: baking route detection into openCreate (not just the hotkey handler)
+means the page "New task" button (create-task-btn.tsx) and tasks-empty also auto-fill the
+project when on a project detail page — satisfying req #2 for every entry point, not only
+the hotkey.
+
+Verification: bun run build (tsc -b + vite build).
+
+Reviewer (architect, sonnet): REJECTED first pass on US-001.3 — useHotkeys callback
+captured `createOpen` in a stale closure (no dependency array), so the no-clobber guard
+read a frozen false. Fixed by passing [createOpen, openCreate] as the third arg to
+useHotkeys (react-hotkeys-hook v5 treats a DependencyList there and re-binds the listener
+on change). Re-verified: APPROVED, all six acceptance criteria pass. Contenteditable
+suppression (Plate editor) confirmed against installed react-hotkeys-hook@5.3.2 source
+(index.js:205 form-tag guard, :213 contenteditable guard) — both active by default.
+
+Deslop pass: no slop found in the single changed file; no edits.
+Final regression: no stale mod+shift+t refs anywhere; bun run build exit 0. DONE.

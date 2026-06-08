@@ -1,0 +1,27 @@
+{
+  "task": "Global 'C' hotkey opens create-task modal; on a project page the modal pre-selects that project",
+  "stories": [
+    {
+      "id": "US-001",
+      "title": "Pressing 'C' globally opens the create-task modal",
+      "passes": true,
+      "acceptanceCriteria": [
+        "task-dialogs-provider registers a 'c' hotkey that calls openCreate()",
+        "The 'c' hotkey does NOT fire while typing in form fields / contenteditable (react-hotkeys-hook default, enableOnFormTags not set)",
+        "Pressing 'c' while the dialog is already open is a no-op (no form reset)",
+        "bun run build passes (tsc + vite build)"
+      ]
+    },
+    {
+      "id": "US-002",
+      "title": "On a project page, opening the create-task modal pre-selects that project",
+      "passes": true,
+      "acceptanceCriteria": [
+        "openCreate derives projectId from a /projects/:projectId pathname when the caller does not provide one",
+        "Explicit init.projectId from existing callers (task-sessions, create-task-floating) still wins",
+        "On /projects (list) or other pages, no project is forced and existing first-project default behaviour is preserved",
+        "bun run build passes"
+      ]
+    }
+  ]
+}
